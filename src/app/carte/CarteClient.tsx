@@ -37,13 +37,14 @@ export function CarteClient() {
       <section className="pt-6 pb-6 px-5 sm:px-8">
         <div className="max-w-[1440px] mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {items.map((item) => (
+            {items.map((item, index) => (
               <article key={item.slug} className="card-warm overflow-hidden flex flex-col">
-                <div className="relative aspect-[5/3] overflow-hidden">
+                <div className="relative aspect-[5/3] overflow-hidden bg-ink/5">
                   <Image
                     src={item.image}
                     alt={item.name}
                     fill
+                    priority={index < 6}
                     className="object-cover transition-transform duration-700 hover:scale-105"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
