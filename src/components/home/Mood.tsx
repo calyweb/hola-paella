@@ -58,12 +58,13 @@ export function Mood() {
           {shots.map((s) => (
             <figure
               key={s.src}
-              className={`relative rounded-2xl overflow-hidden group ${s.span}`}
+              className={`relative rounded-2xl overflow-hidden group bg-ink/5 ${s.span}`}
             >
               <Image
                 src={s.src}
                 alt={s.alt}
                 fill
+                priority
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 50vw, 33vw"
               />

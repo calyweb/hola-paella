@@ -35,11 +35,12 @@ export function Formules() {
                 </div>
               )}
 
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-[16/10] overflow-hidden bg-ink/5">
                 <Image
                   src={f.image}
                   alt={f.name}
                   fill
+                  priority
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />

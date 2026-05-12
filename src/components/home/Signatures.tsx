@@ -31,11 +31,12 @@ export function Signatures() {
               className="card-warm overflow-hidden group"
               style={{ animationDelay: `${idx * 80}ms` }}
             >
-              <div className="relative aspect-[5/4] overflow-hidden">
+              <div className="relative aspect-[5/4] overflow-hidden bg-ink/5">
                 <Image
                   src={item.image}
                   alt={item.name}
                   fill
+                  priority={idx < 4}
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 25vw"
                 />

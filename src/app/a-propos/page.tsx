@@ -46,11 +46,12 @@ export default function AboutPage() {
 
       <section className="px-5 sm:px-8 pt-24 pb-24">
         <div className="max-w-[1440px] mx-auto grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-center">
-          <div className="relative aspect-[4/3] rounded-[1.5rem] overflow-hidden">
+          <div className="relative aspect-[4/3] rounded-[1.5rem] overflow-hidden bg-ink/5">
             <Image
               src="/images/about-team.jpg"
               alt="Nicolas Cubie, chef Hola Paella"
               fill
+              priority
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
