@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" fill="none">
+  <!-- Fond vert TripAdvisor -->
+  <circle cx="28" cy="28" r="28" fill="#00AA6C"/>
+  <!-- Oreilles / antennes -->
+  <circle cx="17" cy="13" r="6" fill="#00AA6C" stroke="white" stroke-width="2"/>
+  <circle cx="39" cy="13" r="6" fill="#00AA6C" stroke="white" stroke-width="2"/>
+  <!-- Oeil gauche (blanc) -->
+  <circle cx="17" cy="30" r="11" fill="white"/>
+  <!-- Oeil droit (blanc) -->
+  <circle cx="39" cy="30" r="11" fill="white"/>
+  <!-- Iris gauche -->
+  <circle cx="17" cy="30" r="7" fill="#00AA6C"/>
+  <!-- Iris droit -->
+  <circle cx="39" cy="30" r="7" fill="#00AA6C"/>
+  <!-- Pupille gauche -->
+  <circle cx="17" cy="30" r="3.5" fill="black"/>
+  <!-- Pupille droite -->
+  <circle cx="39" cy="30" r="3.5" fill="black"/>
+  <!-- Reflet gauche -->
+  <circle cx="18.5" cy="28.5" r="1.2" fill="white"/>
+  <!-- Reflet droit -->
+  <circle cx="40.5" cy="28.5" r="1.2" fill="white"/>
+  <!-- Bec -->
+  <ellipse cx="28" cy="38" rx="4" ry="2.5" fill="#FF6600"/>
+</svg>
