@@ -84,14 +84,18 @@ export function Footer() {
             <li><Link href="/livraison-paella-la-teste-de-buch" className="hover:text-saffron">Livraison paella La Teste-de-Buch</Link></li>
             <li><Link href="/livraison-paella-gujan-mestras" className="hover:text-saffron">Livraison paella Gujan-Mestras</Link></li>
             <li><Link href="/livraison-paella-le-teich" className="hover:text-saffron">Livraison paella Le Teich</Link></li>
-            <li><Link href="/livraison-paella-biganos" className="hover:text-saffron">Livraison paella Biganos</Link></li>
-            <li><Link href="/livraison-paella-mios" className="hover:text-saffron">Livraison paella Mios</Link></li>
-            <li><Link href="/livraison-paella-audenge" className="hover:text-saffron">Livraison paella Audenge</Link></li>
-            <li><Link href="/livraison-paella-lanton" className="hover:text-saffron">Livraison paella Lanton</Link></li>
-            <li><Link href="/livraison-paella-andernos" className="hover:text-saffron">Livraison paella Andernos</Link></li>
-            <li><Link href="/livraison-paella-lege" className="hover:text-saffron">Livraison paella Lège</Link></li>
-            <li><Link href="/livraison-paella-cap-ferret" className="hover:text-saffron">Livraison paella Cap Ferret</Link></li>
-            <li><Link href="/livraison-paella-bordeaux" className="hover:text-saffron">Livraison paella Bordeaux</Link></li>
+          </ul>
+
+          <div className="text-saffron text-xs uppercase tracking-[0.2em] mb-4">Paella à domicile</div>
+          <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-cream/70 mb-8">
+            <li><Link href="/livraison-paella-biganos" className="hover:text-saffron">Paella Biganos</Link></li>
+            <li><Link href="/livraison-paella-mios" className="hover:text-saffron">Paella Mios</Link></li>
+            <li><Link href="/livraison-paella-audenge" className="hover:text-saffron">Paella Audenge</Link></li>
+            <li><Link href="/livraison-paella-lanton" className="hover:text-saffron">Paella Lanton</Link></li>
+            <li><Link href="/livraison-paella-andernos" className="hover:text-saffron">Paella Andernos</Link></li>
+            <li><Link href="/livraison-paella-lege" className="hover:text-saffron">Paella Lège</Link></li>
+            <li><Link href="/livraison-paella-cap-ferret" className="hover:text-saffron">Paella Cap Ferret</Link></li>
+            <li><Link href="/livraison-paella-bordeaux" className="hover:text-saffron">Paella Bordeaux</Link></li>
           </ul>
 
           <div className="text-saffron text-xs uppercase tracking-[0.2em] mb-4">Pour quel événement&nbsp;?</div>
