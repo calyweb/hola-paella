@@ -99,6 +99,16 @@ export function Footer() {
             <li><Link href="/livraison-paella-bordeaux" className="hover:text-saffron">Paella Bordeaux</Link></li>
           </ul>
 
+          <div className="text-saffron text-xs uppercase tracking-[0.2em] mb-4">Paella par ville</div>
+          <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-cream/70 mb-8">
+            <li><Link href="/paella-arcachon" className="hover:text-saffron">Paella Arcachon</Link></li>
+            <li><Link href="/paella-pyla" className="hover:text-saffron">Paella Pyla-sur-Mer</Link></li>
+            <li><Link href="/paella-la-teste-de-buch" className="hover:text-saffron">Paella La Teste-de-Buch</Link></li>
+            <li><Link href="/paella-gujan-mestras" className="hover:text-saffron">Paella Gujan-Mestras</Link></li>
+            <li><Link href="/paella-le-teich" className="hover:text-saffron">Paella Le Teich</Link></li>
+            <li><Link href="/paella-la-hume" className="hover:text-saffron">Paella La Hume</Link></li>
+          </ul>
+
           <div className="text-saffron text-xs uppercase tracking-[0.2em] mb-4">Pour quel événement&nbsp;?</div>
           <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-cream/70 mb-10">
             <li><Link href="/paella-mariage" className="hover:text-saffron">Paella mariage</Link></li>
