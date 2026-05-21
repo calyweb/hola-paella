@@ -35,7 +35,7 @@ export function Formules() {
                 </div>
               )}
 
-              <div className="relative aspect-[16/10] overflow-hidden bg-ink/5">
+              <div className="relative aspect-[16/10] overflow-hidden bg-saffron/10">
                 <Image
                   src={f.image}
                   alt={f.name}

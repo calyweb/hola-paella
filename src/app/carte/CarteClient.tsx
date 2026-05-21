@@ -43,7 +43,7 @@ export function CarteClient() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {items.map((item, index) => (
                   <article key={item.slug} className="card-warm overflow-hidden flex flex-col">
-                    <div className="relative aspect-[5/3] overflow-hidden bg-ink/5">
+                    <div className="relative aspect-[5/3] overflow-hidden bg-saffron/10">
                       <Image
                         src={item.image}
                         alt={item.name}

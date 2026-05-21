@@ -31,7 +31,7 @@ export function Signatures() {
               className="card-warm overflow-hidden group"
               style={{ animationDelay: `${idx * 80}ms` }}
             >
-              <div className="relative aspect-[5/4] overflow-hidden bg-ink/5">
+              <div className="relative aspect-[5/4] overflow-hidden bg-saffron/10">
                 <Image
                   src={item.image}
                   alt={item.name}
