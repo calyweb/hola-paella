@@ -81,6 +81,76 @@ export const cities = [
     geo: { lat: 44.6442, lng: -0.9758 },
   },
   {
+    slug: "la-teste-de-buch",
+    name: "La Teste-de-Buch",
+    h1: "Livraison paella à La Teste-de-Buch",
+    intro:
+      "Basé à La Teste-de-Buch, je livre votre paella à domicile dès 10 personnes. C'est ma zone principale : pas de frais de déplacement, cuisson le jour même, livraison chaude chez vous.",
+    distance: "Zone principale · sans frais",
+    quartiers: ["La Teste centre", "Cazaux", "La Hume", "Les Prés salés"],
+    geo: { lat: 44.6308, lng: -1.1428 },
+  },
+  {
+    slug: "gujan-mestras",
+    name: "Gujan-Mestras",
+    h1: "Livraison paella à Gujan-Mestras",
+    intro:
+      "Je livre votre paella à Gujan-Mestras dès 10 personnes, réservation 48h à l'avance. Chef à domicile dès 23 invités. Zone de livraison principale, sans frais de déplacement.",
+    distance: "Zone principale · sans frais",
+    quartiers: ["Gujan centre", "Mestras", "Port de Larros", "La Hume"],
+    geo: { lat: 44.6342, lng: -1.0681 },
+  },
+  {
+    slug: "mios",
+    name: "Mios",
+    h1: "Livraison paella à Mios",
+    intro:
+      "Je livre votre paella à Mios et ses environs dès 10 personnes. Formule chef à domicile disponible dès 23 invités. Réservation 48h à l'avance pour la livraison.",
+    distance: "Zone de livraison principale",
+    quartiers: ["Mios centre", "Cassy", "Marcheprime"],
+    geo: { lat: 44.6050, lng: -0.9350 },
+  },
+  {
+    slug: "audenge",
+    name: "Audenge",
+    h1: "Livraison paella à Audenge",
+    intro:
+      "Audenge est dans ma zone de livraison principale. Paella livrée chaude à domicile dès 10 personnes, ou chef à domicile pour vos événements dès 23 invités.",
+    distance: "Zone de livraison principale",
+    quartiers: ["Audenge centre", "Le port", "Certes et Graveyron"],
+    geo: { lat: 44.6833, lng: -1.0167 },
+  },
+  {
+    slug: "lanton",
+    name: "Lanton",
+    h1: "Livraison paella à Lanton",
+    intro:
+      "Je livre votre paella à Lanton et Cassy dès 10 personnes. Chef à domicile disponible dès 23 invités pour vos événements en bord de Bassin.",
+    distance: "Zone de livraison principale",
+    quartiers: ["Lanton centre", "Cassy", "Taussat", "Blagon"],
+    geo: { lat: 44.7000, lng: -1.0333 },
+  },
+  {
+    slug: "andernos",
+    name: "Andernos",
+    h1: "Livraison paella à Andernos",
+    intro:
+      "Je livre votre paella à Andernos-les-Bains dès 10 personnes. Réservation 48h à l'avance. Chef à domicile disponible dès 23 invités pour vos mariages, anniversaires et soirées.",
+    distance: "Zone de livraison principale",
+    quartiers: ["Andernos centre", "Le Mauret", "Le Coulin", "Port ostréicole"],
+    geo: { lat: 44.7444, lng: -1.1025 },
+  },
+  {
+    slug: "lege",
+    name: "Lège",
+    h1: "Livraison paella à Lège",
+    intro:
+      "Je livre votre paella à Lège-Cap-Ferret dès 10 personnes. Chef à domicile disponible dès 23 invités. Toute la presqu'île est dans ma zone d'intervention.",
+    distance: "Zone de livraison principale",
+    quartiers: ["Lège centre", "Arès", "Le Canon", "Claouey"],
+    geo: { lat: 44.7667, lng: -1.1500 },
+  },
+  {
     slug: "bordeaux",
     name: "Bordeaux",
     h1: "Traiteur paella à Bordeaux",
@@ -116,6 +186,22 @@ export const events = [
     intro:
       "Anniversaire en famille ou entre amis : je m'occupe de la cuisine, vous profitez de vos invités. Livraison à domicile dès 10 personnes ou chef à domicile pour les grands rassemblements (dès 23 invités).",
     badge: "10 à 80 invités",
+  },
+  {
+    slug: "bapteme",
+    name: "Paella baptême",
+    h1: "Traiteur paella pour baptême",
+    intro:
+      "Pour le baptême de votre enfant, je prépare un repas convivial et généreux. Paella livrée chaude dès 10 personnes, ou chef à domicile dès 23 invités. Menu adaptable pour les enfants.",
+    badge: "Dès 10 invités",
+  },
+  {
+    slug: "soiree-privee",
+    name: "Paella soirée privée",
+    h1: "Traiteur paella pour soirée privée",
+    intro:
+      "Crémaillère, retrouvailles, soirée entre amis — je livre votre paella à domicile ou je viens cuisiner sur place. Tapas, planches ibériques, sangria maison. Du Bassin d'Arcachon à Bordeaux.",
+    badge: "Dès 10 invités",
   },
 ];
 

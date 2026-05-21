@@ -72,6 +72,34 @@ const eventContent: Record<
       { q: "Anniversaire enfant possible ?", a: "Bien sûr — la paella Fruits de mer & Poulet bio est douce et plaît aux enfants. J'adapte le menu selon vos invités." },
     ],
   },
+  bapteme: {
+    hooks: [
+      { title: "Un repas convivial et généreux", text: "La paella, c'est le plat familial par excellence. Tout le monde se sert, on partage, on profite — parfait pour un baptême." },
+      { title: "Menu adaptable pour les enfants", text: "La paella Fruits de mer & Poulet bio plaît aux petits comme aux grands. J'adapte les quantités et le menu selon vos invités." },
+      { title: "Livraison dès 10 personnes", text: "Paella livrée chaude chez vous, prête à servir. Vous vous occupez de la cérémonie, je m'occupe du repas." },
+      { title: "Chef à domicile dès 23 invités", text: "Pour un baptême plus grand, je viens avec mon matériel et je cuisine devant vos invités. Moment convivial garanti." },
+    ],
+    faqs: [
+      { q: "Quel budget pour un baptême avec paella ?", a: "De 18 à 21 €/pers pour la paella, à compléter avec tapas, planches et sangria selon vos envies. Devis sur mesure via le formulaire en ligne." },
+      { q: "Peut-on adapter le menu pour les enfants ?", a: "Oui. La paella Fruits de mer & Poulet bio est douce et convient aux enfants. Je peux aussi prévoir des portions adaptées." },
+      { q: "Quel délai pour réserver ?", a: "48 h pour la livraison, 72 h pour le chef à domicile. En saison, prévoyez quelques semaines à l'avance." },
+      { q: "Vous déplacez-vous le dimanche ?", a: "Oui, je travaille le week-end. La plupart des baptêmes ont lieu le dimanche — c'est mon quotidien." },
+    ],
+  },
+  "soiree-privee": {
+    hooks: [
+      { title: "Zéro prise de tête", text: "Je livre la paella chaude chez vous, prête à servir. Vous ouvrez la porte, vous servez vos invités, c'est tout." },
+      { title: "L'apéro complet", text: "Tapas (carpaccio de poulpe, gambas, chipirons), planches de Pata Negra Bellota 36 mois, sangria maison en Bag-in-Box. L'apéro est aussi bon que le plat." },
+      { title: "Chef sur place pour les grandes soirées", text: "Dès 23 invités, je viens cuisiner chez vous. La paella se fait devant vos invités — ça lance toujours la soirée." },
+      { title: "Devis en ligne en 5 minutes", text: "Vous composez votre menu, je vous envoie une proposition sous 24 h. Pas de mauvaise surprise à la facture." },
+    ],
+    faqs: [
+      { q: "Combien de personnes minimum ?", a: "10 invités pour la livraison, 23 pour le chef à domicile. En dessous de 10, appelez-moi, on voit ensemble." },
+      { q: "Jusqu'à quelle heure livrez-vous ?", a: "Je m'adapte à votre programme. Dites-moi l'heure du repas, je livre en conséquence." },
+      { q: "Vous fournissez les couverts ?", a: "Kit couverts bambou éco-responsable en option à 1,50 €/pers. Compostable, élégant." },
+      { q: "Peut-on commander uniquement des tapas et planches ?", a: "Oui, sans problème. Tapas, planches de charcuterie ibérique et sangria — un format apéritif dînatoire très demandé." },
+    ],
+  },
 };
 
 export default async function EventPage({
