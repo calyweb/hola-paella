@@ -84,6 +84,7 @@ export function Footer() {
             <li><Link href="/livraison-paella-la-teste-de-buch" className="hover:text-saffron">Livraison paella La Teste-de-Buch</Link></li>
             <li><Link href="/livraison-paella-gujan-mestras" className="hover:text-saffron">Livraison paella Gujan-Mestras</Link></li>
             <li><Link href="/livraison-paella-le-teich" className="hover:text-saffron">Livraison paella Le Teich</Link></li>
+            <li><Link href="/livraison-paella-la-hume" className="hover:text-saffron">Livraison paella La Hume</Link></li>
           </ul>
 
           <div className="text-saffron text-xs uppercase tracking-[0.2em] mb-4">Paella à domicile</div>

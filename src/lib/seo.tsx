@@ -87,6 +87,18 @@ export const cities = [
     geo: { lat: 44.6342, lng: -1.0214 },
   },
 
+  {
+    slug: "la-hume",
+    name: "La Hume",
+    delivery: true,
+    h1: "Livraison paella à La Hume",
+    intro:
+      "Je livre votre paella à La Hume dès 10 personnes, réservation 48h à l'avance. Chef à domicile également disponible dès 23 invités. Zone de livraison principale.",
+    distance: "Zone de livraison · sans frais",
+    quartiers: ["La Hume", "Port de La Hume"],
+    geo: { lat: 44.6400, lng: -1.0900 },
+  },
+
   // ── CHEF À DOMICILE UNIQUEMENT ──
   {
     slug: "biganos",
