@@ -5,6 +5,7 @@ export type Category =
   | "sangrias"
   | "bieres"
   | "vins"
+  | "eaux"
   | "extras";
 
 export interface MenuItem {
@@ -60,9 +61,15 @@ export const categoryMeta: Record<
     emoji: "🍇",
     accent: "olive",
   },
+  eaux: {
+    label: "Eaux",
+    tagline: "Eau plate ou pétillante · à la bouteille ou au carton.",
+    emoji: "💧",
+    accent: "olive",
+  },
   extras: {
     label: "Extras",
-    tagline: "Couverts éco-responsables et eau.",
+    tagline: "Couverts éco-responsables.",
     emoji: "✨",
     accent: "saffron",
   },
@@ -416,7 +423,7 @@ export const menu: MenuItem[] = [
   {
     slug: "eau-abatilles-bouteille",
     name: "Eau Abatilles plate 1,5L",
-    category: "extras",
+    category: "eaux",
     tagline: "La bouteille.",
     description: "Eau minérale naturelle Abatilles, 1,5L.",
     price: 2,
@@ -426,7 +433,7 @@ export const menu: MenuItem[] = [
   {
     slug: "eau-abatilles-carton",
     name: "Eau Abatilles plate 1,5L — carton",
-    category: "extras",
+    category: "eaux",
     tagline: "Carton de 6 bouteilles.",
     description: "Eau minérale naturelle Abatilles, 1,5L. Carton de 6 bouteilles.",
     price: 10,
@@ -446,7 +453,7 @@ export const menu: MenuItem[] = [
   {
     slug: "eau-abatilles-petillante-carton",
     name: "Eau Abatilles pétillante 1L — carton",
-    category: "extras",
+    category: "eaux",
     tagline: "Carton de 6 bouteilles.",
     description: "Eau minérale gazeuse Abatilles, 1L. Carton de 6 bouteilles.",
     price: 13,
