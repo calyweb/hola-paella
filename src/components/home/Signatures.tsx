@@ -4,7 +4,9 @@ import { ArrowRight } from "lucide-react";
 import { getMenuByCategory } from "@/data/menu";
 
 export function Signatures() {
-  const items = getMenuByCategory("paellas");
+  const items = getMenuByCategory("paellas").filter(
+    (item) => item.slug !== "paella-homard-bleu"
+  );
 
   return (
     <section className="py-24 lg:py-32 px-5 sm:px-8 bg-cream">
