@@ -25,19 +25,19 @@ export const categoryMeta: Record<
 > = {
   paellas: {
     label: "Paellas",
-    tagline: "4 paellas, 2 versions : classique ou bodega.",
+    tagline: "5 paellas au choix — cuisson au feu de bois, riz bomba, safran.",
     emoji: "🥘",
     accent: "saffron",
   },
   tapas: {
-    label: "Tapas",
-    tagline: "Pour environ 4 personnes par plat.",
+    label: "Tapas tartinables",
+    tagline: "Pour environ 5 personnes · servis avec toasts classiques & multi-grains.",
     emoji: "🦐",
     accent: "terracotta",
   },
   planches: {
     label: "Planches dégustation",
-    tagline: "1 planche pour 8 personnes, servie avec guindillas.",
+    tagline: "1 planche pour 8 personnes · servie avec pan con tomate à la catalane.",
     emoji: "🥓",
     accent: "olive",
   },
@@ -62,30 +62,42 @@ export const categoryMeta: Record<
 };
 
 export const menu: MenuItem[] = [
-  // PAELLAS — ingrédients communs : moules, calamars, chorizo, petits pois, poivrons, oignons, riz, safran, épices
+  // PAELLAS — base commune : moules, calamars, chorizo, petits pois, poivrons, oignons, riz bomba, safran & épices
+  {
+    slug: "paella-fruits-de-mer-poulet",
+    name: "Paella Fruits de mer & Poulet fermier",
+    category: "paellas",
+    tagline: "Gambas sauvages, poulet fermier label rouge.",
+    description:
+      "Riz au safran, moules, calamars, chorizo, poivrons et épices. Gambas sauvages et poulet fermier label rouge.",
+    price: 15,
+    unit: "/ pers.",
+    highlights: ["Gambas sauvages", "Poulet fermier label rouge"],
+    image: "/images/products/paella-bodega.jpg",
+  },
+  {
+    slug: "paella-bodega",
+    name: "Paella Bodega",
+    category: "paellas",
+    tagline: "Tout décortiqué — se mange à la fourchette, debout ou assis.",
+    description:
+      "Grosses crevettes sauvages décortiquées, moules, calamars, chorizo, bouchées de poulet, petits pois, poivrons, oignons, riz, safran & épices. La paella facile à manger — parfaite sur un bateau ou au coin d'une table.",
+    price: 15,
+    unit: "/ pers.",
+    image: "/images/products/paella-bodega.jpg",
+  },
   {
     slug: "paella-royale",
     name: "Paella Royale",
     category: "paellas",
-    tagline: "Gambas sauvages, poulet bio, lotte, langoustines.",
+    tagline: "Gambas sauvages, poulet fermier, lotte, langoustines.",
     description:
-      "Riz au safran, moules, calamars, chorizo, poivrons et épices. Gambas sauvages, poulet bio, lotte et langoustines. Version classique ou Bodega (fruits de mer décortiqués).",
-    price: 21,
+      "Riz au safran, moules, calamars, chorizo, poivrons et épices. Gambas sauvages, poulet fermier label rouge, lotte et langoustines.",
+    price: 19,
     unit: "/ pers.",
-    highlights: ["Gambas sauvages", "Lotte", "Langoustines", "Poulet bio"],
+    highlights: ["Gambas sauvages", "Lotte", "Langoustines", "Poulet fermier"],
     image: "/images/products/paella-royale.jpg",
     signature: true,
-  },
-  {
-    slug: "paella-del-pueblo",
-    name: "Paella Del Pueblo",
-    category: "paellas",
-    tagline: "Travers de porc, poulet bio, Serrano, gambas décortiquées.",
-    description:
-      "Riz au safran, moules, calamars, chorizo, poivrons et épices. Travers de porc, poulet bio, jambon Serrano et gambas décortiquées. Version classique ou Bodega.",
-    price: 20,
-    unit: "/ pers.",
-    image: "/images/products/paella-poulet.jpg",
   },
   {
     slug: "paella-fruits-de-mer-poisson",
@@ -93,127 +105,129 @@ export const menu: MenuItem[] = [
     category: "paellas",
     tagline: "Gambas sauvages, lotte.",
     description:
-      "Riz au safran, moules, calamars, chorizo, poivrons et épices. Gambas sauvages et lotte. Version classique ou Bodega (fruits de mer décortiqués).",
-    price: 19,
+      "Riz au safran, moules, calamars, chorizo, poivrons et épices. Gambas sauvages et lotte.",
+    price: 25,
     unit: "/ pers.",
+    highlights: ["Gambas sauvages", "Lotte"],
     image: "/images/products/paella-mer.jpg",
   },
   {
-    slug: "paella-fruits-de-mer-poulet",
-    name: "Paella Fruits de mer & Poulet",
+    slug: "paella-homard-bleu",
+    name: "Paella Fruits de mer & Homard bleu",
     category: "paellas",
-    tagline: "Gambas sauvages, poulet bio.",
+    tagline: "½ homard bleu décortiqué, gambas sauvages.",
     description:
-      "Riz au safran, moules, calamars, chorizo, poivrons et épices. Gambas sauvages et poulet bio. Version classique ou Bodega.",
-    price: 18,
+      "½ homard bleu décortiqué, gambas sauvages, moules, calamars, chorizo, petits pois, poivrons, oignons, riz, safran & épices.",
+    price: 25,
     unit: "/ pers.",
-    image: "/images/products/paella-bodega.jpg",
-  },
-
-  // TAPAS — ~4 personnes par plat
-  {
-    slug: "carpaccio-poulpe-galicienne",
-    name: "Carpaccio de poulpe à la Galicienne",
-    category: "tapas",
-    tagline: "Environ 8 personnes.",
-    description:
-      "Tranché finement, huile d'olive, paprika fumé. La recette galicienne, sans fioriture.",
-    price: 30,
-    unit: "/ plat",
-    image: "/images/products/poulpe.jpg",
+    highlights: ["½ Homard bleu", "Gambas sauvages"],
+    image: "/images/products/paella-mer.jpg",
     signature: true,
   },
+
+  // TAPAS TARTINABLES — ~5 personnes par plat, servis avec toasts classiques & multi-grains
   {
-    slug: "gambas-ail-espelette",
-    name: "Gambas sautées à l'ail & piment d'Espelette",
+    slug: "effiloche-surimi-crabe",
+    name: "Effiloché de surimi au crabe",
     category: "tapas",
-    tagline: "Décortiquées par nos soins.",
+    tagline: "Oeuf, oignon frais, mayonnaise maison.",
     description:
-      "Sautées à l'ail et au piment d'Espelette. Décortiquées, prêtes à déguster.",
-    price: 16,
-    unit: "/ plat (env. 4 pers.)",
+      "Un classique des bars à tapas. Effiloché de surimi au crabe, œuf, pointe d'oignon frais et mayonnaise maison. Servi avec toasts classiques & multi-grains.",
+    price: 11,
+    unit: "/ plat (env. 5 pers.)",
     image: "/images/products/gambas.jpg",
   },
   {
-    slug: "chipirons-lard-pyrenees",
-    name: "Chipirons au lard poivré des Pyrénées",
+    slug: "caviar-aubergine-tomate",
+    name: "Caviar d'aubergine & tomate confite",
+    category: "tapas",
+    tagline: "Vegan · sans gluten · sans conservateurs.",
+    description:
+      "100 % plaisir : sans ingrédient d'origine animale, sans gluten, sans conservateurs, sans huile de palme. Servi avec toasts classiques & multi-grains.",
+    price: 11,
+    unit: "/ plat (env. 5 pers.)",
+    image: "/images/products/gambas.jpg",
+  },
+  {
+    slug: "rillettes-chorizo-chevre",
+    name: "Rillettes de chorizo & chèvre frais",
+    category: "tapas",
+    tagline: "La force du chorizo, la douceur du chèvre.",
+    description:
+      "La rencontre entre la force du chorizo et la douceur du chèvre frais. Un délice. Servi avec toasts classiques & multi-grains.",
+    price: 12,
+    unit: "/ plat (env. 5 pers.)",
+    image: "/images/products/gambas.jpg",
+  },
+  {
+    slug: "crevettes-ail-espelette",
+    name: "Crevettes sautées à l'ail & piment d'Espelette",
+    category: "tapas",
+    tagline: "Décortiquées — prêtes à déguster.",
+    description:
+      "Queues de crevettes décortiquées par nos soins pour un plaisir immédiat, sans se salir les doigts. Servi avec toasts classiques & multi-grains.",
+    price: 14,
+    unit: "/ plat (env. 5 pers.)",
+    image: "/images/products/gambas.jpg",
+  },
+  {
+    slug: "friture-calamars-citron",
+    name: "Friture de calamars au pimentón",
+    category: "tapas",
+    tagline: "Tartare de citron bio · croustillante & relevée.",
+    description:
+      "Lamelles de calamars enrobées d'une panure fine, croustillante et légèrement relevée au piment d'Espelette, servies avec un tartare de citron bio.",
+    price: 14,
+    unit: "/ plat (env. 5 pers.)",
+    image: "/images/products/chipirons.jpg",
+  },
+  {
+    slug: "chipirons-chorizo",
+    name: "Chipirons poêlés au chorizo",
     category: "tapas",
     tagline: "Pêchés sur la Côte Basque.",
     description:
-      "Pêchés sur la Côte Basque, sautés au lard poivré des Pyrénées.",
-    price: 16,
-    unit: "/ plat (env. 4 pers.)",
+      "Pêchés sur la Côte Basque, ce petit calamar très tendre est un régal à l'heure de l'apéritif, poêlé au chorizo.",
+    price: 14,
+    unit: "/ plat (env. 5 pers.)",
     image: "/images/products/chipirons.jpg",
-  },
-
-  // PLANCHES DÉGUSTATION — 1 planche / 8 personnes, servies avec piments guindillas
-  {
-    slug: "planche-pata-negra",
-    name: "Planche Jambon Pata Negra 36 mois",
-    category: "planches",
-    tagline: "3 ans d'affinage. Le sommet.",
-    description:
-      "36 mois d'affinage. Servie avec piments guindillas.",
-    price: 48,
-    unit: "/ planche 8 pers.",
-    highlights: ["Pata Negra", "36 mois"],
-    image: "/images/products/pata-negra.jpg",
     signature: true,
   },
+
+  // PLANCHES DÉGUSTATION — 1 planche / 8 personnes, servies avec pan con tomate à la catalane
   {
-    slug: "planche-iberique",
-    name: "Planche Ibérique",
+    slug: "planche-decouverte",
+    name: "Planche Découverte",
     category: "planches",
-    tagline: "Le grand tour ibérique.",
+    tagline: "Saucisson Bellota · Chorizo Bellota · Serrano Duroc 18 mois.",
     description:
-      "Fuet extra, Chorizo Bellota, jambon ibérique Bellota Pata Negra 24 mois. Avec piments guindillas.",
-    price: 29,
+      "Saucisson Bellota, Chorizo Bellota, Jambon Serrano Duroc affinage 18 mois. Servie avec pan con tomate à la catalane.",
+    price: 19,
     unit: "/ planche 8 pers.",
-    image: "/images/products/planche-iberique.jpg",
+    image: "/images/products/planche-decouverte.jpg",
   },
   {
     slug: "planche-pena",
     name: "Planche Peña",
     category: "planches",
-    tagline: "La grande dégustation.",
+    tagline: "Manchego 9 mois · Serrano Duroc 18 mois.",
     description:
-      "Fuet extra, Chorizo Bellota, Serrano Duroc 18 mois, Pata Negra 36 mois. Avec piments guindillas.",
-    price: 25,
-    unit: "/ planche 8 pers.",
-    image: "/images/products/planche-iberique.jpg",
-  },
-  {
-    slug: "planche-serrano-duroc",
-    name: "Planche Jambon Serrano Duroc 24 mois",
-    category: "planches",
-    tagline: "La race Duroc, après 24 mois.",
-    description:
-      "Jambon Serrano Duroc, 24 mois d'affinage. Avec piments guindillas.",
-    price: 22,
-    unit: "/ planche 8 pers.",
-    image: "/images/products/planche-decouverte.jpg",
-  },
-  {
-    slug: "planche-decouverte",
-    name: "Planche Découverte",
-    category: "planches",
-    tagline: "Pour s'initier en bonne compagnie.",
-    description:
-      "Fuet extra, Chorizo Bellota, Serrano Duroc 24 mois. Avec piments guindillas.",
+      "Manchego affinage 9 mois, Jambon Serrano Duroc affinage 18 mois. Servie avec pan con tomate à la catalane.",
     price: 21,
     unit: "/ planche 8 pers.",
-    image: "/images/products/planche-decouverte.jpg",
+    image: "/images/products/planche-iberique.jpg",
   },
   {
-    slug: "planche-chorizo-bellota",
-    name: "Planche Chorizo Bellota",
+    slug: "planche-iberique",
+    name: "Planche Ibérique",
     category: "planches",
-    tagline: "Le chorizo des connaisseurs.",
+    tagline: "Saucisson Bellota · Chorizo Bellota · Pata Negra 24 mois.",
     description:
-      "Chorizo Bellota Pata Negra. Avec piments guindillas.",
-    price: 20,
+      "Saucisson Bellota, Chorizo Bellota, Jambon ibérique Pata Negra affinage 24 mois. Servie avec pan con tomate à la catalane.",
+    price: 28,
     unit: "/ planche 8 pers.",
     image: "/images/products/planche-iberique.jpg",
+    signature: true,
   },
 
   // SANGRIAS — BIB
@@ -289,11 +303,11 @@ export const menu: MenuItem[] = [
   // EXTRAS
   {
     slug: "couverts-eco",
-    name: "Kit couverts bambou éco-responsable",
+    name: "Kit couvert à usage unique",
     category: "extras",
-    tagline: "Élégant, compostable.",
+    tagline: "Assiette, serviettes, couteau, fourchette & verre bodega.",
     description:
-      "Kit complet en bambou compostable. Sans plastique, sans vaisselle.",
+      "Kit complet : assiette, serviettes, couteau, fourchette & verre bodega.",
     price: 1.5,
     unit: "/ pers.",
     image: "/images/products/couverts.jpg",

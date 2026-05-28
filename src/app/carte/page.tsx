@@ -31,7 +31,7 @@ export default function CartePage() {
             <span className="italic font-light">paella d&apos;exception.</span>
           </h1>
           <p className="mt-6 text-ink-soft text-lg max-w-2xl mx-auto leading-relaxed">
-            Quatre paellas, trois tapas, six planches ibériques, sangrias maison et vins espagnols.
+            Cinq paellas, six tapas tartinables, trois planches ibériques, sangrias maison et vins espagnols.
             Tout est à composer sur votre devis.
           </p>
         </div>
