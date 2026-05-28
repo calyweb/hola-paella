@@ -43,7 +43,7 @@ export const categoryMeta: Record<
     accent: "olive",
   },
   sangrias: {
-    label: "Apéritifs",
+    label: "Sangrias",
     tagline: "Sangrias maison en Bag-in-Box · préparées dans nos locaux.",
     emoji: "🍷",
     accent: "terracotta",
