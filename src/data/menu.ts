@@ -443,7 +443,7 @@ export const menu: MenuItem[] = [
   {
     slug: "eau-abatilles-petillante-bouteille",
     name: "Eau Abatilles pétillante 1L",
-    category: "extras",
+    category: "eaux",
     tagline: "La bouteille.",
     description: "Eau minérale gazeuse Abatilles, 1L.",
     price: 2.5,
