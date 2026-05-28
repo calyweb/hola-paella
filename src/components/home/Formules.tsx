@@ -5,7 +5,7 @@ import { formules } from "@/data/formules";
 
 export function Formules() {
   return (
-    <section className="py-24 lg:py-32 px-5 sm:px-8 linen-bg">
+    <section className="py-24 lg:py-32 px-5 sm:px-8 bg-white">
       <div className="max-w-[1440px] mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="pill pill-terracotta mb-5">Nos formules</div>
