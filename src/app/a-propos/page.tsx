@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { SITE, JsonLd, breadcrumbJsonLd, personJsonLd } from "@/lib/seo";
 
 export const metadata = {
   title: "Le traiteur paella du Bassin d'Arcachon",
   description:
     "Hola Paella : traiteur paella indépendant fondé en 2017, basé à Arcachon. Sourcing en Espagne (riz bomba, safran de la Mancha, Pata Negra), cuisson au feu de bois.",
+  alternates: { canonical: `${SITE.url}/a-propos` },
 };
 
 const values = [
@@ -29,6 +31,13 @@ const values = [
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={[
+        personJsonLd(),
+        breadcrumbJsonLd([
+          { name: "Accueil", url: SITE.url },
+          { name: "Notre histoire", url: `${SITE.url}/a-propos` },
+        ]),
+      ]} />
       <section className="warm-bg pt-16 pb-14 px-5 sm:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="text-center">

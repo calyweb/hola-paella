@@ -1,16 +1,27 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { CarteClient } from "./CarteClient";
+import { SITE, JsonLd, menuJsonLd, breadcrumbJsonLd } from "@/lib/seo";
+import { menu } from "@/data/menu";
 
 export const metadata = {
   title: "La carte",
   description:
     "Paellas, tapas, planches de Pata Negra, sangrias maison et vins espagnols. Découvrez notre carte traiteur sur le Bassin d'Arcachon et Bordeaux.",
+  alternates: { canonical: `${SITE.url}/carte` },
 };
 
 export default function CartePage() {
+  const menuItems = menu.map((m) => ({ name: m.name, description: m.description, price: m.price, category: m.category }));
   return (
     <>
+      <JsonLd data={[
+        menuJsonLd(menuItems),
+        breadcrumbJsonLd([
+          { name: "Accueil", url: SITE.url },
+          { name: "La carte", url: `${SITE.url}/carte` },
+        ]),
+      ]} />
       <section className="warm-bg pt-16 pb-14 px-5 sm:px-8">
         <div className="max-w-5xl mx-auto text-center">
           <div className="pill mb-5">Notre carte</div>
@@ -27,6 +38,14 @@ export default function CartePage() {
       </section>
 
       <CarteClient />
+
+      {/* Sticky CTA mobile */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-paper/95 backdrop-blur-md border-t border-ink/10 px-5 py-3">
+        <Link href="/devis" className="btn-primary w-full group">
+          Demander un devis
+          <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+        </Link>
+      </div>
 
       <section className="pt-10 pb-24 px-5 sm:px-8 bg-paper text-center">
         <div className="max-w-2xl mx-auto">

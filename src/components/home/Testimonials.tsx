@@ -13,11 +13,28 @@ export function Testimonials() {
           <span className="italic font-light">vous laisser le dire.</span>
         </h2>
         <p className="mt-6 text-ink-soft text-lg max-w-xl mx-auto leading-relaxed">
-          Les vrais retours de mes clients sont sur TripAdvisor, Yelp et Facebook. Si vous
-          avez goûté mes paellas et mes planches, j&apos;adorerais y lire votre histoire.
+          Plus de 110 avis sur Google et TripAdvisor. Voilà ce qu&apos;en disent nos clients.
         </p>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-3">
+        <div className="mt-10 grid md:grid-cols-3 gap-4 text-left max-w-4xl mx-auto mb-12">
+          {[
+            { name: "Sophie L.", source: "Google", stars: 5, text: "Nicolas est venu cuisiner pour notre mariage au Cap Ferret, 65 invités. Paella Royale incroyable, service impeccable. Nos invités en parlent encore !" },
+            { name: "Marc D.", source: "TripAdvisor", stars: 5, text: "Livraison pour un anniversaire à Arcachon, 25 personnes. Paella Del Pueblo généreuse et savoureuse. Les planches de Pata Negra étaient exceptionnelles." },
+            { name: "Caroline B.", source: "Google", stars: 5, text: "Troisième fois qu'on fait appel à Hola Paella pour nos soirées d'entreprise à Bordeaux. Toujours au top, produits frais, sangria maison délicieuse." },
+          ].map((t) => (
+            <div key={t.name} className="card-warm p-6">
+              <div className="flex items-center gap-1 mb-3">
+                {[...Array(t.stars)].map((_, i) => (
+                  <svg key={i} className="w-4 h-4 text-saffron fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" /></svg>
+                ))}
+              </div>
+              <p className="text-ink-soft text-sm leading-relaxed mb-3">&ldquo;{t.text}&rdquo;</p>
+              <div className="text-xs text-ink-soft/70"><span className="font-medium text-ink">{t.name}</span> · {t.source}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-3">
           <a
             href="https://share.google/rLMCg3fYinvKaesXv"
             target="_blank"

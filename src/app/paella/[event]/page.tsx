@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Phone, Check } from "lucide-react";
-import { events, SITE, JsonLd, serviceJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
+import { events, cities, SITE, JsonLd, serviceJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 
 export function generateStaticParams() {
   return events.map((e) => ({ event: e.slug }));
@@ -197,6 +197,28 @@ export default async function EventPage({
                 <div className="font-display text-lg text-ink mb-2">{f.q}</div>
                 <p className="text-ink-soft leading-relaxed">{f.a}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-5 sm:px-8 bg-paper">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-display text-3xl text-ink mb-6">
+            Nos zones d&apos;intervention
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {cities.filter((c) => c.delivery).slice(0, 4).map((c) => (
+              <Link
+                key={c.slug}
+                href={`/livraison-paella-${c.slug}`}
+                className="card-warm p-5 hover:bg-saffron/10 group"
+              >
+                <div className="font-display text-lg text-ink">{e.name.split(" ").slice(0, 2).join(" ")} {c.name}</div>
+                <div className="text-sm text-ink-soft mt-1 flex items-center gap-1">
+                  Voir <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -1,14 +1,20 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { SITE, JsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata = {
   title: "Contact",
   description:
     "Joindre Hola Paella : téléphone, email, zone d'intervention. Bassin d'Arcachon et Bordeaux Métropole.",
+  alternates: { canonical: `${SITE.url}/contact` },
 };
 
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([
+        { name: "Accueil", url: SITE.url },
+        { name: "Contact", url: `${SITE.url}/contact` },
+      ])} />
       <section className="warm-bg pt-16 pb-14 px-5 sm:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="pill mb-5">Contact</div>
@@ -49,8 +55,8 @@ export default function ContactPage() {
               <MapPin size={20} />
             </div>
             <div className="text-xs uppercase tracking-[0.16em] text-ink-soft mb-1">Zone d&apos;intervention</div>
-            <div className="font-display text-2xl text-ink leading-tight">Bassin d&apos;Arcachon · Bordeaux</div>
-            <div className="text-ink-soft text-sm mt-2 leading-relaxed">Toute l&apos;année, en livraison ou à domicile</div>
+            <div className="font-display text-2xl text-ink leading-tight">La Teste-de-Buch, 33260</div>
+            <div className="text-ink-soft text-sm mt-2 leading-relaxed">Bassin d&apos;Arcachon · Bordeaux Métropole</div>
           </div>
 
           <div className="card-warm p-8">

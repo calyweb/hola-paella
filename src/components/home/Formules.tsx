@@ -8,7 +8,7 @@ export function Formules() {
     <section className="py-24 lg:py-32 px-5 sm:px-8 linen-bg">
       <div className="max-w-[1440px] mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="pill pill-terracotta mb-5">Deux façons de recevoir</div>
+          <div className="pill pill-terracotta mb-5">Nos formules</div>
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.05]">
             Une cuisine <span className="italic font-light">généreuse,</span>
             <br />
@@ -40,7 +40,7 @@ export function Formules() {
                   src={f.image}
                   alt={f.name}
                   fill
-                  priority
+                  loading="lazy"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />

@@ -44,7 +44,7 @@ export function Header() {
               fill
               className="object-contain drop-shadow-sm"
               sizes="56px"
-              priority
+              loading="eager"
             />
           </div>
           <div className="leading-none hidden sm:block">

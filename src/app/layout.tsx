@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     "Bassin d'Arcachon",
     "Bordeaux",
   ],
-  authors: [{ name: "Hola Paella" }],
+  authors: [{ name: "Nicolas Cubie", url: "https://hola-paella.fr/a-propos" }],
   creator: "Hola Paella",
   publisher: "Hola Paella",
   alternates: { canonical: SITE.url },
@@ -115,7 +115,15 @@ export default function RootLayout({
         <meta name="ICBM" content="44.6588, -1.1681" />
       </head>
       <body className="min-h-full flex flex-col bg-cream text-ink">
-        <JsonLd data={localBusinessJsonLd()} />
+        <JsonLd data={[localBusinessJsonLd(), {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": `${SITE.url}#website`,
+          name: SITE.name,
+          url: SITE.url,
+          publisher: { "@id": `${SITE.url}#business` },
+          inLanguage: "fr-FR",
+        }]} />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

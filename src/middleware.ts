@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-// Slugs des villes de livraison (pages /paella-[city])
-const deliveryCitySlugs = new Set([
-  "arcachon", "pyla", "la-teste-de-buch", "gujan-mestras", "le-teich", "la-hume",
+// Tous les slugs de villes (pages /paella-[city])
+const citySlugs = new Set([
+  "pyla", "arcachon", "la-teste-de-buch", "cazaux", "la-hume", "gujan-mestras", "le-teich",
+  "biganos", "mios", "audenge", "lanton", "andernos", "lege", "cap-ferret", "bordeaux",
 ]);
 
 export function middleware(request: NextRequest) {
@@ -22,7 +23,7 @@ export function middleware(request: NextRequest) {
   const paellaMatch = pathname.match(/^\/paella-(.+)$/);
   if (paellaMatch) {
     const slug = paellaMatch[1];
-    if (deliveryCitySlugs.has(slug)) {
+    if (citySlugs.has(slug)) {
       return NextResponse.rewrite(
         new URL(`/paella-city/${slug}`, request.url)
       );

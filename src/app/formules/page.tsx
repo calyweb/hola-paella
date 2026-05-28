@@ -1,16 +1,22 @@
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { formules } from "@/data/formules";
+import { SITE, JsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata = {
   title: "Nos formules",
   description:
     "Livraison à domicile ou chef privé : choisissez la formule paella qui correspond à votre événement.",
+  alternates: { canonical: `${SITE.url}/formules` },
 };
 
 export default function FormulesPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([
+        { name: "Accueil", url: SITE.url },
+        { name: "Nos formules", url: `${SITE.url}/formules` },
+      ])} />
       <section className="warm-bg pt-16 pb-14 px-5 sm:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="pill mb-5">Nos formules</div>

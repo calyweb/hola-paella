@@ -64,7 +64,7 @@ export function Mood() {
                 src={s.src}
                 alt={s.alt}
                 fill
-                priority
+                loading="lazy"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 50vw, 33vw"
               />

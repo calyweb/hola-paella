@@ -13,8 +13,8 @@ export function GET() {
 - **Chef et gérant :** Nicolas Cubie
 - **Fondé en :** 2018
 - **Activité :** Traiteur espagnol · Paella, tapas, planches, sangria, vins
-- **Zone livraison :** Arcachon → Le Teich (basse saison), Arcachon → Biganos (haute saison)
-- **Zone chef à domicile :** jusqu'au Cap Ferret (sept à juin), jusqu'à Biganos (toute l'année)
+- **Zone livraison + chef à domicile :** Arcachon, Pyla-sur-Mer, La Teste-de-Buch, Gujan-Mestras, Le Teich, La Hume (livraison dès 10 pers, chef dès 23 pers)
+- **Zone chef à domicile uniquement :** Biganos, Mios, Audenge, Lanton, Andernos, Lège, Cap Ferret, Bordeaux (chef dès 23 pers)
 - **Téléphone :** ${SITE.phoneDisplay}
 - **Email :** ${SITE.email}
 - **Site :** ${SITE.url}

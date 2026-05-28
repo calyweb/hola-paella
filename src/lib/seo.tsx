@@ -32,17 +32,6 @@ export const SITE = {
 export const cities = [
   // ── LIVRAISON + CHEF À DOMICILE ──
   {
-    slug: "arcachon",
-    name: "Arcachon",
-    delivery: true,
-    h1: "Livraison paella à Arcachon",
-    intro:
-      "Je livre ma paella à domicile à Arcachon dès 10 personnes, réservation 48h à l'avance. Pour les événements de 23 invités et plus, je me déplace avec mon matériel et je cuisine sur place, devant vos invités.",
-    distance: "Zone de livraison · sans frais",
-    quartiers: ["Centre-ville", "Ville d'Hiver", "L'Aiguillon", "Le Moulleau", "Pereire", "Abatilles"],
-    geo: { lat: 44.6588, lng: -1.1681 },
-  },
-  {
     slug: "pyla",
     name: "Pyla-sur-Mer",
     delivery: true,
@@ -52,6 +41,17 @@ export const cities = [
     distance: "Zone de livraison · sans frais",
     quartiers: ["Pyla-sur-Mer", "Pilat-Plage"],
     geo: { lat: 44.5828, lng: -1.2056 },
+  },
+  {
+    slug: "arcachon",
+    name: "Arcachon",
+    delivery: true,
+    h1: "Livraison paella à Arcachon",
+    intro:
+      "Je livre ma paella à domicile à Arcachon dès 10 personnes, réservation 48h à l'avance. Pour les événements de 23 invités et plus, je me déplace avec mon matériel et je cuisine sur place, devant vos invités.",
+    distance: "Zone de livraison · sans frais",
+    quartiers: ["Centre-ville", "Ville d'Hiver", "L'Aiguillon", "Le Moulleau", "Pereire", "Abatilles"],
+    geo: { lat: 44.6588, lng: -1.1681 },
   },
   {
     slug: "la-teste-de-buch",
@@ -65,6 +65,28 @@ export const cities = [
     geo: { lat: 44.6308, lng: -1.1428 },
   },
   {
+    slug: "cazaux",
+    name: "Cazaux",
+    delivery: true,
+    h1: "Livraison paella a Cazaux",
+    intro:
+      "Je livre votre paella a Cazaux des 10 personnes, reservation 48h a l'avance. Chef a domicile egalement disponible des 23 invites. Cazaux fait partie de ma zone de livraison principale.",
+    distance: "Zone de livraison - sans frais",
+    quartiers: ["Cazaux centre", "Lac de Cazaux"],
+    geo: { lat: 44.5833, lng: -1.1333 },
+  },
+  {
+    slug: "la-hume",
+    name: "La Hume",
+    delivery: true,
+    h1: "Livraison paella à La Hume",
+    intro:
+      "Je livre votre paella à La Hume dès 10 personnes, réservation 48h à l'avance. Chef à domicile également disponible dès 23 invités. Zone de livraison principale.",
+    distance: "Zone de livraison · sans frais",
+    quartiers: ["La Hume", "Port de La Hume"],
+    geo: { lat: 44.6400, lng: -1.0900 },
+  },
+  {
     slug: "gujan-mestras",
     name: "Gujan-Mestras",
     delivery: true,
@@ -72,7 +94,7 @@ export const cities = [
     intro:
       "Je livre votre paella à Gujan-Mestras dès 10 personnes, réservation 48h à l'avance. Chef à domicile également disponible dès 23 invités. Zone de livraison principale.",
     distance: "Zone de livraison · sans frais",
-    quartiers: ["Gujan centre", "Mestras", "Port de Larros", "La Hume"],
+    quartiers: ["Gujan centre", "Mestras", "Port de Larros"],
     geo: { lat: 44.6342, lng: -1.0681 },
   },
   {
@@ -85,18 +107,6 @@ export const cities = [
     distance: "Zone de livraison · sans frais",
     quartiers: ["Le Teich centre", "Réserve ornithologique"],
     geo: { lat: 44.6342, lng: -1.0214 },
-  },
-
-  {
-    slug: "la-hume",
-    name: "La Hume",
-    delivery: true,
-    h1: "Livraison paella à La Hume",
-    intro:
-      "Je livre votre paella à La Hume dès 10 personnes, réservation 48h à l'avance. Chef à domicile également disponible dès 23 invités. Zone de livraison principale.",
-    distance: "Zone de livraison · sans frais",
-    quartiers: ["La Hume", "Port de La Hume"],
-    geo: { lat: 44.6400, lng: -1.0900 },
   },
 
   // ── CHEF À DOMICILE UNIQUEMENT ──
@@ -235,7 +245,7 @@ export const events = [
 export function localBusinessJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": "FoodEstablishment",
+    "@type": ["FoodEstablishment", "FoodService"],
     "@id": `${SITE.url}#business`,
     name: SITE.name,
     description: SITE.tagline,
@@ -266,6 +276,50 @@ export function localBusinessJsonLd() {
         closes: "19:00",
       },
     ],
+    hasMenu: { "@id": `${SITE.url}/carte#menu` },
+    serviceType: "Catering",
+  };
+}
+
+export function menuJsonLd(items: { name: string; description: string; price: number; category: string }[]) {
+  const sections: Record<string, typeof items> = {};
+  for (const item of items) {
+    if (!sections[item.category]) sections[item.category] = [];
+    sections[item.category].push(item);
+  }
+  return {
+    "@context": "https://schema.org",
+    "@type": "Menu",
+    "@id": `${SITE.url}/carte#menu`,
+    name: "Carte Hola Paella",
+    url: `${SITE.url}/carte`,
+    hasMenuSection: Object.entries(sections).map(([cat, menuItems]) => ({
+      "@type": "MenuSection",
+      name: cat.charAt(0).toUpperCase() + cat.slice(1),
+      hasMenuItem: menuItems.map((m) => ({
+        "@type": "MenuItem",
+        name: m.name,
+        description: m.description,
+        offers: {
+          "@type": "Offer",
+          price: String(m.price),
+          priceCurrency: "EUR",
+        },
+      })),
+    })),
+  };
+}
+
+export function personJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: SITE.chefName,
+    jobTitle: "Chef traiteur",
+    worksFor: { "@id": `${SITE.url}#business` },
+    knowsAbout: ["Paella", "Spanish cuisine", "Catering", "Tapas", "Charcuterie iberique"],
+    image: `${SITE.url}/images/about-team.jpg`,
+    url: `${SITE.url}/a-propos`,
   };
 }
 
@@ -275,9 +329,17 @@ export function serviceJsonLd(name: string, description: string, areaName?: stri
     "@type": "Service",
     name,
     description,
+    url: typeof window !== "undefined" ? window.location.href : undefined,
     provider: { "@id": `${SITE.url}#business` },
     areaServed: areaName ? { "@type": "City", name: areaName } : SITE.serviceArea.map((c) => ({ "@type": "City", name: c })),
     serviceType: "Paella catering",
+    offers: {
+      "@type": "AggregateOffer",
+      lowPrice: "18",
+      highPrice: "21",
+      priceCurrency: "EUR",
+      offerCount: "4",
+    },
   };
 }
 

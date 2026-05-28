@@ -1,14 +1,20 @@
 import { DevisForm } from "./DevisForm";
+import { SITE, JsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata = {
   title: "Demander un devis",
   description:
     "Demandez votre devis paella personnalisé. Réponse sous 24h pour votre événement sur le Bassin d'Arcachon ou à Bordeaux.",
+  alternates: { canonical: `${SITE.url}/devis` },
 };
 
 export default function DevisPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([
+        { name: "Accueil", url: SITE.url },
+        { name: "Demander un devis", url: `${SITE.url}/devis` },
+      ])} />
       <section className="warm-bg pt-16 pb-14 px-5 sm:px-8">
         <div className="max-w-5xl mx-auto text-center">
           <div className="pill mb-5">Devis personnalisé · Réponse sous 24h</div>
@@ -24,7 +30,7 @@ export default function DevisPage() {
         </div>
       </section>
 
-      <section className="bg-paper px-5 sm:px-8 pt-24 pb-24">
+      <section className="bg-paper px-5 sm:px-8 pt-12 pb-24">
         <DevisForm />
       </section>
     </>

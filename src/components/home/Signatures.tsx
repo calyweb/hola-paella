@@ -11,7 +11,7 @@ export function Signatures() {
       <div className="max-w-[1440px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div className="max-w-xl">
-            <div className="pill mb-5">Les incontournables</div>
+            <div className="pill mb-5">Nos paellas</div>
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.05]">
               Nos paellas
               <br />
@@ -36,7 +36,7 @@ export function Signatures() {
                   src={item.image}
                   alt={item.name}
                   fill
-                  priority={idx < 4}
+                  loading="lazy"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 25vw"
                 />
