@@ -42,7 +42,7 @@ export const categoryMeta: Record<
     accent: "olive",
   },
   sangrias: {
-    label: "Sangrias maison",
+    label: "Apéritifs",
     tagline: "Bag-in-Box 3L ou 5L · toujours fraîche, jusqu'à la dernière goutte.",
     emoji: "🍷",
     accent: "terracotta",
