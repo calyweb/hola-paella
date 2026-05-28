@@ -24,7 +24,7 @@ export const formules: Formule[] = [
       "Je cuisine dans mes locaux, je livre chaud chez vous. Vous gardez la maîtrise de votre soirée, je garantis le goût dans l'assiette. Règlement à la livraison, CB ou espèces.",
     minGuests: 10,
     notice: "48h à l'avance",
-    zone: "Bassin d'Arcachon → Bordeaux",
+    zone: "Pyla · Arcachon · La Teste · Cazaux · La Hume · Gujan · Le Teich",
     includes: [
       "Paella cuisinée le jour même",
       "Tapas et planches dressées",
@@ -42,10 +42,10 @@ export const formules: Formule[] = [
     badge: "Dès 23 personnes",
     tagline: "Je viens chez vous, avec mon matériel.",
     description:
-      "J'arrive avec mon matériel et je cuisine votre repas devant vos invités. Vous profitez de la soirée, je m'occupe du reste — l'organisation, la cuisson, le service. Du Bassin d'Arcachon à Bordeaux.",
+      "J'arrive avec mon matériel et je cuisine votre repas devant vos invités. Vous profitez de la soirée, je m'occupe du reste — l'organisation, la cuisson, le service. Bassin d'Arcachon & Bordeaux.",
     minGuests: 23,
     notice: "72h à l'avance",
-    zone: "Bassin d'Arcachon → Bordeaux",
+    zone: "Bassin d'Arcachon & Bordeaux",
     includes: [
       "J'arrive avec tout mon matériel",
       "Cuisson en direct devant vos invités",
