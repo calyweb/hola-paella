@@ -30,13 +30,13 @@ export const categoryMeta: Record<
     accent: "saffron",
   },
   tapas: {
-    label: "Tapas tartinables",
+    label: "Tapas",
     tagline: "Pour environ 5 personnes · servis avec toasts classiques & multi-grains.",
     emoji: "🦐",
     accent: "terracotta",
   },
   planches: {
-    label: "Planches dégustation",
+    label: "Planches",
     tagline: "1 planche pour 8 personnes · servie avec pan con tomate à la catalane.",
     emoji: "🥓",
     accent: "olive",
