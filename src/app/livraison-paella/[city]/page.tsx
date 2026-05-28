@@ -6,7 +6,7 @@ import { ArrowRight, Check, Phone } from "lucide-react";
 import { cities, SITE, JsonLd, serviceJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 
 export function generateStaticParams() {
-  return cities.map((c) => ({ city: c.slug }));
+  return cities.filter((c) => c.delivery).map((c) => ({ city: c.slug }));
 }
 
 export async function generateMetadata({

@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/mentions-legales`, lastModified: lastUpdate, priority: 0.3 },
   ];
 
-  const cityPages: MetadataRoute.Sitemap = cities.map((c) => ({
+  const cityPages: MetadataRoute.Sitemap = cities.filter((c) => c.delivery).map((c) => ({
     url: `${base}/livraison-paella-${c.slug}`,
     lastModified: lastUpdate,
     priority: 0.85,

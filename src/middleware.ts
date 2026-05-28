@@ -1,7 +1,12 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-// Tous les slugs de villes (pages /paella-[city])
+// Villes avec livraison → /livraison-paella-X rewrites vers /livraison-paella/X
+const deliverySlugs = new Set([
+  "pyla", "arcachon", "la-teste-de-buch", "cazaux", "la-hume", "gujan-mestras", "le-teich",
+]);
+
+// Toutes les villes → /paella-X rewrites vers /paella-city/X
 const citySlugs = new Set([
   "pyla", "arcachon", "la-teste-de-buch", "cazaux", "la-hume", "gujan-mestras", "le-teich",
   "biganos", "mios", "audenge", "lanton", "andernos", "lege", "cap-ferret", "bordeaux",
@@ -10,9 +15,9 @@ const citySlugs = new Set([
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // /livraison-paella-arcachon → /livraison-paella/arcachon
+  // /livraison-paella-arcachon → /livraison-paella/arcachon (villes avec livraison uniquement)
   const cityMatch = pathname.match(/^\/livraison-paella-(.+)$/);
-  if (cityMatch) {
+  if (cityMatch && deliverySlugs.has(cityMatch[1])) {
     return NextResponse.rewrite(
       new URL(`/livraison-paella/${cityMatch[1]}`, request.url)
     );

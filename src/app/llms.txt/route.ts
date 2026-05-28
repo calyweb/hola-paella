@@ -13,7 +13,7 @@ export function GET() {
 - **Chef et gérant :** Nicolas Cubie
 - **Fondé en :** 2018
 - **Activité :** Traiteur espagnol · Paella, tapas, planches, sangria, vins
-- **Zone livraison + chef à domicile :** Arcachon, Pyla-sur-Mer, La Teste-de-Buch, Gujan-Mestras, Le Teich, La Hume (livraison dès 10 pers, chef dès 23 pers)
+- **Zone livraison + chef à domicile :** Pyla-sur-Mer, Arcachon, La Teste-de-Buch, Cazaux, La Hume, Gujan-Mestras, Le Teich (livraison dès 10 pers, chef dès 23 pers)
 - **Zone chef à domicile uniquement :** Biganos, Mios, Audenge, Lanton, Andernos, Lège, Cap Ferret, Bordeaux (chef dès 23 pers)
 - **Téléphone :** ${SITE.phoneDisplay}
 - **Email :** ${SITE.email}
