@@ -3,6 +3,7 @@ export type Category =
   | "tapas"
   | "planches"
   | "sangrias"
+  | "bieres"
   | "vins"
   | "extras";
 
@@ -43,9 +44,15 @@ export const categoryMeta: Record<
   },
   sangrias: {
     label: "Apéritifs",
-    tagline: "Bag-in-Box 3L ou 5L · toujours fraîche, jusqu'à la dernière goutte.",
+    tagline: "Sangrias maison en Bag-in-Box · préparées dans nos locaux.",
     emoji: "🍷",
     accent: "terracotta",
+  },
+  bieres: {
+    label: "Bières",
+    tagline: "Bière pression à domicile · location tireuse + fût.",
+    emoji: "🍺",
+    accent: "saffron",
   },
   vins: {
     label: "Vins espagnols",
@@ -232,26 +239,83 @@ export const menu: MenuItem[] = [
 
   // SANGRIAS — BIB
   {
-    slug: "sangria-rouge",
-    name: "Sangria rouge maison",
+    slug: "sangria-rouge-3l",
+    name: "Sangria rouge maison · BIB 3L",
     category: "sangrias",
-    tagline: "Bag-in-Box · pack fraîcheur 2 h.",
+    tagline: "Env. 8–9 personnes · pack fraîcheur 2 h.",
     description:
-      "Préparée dans mes locaux. BIB 3L (≈18 verres) ou 5L (≈30 verres).",
-    price: 27,
-    unit: "/ BIB 3L (39€ le 5L)",
+      "Sangria rouge préparée dans nos locaux. Bag-in-Box 3L, environ 8 à 9 personnes.",
+    price: 20,
+    unit: "/ BIB 3L",
     image: "/images/products/sangria-rouge.jpg",
   },
   {
-    slug: "sangria-blanche",
-    name: "Sangria blanche maison",
+    slug: "sangria-rouge-5l",
+    name: "Sangria rouge maison · BIB 5L",
     category: "sangrias",
-    tagline: "Bag-in-Box · pack fraîcheur 2 h.",
+    tagline: "Env. 14–15 personnes · pack fraîcheur 2 h.",
     description:
-      "Préparée dans mes locaux. BIB 3L (≈18 verres) ou 5L (≈30 verres).",
-    price: 27,
-    unit: "/ BIB 3L (39€ le 5L)",
+      "Sangria rouge préparée dans nos locaux. Bag-in-Box 5L, environ 14 à 15 personnes.",
+    price: 30,
+    unit: "/ BIB 5L",
+    image: "/images/products/sangria-rouge.jpg",
+  },
+  {
+    slug: "sangria-blanche-3l",
+    name: "Sangria blanche maison · BIB 3L",
+    category: "sangrias",
+    tagline: "Env. 8–9 personnes · pack fraîcheur 2 h.",
+    description:
+      "Sangria blanche préparée dans nos locaux. Bag-in-Box 3L, environ 8 à 9 personnes.",
+    price: 20,
+    unit: "/ BIB 3L",
     image: "/images/products/sangria-blanche.jpg",
+  },
+  {
+    slug: "sangria-blanche-5l",
+    name: "Sangria blanche maison · BIB 5L",
+    category: "sangrias",
+    tagline: "Env. 14–15 personnes · pack fraîcheur 2 h.",
+    description:
+      "Sangria blanche préparée dans nos locaux. Bag-in-Box 5L, environ 14 à 15 personnes.",
+    price: 30,
+    unit: "/ BIB 5L",
+    image: "/images/products/sangria-blanche.jpg",
+  },
+
+  // BIÈRES — location tireuse + fûts
+  {
+    slug: "location-tireuse",
+    name: "Location tireuse à bière",
+    category: "bieres",
+    tagline: "Livraison et reprise incluses.",
+    description:
+      "Location de la tireuse à bière pour votre événement. À combiner avec un fût Stella Artois ou Leffe.",
+    price: 30,
+    unit: "/ location",
+    image: "/images/products/couverts.jpg",
+  },
+  {
+    slug: "fut-stella-artois",
+    name: "Fût Stella Artois 6L",
+    category: "bieres",
+    tagline: "Bière blonde · environ 12 pintes.",
+    description:
+      "Fût Stella Artois 6 litres, environ 12 pintes. À utiliser avec la tireuse à bière.",
+    price: 48,
+    unit: "/ fût 6L",
+    image: "/images/products/couverts.jpg",
+  },
+  {
+    slug: "fut-leffe",
+    name: "Fût Leffe 6L",
+    category: "bieres",
+    tagline: "Bière d'abbaye · environ 12 pintes.",
+    description:
+      "Fût Leffe 6 litres, environ 12 pintes. À utiliser avec la tireuse à bière.",
+    price: 56,
+    unit: "/ fût 6L",
+    image: "/images/products/couverts.jpg",
   },
 
   // VINS ESPAGNOLS — 5 bouteilles achetées = la 6ème offerte
