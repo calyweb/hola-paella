@@ -6,11 +6,12 @@ import { Plus, Minus } from "lucide-react";
 const faqs = [
   {
     q: "Où livrez-vous la paella à domicile ?",
-    a: "Je livre sur tout le Bassin d'Arcachon et jusqu'à Bordeaux, dès 10 personnes. Réservation 48h à l'avance. Règlement à la livraison en CB ou espèces.",
+    a: "Je livre sur le Bassin d'Arcachon (Pyla, Arcachon, La Teste-de-Buch, Cazaux, La Hume, Gujan-Mestras, Le Teich), dès 10 personnes. Réservation 48h à l'avance. Règlement à la livraison en CB ou espèces.",
   },
   {
     q: "Pour le chef à domicile, jusqu'où vous déplacez-vous ?",
     a: "Je me déplace sur tout le Bassin d'Arcachon et jusqu'à Bordeaux, dès 23 personnes. Réservation 72h à l'avance.",
+
   },
   {
     q: "Combien coûte une paella ?",
@@ -49,7 +50,7 @@ export function FAQ() {
           </h2>
           <p className="mt-6 text-ink-soft leading-relaxed">
             Pas de réponse à votre question&nbsp;? Appelez-moi au{" "}
-            <a href="tel:0646198234" className="text-terracotta font-medium underline decoration-saffron decoration-2 underline-offset-4">
+            <a href="tel:+33646198234" className="text-terracotta font-medium underline decoration-saffron decoration-2 underline-offset-4">
               06 46 19 82 34
             </a>
             .

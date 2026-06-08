@@ -87,6 +87,7 @@ export default async function CityPage({
             `Livraison paella à ${c.name}`,
             `Service de livraison de paella à domicile et de chef privé à ${c.name} et alentours.`,
             c.name,
+            url,
           ),
           faqJsonLd(localFaqs),
           breadcrumbJsonLd([

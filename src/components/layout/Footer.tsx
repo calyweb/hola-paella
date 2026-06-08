@@ -26,7 +26,7 @@ export function Footer() {
               <Link href="/devis" className="btn-saffron whitespace-nowrap">
                 Demander un devis
               </Link>
-              <a href="tel:0646198234" className="btn-ghost border-cream/30 text-cream hover:bg-cream hover:text-ink whitespace-nowrap">
+              <a href="tel:+33646198234" className="btn-ghost border-cream/30 text-cream hover:bg-cream hover:text-ink whitespace-nowrap">
                 <Phone size={16} /> 06 46 19 82 34
               </a>
             </div>
@@ -39,7 +39,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <div className="text-saffron text-xs uppercase tracking-[0.2em] mb-4">Hola Paella</div>
             <p className="text-cream/65 max-w-md leading-relaxed">
-              Je suis Nicolas Cubie, traiteur espagnol sur le Bassin d&apos;Arcachon depuis 2018. Livraison à domicile et chef à domicile à Arcachon, Cap Ferret, Pyla, Bordeaux. Produits sélectionnés en Espagne et chez mes producteurs locaux.
+              Je suis Nicolas Cubie, traiteur espagnol sur le Bassin d&apos;Arcachon depuis 2018. Livraison sur le Bassin d&apos;Arcachon, chef à domicile jusqu&apos;à Bordeaux. Produits sélectionnés en Espagne et chez mes producteurs locaux.
             </p>
           </div>
 
@@ -58,7 +58,7 @@ export function Footer() {
             <ul className="space-y-3 text-cream/75 text-sm">
               <li className="flex items-start gap-2.5">
                 <Phone size={15} className="mt-1 text-saffron shrink-0" />
-                <a href="tel:0646198234" className="hover:text-saffron">06 46 19 82 34</a>
+                <a href="tel:+33646198234" className="hover:text-saffron">06 46 19 82 34</a>
               </li>
               <li className="flex items-start gap-2.5">
                 <Mail size={15} className="mt-1 text-saffron shrink-0" />

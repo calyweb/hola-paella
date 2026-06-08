@@ -32,7 +32,7 @@ export default function ContactPage() {
 
       <section className="bg-paper px-5 sm:px-8 pb-24 pt-24">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
-          <a href="tel:0646198234" className="card-warm p-8 group block">
+          <a href="tel:+33646198234" className="card-warm p-8 group block">
             <div className="w-12 h-12 rounded-2xl bg-terracotta/10 text-terracotta flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
               <Phone size={20} />
             </div>

@@ -20,11 +20,11 @@ export async function generateMetadata({
   const url = `${SITE.url}/paella-${c.slug}`;
   return {
     title: c.delivery
-      ? `Paella ${c.name} — Livraison & chef a domicile`
-      : `Paella ${c.name} — Chef traiteur a domicile`,
+      ? `Paella ${c.name} — Livraison & chef à domicile`
+      : `Paella ${c.name} — Chef traiteur à domicile`,
     description: c.delivery
-      ? `Commandez votre paella a ${c.name}. Livraison a domicile des 10 personnes ou chef sur place des 23 invites. Tapas, planches iberiques, sangria maison.`
-      : `Chef traiteur paella a domicile a ${c.name} des 23 invites. Je viens avec mon materiel et je cuisine devant vos invites. Tapas, planches, sangria.`,
+      ? `Commandez votre paella à ${c.name}. Livraison à domicile dès 10 personnes ou chef sur place dès 23 invités. Tapas, planches ibériques, sangria maison.`
+      : `Chef traiteur paella à domicile à ${c.name} dès 23 invités. Je viens avec mon matériel et je cuisine devant vos invités. Tapas, planches, sangria.`,
     alternates: { canonical: url },
     openGraph: {
       url,
@@ -92,11 +92,12 @@ export default async function PaellaCityPage({
       <JsonLd
         data={[
           serviceJsonLd(
-            `Paella a ${c.name}`,
+            `Paella à ${c.name}`,
             c.delivery
-              ? `Service traiteur paella a ${c.name} : livraison a domicile et chef sur place.`
-              : `Chef traiteur paella a domicile a ${c.name} : je viens cuisiner sur place des 23 invites.`,
+              ? `Service traiteur paella à ${c.name} : livraison à domicile et chef sur place.`
+              : `Chef traiteur paella à domicile à ${c.name} : je viens cuisiner sur place dès 23 invités.`,
             c.name,
+            url,
           ),
           faqJsonLd(faqs),
           breadcrumbJsonLd([

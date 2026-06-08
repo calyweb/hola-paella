@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
     default:
-      "Hola Paella — Traiteur paella cuisinée devant vos invités · Bordeaux & Bassin d'Arcachon",
+      "Hola Paella — Traiteur paella Arcachon & Bordeaux",
     template: "%s · Hola Paella",
   },
   description:

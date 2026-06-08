@@ -44,7 +44,7 @@ export function Origines() {
               <span className="brush">avant tout.</span>
             </h2>
             <p className="mt-7 text-ink-soft text-lg leading-relaxed">
-              Je suis Nicolas, chef d&apos;<strong className="text-ink font-medium">Hola Paella, traiteur espagnol basé sur le Bassin d&apos;Arcachon</strong>. Après 20 ans en restauration, je livre à domicile et je viens cuisiner sur place, d&apos;Arcachon à Bordeaux.
+              Je suis Nicolas, chef d&apos;<strong className="text-ink font-medium">Hola Paella, traiteur espagnol basé sur le Bassin d&apos;Arcachon</strong>. Après 20 ans en restauration, je livre à domicile sur le Bassin d&apos;Arcachon et je viens cuisiner sur place jusqu&apos;à Bordeaux.
             </p>
           </div>
 

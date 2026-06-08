@@ -117,7 +117,7 @@ export default async function EventPage({
     <>
       <JsonLd
         data={[
-          serviceJsonLd(e.h1, e.intro),
+          serviceJsonLd(e.h1, e.intro, undefined, url),
           faqJsonLd(content.faqs),
           breadcrumbJsonLd([
             { name: "Accueil", url: SITE.url },

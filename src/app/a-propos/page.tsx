@@ -6,7 +6,7 @@ import { SITE, JsonLd, breadcrumbJsonLd, personJsonLd } from "@/lib/seo";
 export const metadata = {
   title: "Le traiteur paella du Bassin d'Arcachon",
   description:
-    "Hola Paella : traiteur paella indépendant fondé en 2017, basé à Arcachon. Sourcing en Espagne (riz bomba, safran de la Mancha, Pata Negra), cuisson au feu de bois.",
+    "Hola Paella : traiteur paella indépendant fondé en 2018, basé sur le Bassin d'Arcachon. Sourcing en Espagne (riz bomba, safran de la Mancha, Pata Negra), cuisson au feu de bois.",
   alternates: { canonical: `${SITE.url}/a-propos` },
 };
 
@@ -71,7 +71,7 @@ export default function AboutPage() {
             <p>
               Après <strong className="text-ink font-medium">20 ans dans le monde de la restauration</strong>,
               j&apos;ai lancé Hola Paella en 2018&nbsp;: un concept pratique et convivial,
-              pour des paellas, tapas et planches servis chez vous, sur le Bassin d&apos;Arcachon et jusqu&apos;à Bordeaux.
+              pour des paellas, tapas et planches servis chez vous — livraison sur le Bassin d&apos;Arcachon, chef à domicile jusqu&apos;à Bordeaux.
             </p>
             <p>
               L&apos;idée&nbsp;? Vous laisser profiter d&apos;une soirée ou d&apos;une journée sans le stress

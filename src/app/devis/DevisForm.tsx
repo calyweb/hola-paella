@@ -62,7 +62,7 @@ export function DevisForm() {
         <p className="mt-4 text-ink-soft leading-relaxed">
           Je reviens vers vous rapidement avec une proposition détaillée.
           En attendant, vous pouvez aussi m&apos;appeler directement au{" "}
-          <a href="tel:0646198234" className="text-terracotta font-medium">
+          <a href="tel:+33646198234" className="text-terracotta font-medium">
             06 46 19 82 34
           </a>
           .

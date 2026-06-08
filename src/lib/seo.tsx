@@ -68,10 +68,10 @@ export const cities = [
     slug: "cazaux",
     name: "Cazaux",
     delivery: true,
-    h1: "Livraison paella a Cazaux",
+    h1: "Livraison paella à Cazaux",
     intro:
-      "Je livre votre paella a Cazaux des 10 personnes, reservation 48h a l'avance. Chef a domicile egalement disponible des 23 invites. Cazaux fait partie de ma zone de livraison principale.",
-    distance: "Zone de livraison - sans frais",
+      "Je livre votre paella à Cazaux dès 10 personnes, réservation 48h à l'avance. Chef à domicile également disponible dès 23 invités. Cazaux fait partie de ma zone de livraison principale.",
+    distance: "Zone de livraison · sans frais",
     quartiers: ["Cazaux centre", "Lac de Cazaux"],
     geo: { lat: 44.5833, lng: -1.1333 },
   },
@@ -245,7 +245,7 @@ export const events = [
 export function localBusinessJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": ["FoodEstablishment", "FoodService"],
+    "@type": ["LocalBusiness", "FoodService"],
     "@id": `${SITE.url}#business`,
     name: SITE.name,
     description: SITE.tagline,
@@ -264,20 +264,26 @@ export function localBusinessJsonLd() {
       postalCode: "33260",
       addressCountry: "FR",
     },
-    geo: { "@type": "GeoCoordinates", latitude: 44.6258, longitude: -1.1453 },
+    geo: { "@type": "GeoCoordinates", latitude: 44.62580, longitude: -1.14530 },
     areaServed: SITE.serviceArea.map((c) => ({ "@type": "City", name: c })),
     servesCuisine: ["Spanish", "Mediterranean", "Paella"],
     sameAs: [SITE.social.instagram, SITE.social.facebook, SITE.social.tripadvisor],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "113",
+      bestRating: "5",
+      worstRating: "1",
+    },
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         opens: "09:00",
         closes: "19:00",
       },
     ],
     hasMenu: { "@id": `${SITE.url}/carte#menu` },
-    serviceType: "Catering",
   };
 }
 
@@ -323,22 +329,23 @@ export function personJsonLd() {
   };
 }
 
-export function serviceJsonLd(name: string, description: string, areaName?: string) {
+export function serviceJsonLd(name: string, description: string, areaName?: string, pageUrl?: string) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": pageUrl ? `${pageUrl}#service` : undefined,
     name,
     description,
-    url: typeof window !== "undefined" ? window.location.href : undefined,
+    url: pageUrl,
     provider: { "@id": `${SITE.url}#business` },
     areaServed: areaName ? { "@type": "City", name: areaName } : SITE.serviceArea.map((c) => ({ "@type": "City", name: c })),
     serviceType: "Paella catering",
     offers: {
       "@type": "AggregateOffer",
-      lowPrice: "18",
-      highPrice: "21",
+      lowPrice: "15",
+      highPrice: "25",
       priceCurrency: "EUR",
-      offerCount: "4",
+      offerCount: "5",
     },
   };
 }
