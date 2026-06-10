@@ -214,9 +214,9 @@ export const menu: MenuItem[] = [
     slug: "planche-chorizo-bellota",
     name: "Planche Chorizo ibérique",
     category: "planches",
-    tagline: "Planche d'un seul produit · Pata Negra Bellota.",
+    tagline: "Planche d'un seul produit · Pata Negra.",
     description:
-      "Laissez votre Chorizo Pata Negra Bellota à température ambiante 30 minutes avant dégustation pour optimiser le fondant du gras et révéler son goût exquis.",
+      "Laissez votre Chorizo Pata Negra à température ambiante 30 minutes avant dégustation pour optimiser le fondant du gras et révéler son goût exquis.",
     price: 20,
     unit: "/ planche 8 pers.",
     image: "/images/products/planche-decouverte.jpg",
@@ -236,7 +236,7 @@ export const menu: MenuItem[] = [
     slug: "planche-pata-negra",
     name: "Planche Pata Negra 36 mois",
     category: "planches",
-    tagline: "Jambon ibérique Bellota · affinage 36 mois.",
+    tagline: "Jambon ibérique · affinage 36 mois.",
     description:
       "Le meilleur jambon du monde. Le Pata Negra est le jambon des connaisseurs — 3 ans d'affinage pour ce produit d'exception.",
     price: 48,
