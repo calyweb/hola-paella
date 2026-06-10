@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { Check, ArrowRight, Sparkles } from "lucide-react";
 import { menu, categoryMeta, type Category } from "@/data/menu";
 
@@ -20,6 +21,7 @@ const eventOptions = [
 ];
 
 export function DevisForm() {
+  const searchParams = useSearchParams();
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
   const [data, setData] = useState({
@@ -34,6 +36,14 @@ export function DevisForm() {
     phone: "",
     message: "",
   });
+
+  // Pre-fill formule from URL param e.g. /devis?formule=livraison
+  useEffect(() => {
+    const f = searchParams.get("formule");
+    if (f && formuleOptions.some((o) => o.id === f)) {
+      setData((d) => ({ ...d, formule: f }));
+    }
+  }, [searchParams]);
 
   const update = (k: keyof typeof data, v: unknown) =>
     setData((d) => ({ ...d, [k]: v }));
@@ -79,16 +89,21 @@ export function DevisForm() {
       <div className="flex items-center justify-center gap-3 mb-10">
         {[1, 2, 3, 4].map((n) => (
           <div key={n} className="flex items-center gap-3">
-            <div
-              className={`w-9 h-9 rounded-full flex items-center justify-center text-sm font-medium transition-all ${
-                n === step
-                  ? "bg-terracotta text-paper shadow-lg"
-                  : n < step
-                  ? "bg-olive text-paper"
-                  : "bg-paper border border-ink/15 text-ink-soft"
-              }`}
-            >
-              {n < step ? <Check size={15} /> : n}
+            <div className="flex flex-col items-center gap-1">
+              <div
+                className={`w-9 h-9 rounded-full flex items-center justify-center text-sm font-medium transition-all ${
+                  n === step
+                    ? "bg-terracotta text-paper shadow-lg"
+                    : n < step
+                    ? "bg-olive text-paper"
+                    : "bg-paper border border-ink/15 text-ink-soft"
+                }`}
+              >
+                {n < step ? <Check size={15} /> : n}
+              </div>
+              {n === 3 && (
+                <span className="text-[10px] text-ink-soft/60 leading-none">optionnelle</span>
+              )}
             </div>
             {n < 4 && <div className={`w-10 h-0.5 ${n < step ? "bg-olive" : "bg-ink/10"}`} />}
           </div>
@@ -224,9 +239,12 @@ export function DevisForm() {
         {step === 3 && (
           <div className="space-y-7 animate-fade-up">
             <div>
-              <h2 className="font-display text-3xl text-ink leading-tight">
-                Vos envies à la carte.
-              </h2>
+              <div className="flex items-center gap-3 flex-wrap">
+                <h2 className="font-display text-3xl text-ink leading-tight">
+                  Vos envies à la carte.
+                </h2>
+                <span className="pill text-xs">optionnelle</span>
+              </div>
               <p className="text-ink-soft mt-1">
                 Cochez ce qui vous fait plaisir, on affine ensemble — tout est modulable.
               </p>
@@ -347,14 +365,25 @@ export function DevisForm() {
             ← Retour
           </button>
           {step < 4 ? (
-            <button
-              type="button"
-              onClick={() => setStep(step + 1)}
-              disabled={(step === 1 && !canNext1) || (step === 2 && !canNext2)}
-              className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              Étape suivante <ArrowRight size={16} />
-            </button>
+            <div className="flex items-center gap-3">
+              {step === 3 && (
+                <button
+                  type="button"
+                  onClick={() => setStep(4)}
+                  className="text-sm text-ink-soft hover:text-ink underline underline-offset-2"
+                >
+                  Passer cette étape
+                </button>
+              )}
+              <button
+                type="button"
+                onClick={() => setStep(step + 1)}
+                disabled={(step === 1 && !canNext1) || (step === 2 && !canNext2)}
+                className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Étape suivante <ArrowRight size={16} />
+              </button>
+            </div>
           ) : (
             <button
               type="button"

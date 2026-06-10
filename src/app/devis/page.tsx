@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { DevisForm } from "./DevisForm";
 import { SITE, JsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
@@ -31,7 +32,9 @@ export default function DevisPage() {
       </section>
 
       <section className="bg-paper px-5 sm:px-8 pt-12 pb-24">
-        <DevisForm />
+        <Suspense>
+          <DevisForm />
+        </Suspense>
       </section>
     </>
   );

@@ -1,8 +1,3 @@
-"use client";
-
-import { useState } from "react";
-import { Plus, Minus } from "lucide-react";
-
 const faqs = [
   {
     q: "Où livrez-vous la paella à domicile ?",
@@ -11,11 +6,10 @@ const faqs = [
   {
     q: "Pour le chef à domicile, jusqu'où vous déplacez-vous ?",
     a: "Je me déplace sur tout le Bassin d'Arcachon et jusqu'à Bordeaux, dès 23 personnes. Réservation 72h à l'avance.",
-
   },
   {
     q: "Combien coûte une paella ?",
-    a: "Nos 4 paellas vont de 18 €/pers (Fruits de mer & Poulet bio) à 21 €/pers (Royale : gambas sauvages, poulet bio, lotte, langoustines). Tarif identique en livraison ou avec chef sur place — les frais de déplacement du chef sont calculés selon le lieu.",
+    a: "Mes 4 paellas vont de 18 €/pers (Fruits de mer & Poulet bio) à 21 €/pers (Royale : gambas sauvages, poulet bio, lotte, langoustines). Tarif identique en livraison ou avec chef sur place — les frais de déplacement du chef sont calculés selon le lieu.",
   },
   {
     q: "Quel est le minimum de personnes ?",
@@ -27,7 +21,7 @@ const faqs = [
   },
   {
     q: "Que proposez-vous en dehors de la paella ?",
-    a: "Oui. Je propose aussi des tapas (gambas, chipirons, carpaccio de poulpe), des planches de charcuterie ibérique (Pata Negra, Serrano, Chorizo Bellota), des sangrias maison en Bag-in-Box et une sélection de vins espagnols.",
+    a: "Tapas tartinables (surimi, aubergine vegan, rillettes chorizo/chèvre, crevettes, friture de calamars, chipirons), planches de charcuterie ibérique (Pata Negra, Serrano, Chorizo Bellota), sangrias maison rouge ou blanche, vins espagnols.",
   },
   {
     q: "Peut-on personnaliser le menu ?",
@@ -36,8 +30,6 @@ const faqs = [
 ];
 
 export function FAQ() {
-  const [open, setOpen] = useState<number | null>(0);
-
   return (
     <section className="py-24 lg:py-32 px-5 sm:px-8 bg-paper">
       <div className="max-w-[1440px] mx-auto grid lg:grid-cols-[1fr_1.4fr] gap-14 lg:gap-20">
@@ -59,25 +51,23 @@ export function FAQ() {
 
         <div className="space-y-3">
           {faqs.map((f, i) => (
-            <div
+            <details
               key={i}
-              className="bg-cream/60 border border-ink/8 rounded-2xl overflow-hidden transition-all"
+              open={i === 0}
+              className="bg-cream/60 border border-ink/8 rounded-2xl overflow-hidden group"
             >
-              <button
-                onClick={() => setOpen(open === i ? null : i)}
-                className="w-full px-6 py-5 flex items-center justify-between text-left gap-4"
-              >
+              <summary className="px-6 py-5 flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                 <span className="font-display text-lg text-ink leading-snug">{f.q}</span>
-                <span className="w-8 h-8 rounded-full bg-paper border border-ink/10 flex items-center justify-center shrink-0">
-                  {open === i ? <Minus size={15} /> : <Plus size={15} />}
+                <span className="w-8 h-8 rounded-full bg-paper border border-ink/10 flex items-center justify-center shrink-0 transition-transform group-open:rotate-45">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                    <path d="M7.5 2v11M2 7.5h11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                  </svg>
                 </span>
-              </button>
-              {open === i && (
-                <div className="px-6 pb-6 text-ink-soft leading-relaxed border-t border-ink/8 pt-4">
-                  {f.a}
-                </div>
-              )}
-            </div>
+              </summary>
+              <div className="px-6 pb-6 text-ink-soft leading-relaxed border-t border-ink/8 pt-4">
+                {f.a}
+              </div>
+            </details>
           ))}
         </div>
       </div>

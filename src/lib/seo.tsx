@@ -323,9 +323,10 @@ export function personJsonLd() {
     name: SITE.chefName,
     jobTitle: "Chef traiteur",
     worksFor: { "@id": `${SITE.url}#business` },
-    knowsAbout: ["Paella", "Spanish cuisine", "Catering", "Tapas", "Charcuterie iberique"],
+    knowsAbout: ["Paella", "Spanish cuisine", "Catering", "Tapas", "Charcuterie ibérique"],
     image: `${SITE.url}/images/about-team.jpg`,
     url: `${SITE.url}/a-propos`,
+    sameAs: [SITE.social.instagram, SITE.social.facebook],
   };
 }
 
@@ -342,10 +343,10 @@ export function serviceJsonLd(name: string, description: string, areaName?: stri
     serviceType: "Paella catering",
     offers: {
       "@type": "AggregateOffer",
-      lowPrice: "15",
-      highPrice: "25",
+      lowPrice: "18",
+      highPrice: "21",
       priceCurrency: "EUR",
-      offerCount: "5",
+      offerCount: "4",
     },
   };
 }

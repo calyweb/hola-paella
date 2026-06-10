@@ -88,13 +88,22 @@ export function Header() {
           </Link>
         </div>
 
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden w-11 h-11 rounded-full bg-paper border border-ink/10 flex items-center justify-center"
-          aria-label="Menu"
-        >
-          {open ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <a
+            href="tel:+33646198234"
+            className="w-10 h-10 rounded-full bg-terracotta/10 border border-terracotta/30 flex items-center justify-center text-terracotta"
+            aria-label="Appeler Hola Paella"
+          >
+            <Phone size={16} strokeWidth={2.5} />
+          </a>
+          <button
+            onClick={() => setOpen(!open)}
+            className="w-11 h-11 rounded-full bg-paper border border-ink/10 flex items-center justify-center"
+            aria-label="Menu"
+          >
+            {open ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
       {open && (

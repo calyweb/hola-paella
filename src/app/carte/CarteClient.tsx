@@ -34,14 +34,22 @@ export function CarteClient() {
       {/* Toutes les catégories rendues, seule l'active est visible */}
       {order.map((c) => {
         const items = menu.filter((m) => m.category === c);
+        const meta = categoryMeta[c];
+        // Promo visible si la tagline commence par "Commandez"
+        const promo = meta.tagline.startsWith("Commandez") ? meta.tagline.split(" · ")[0] : null;
         return (
           <section
             key={c}
             className={`pt-6 pb-6 px-5 sm:px-8 ${active === c ? "block" : "hidden"}`}
           >
             <div className="max-w-[1440px] mx-auto">
+              {promo && (
+                <div className="mb-6 inline-flex items-center gap-2 bg-saffron/20 border border-saffron/40 text-ink px-5 py-2.5 rounded-full text-sm font-medium">
+                  <span className="text-saffron-dark">🎁</span> {promo}
+                </div>
+              )}
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {items.map((item, index) => (
+                {items.map((item) => (
                   <article key={item.slug} className="card-warm overflow-hidden flex flex-col">
                     <div className="relative aspect-[5/3] overflow-hidden bg-saffron/10">
                       <Image
@@ -64,13 +72,19 @@ export function CarteClient() {
                       <p className="text-ink-soft text-sm mt-3 leading-relaxed flex-1">
                         {item.description}
                       </p>
-                      <div className="mt-5 pt-4 border-t border-ink/8 flex items-center justify-between">
+                      <div className="mt-5 pt-4 border-t border-ink/8 flex items-center justify-between gap-4 flex-wrap">
                         <span className="font-display text-xl text-ink">
                           {item.price}€
                           <span className="text-xs font-body text-ink-soft font-normal ml-1">
                             {item.unit}
                           </span>
                         </span>
+                        {item.cartonPrice && (
+                          <span className="text-sm text-ink-soft">
+                            <span className="font-semibold text-ink">{item.cartonPrice}€</span>{" "}
+                            {item.cartonUnit}
+                          </span>
+                        )}
                       </div>
                     </div>
                   </article>

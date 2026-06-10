@@ -247,6 +247,25 @@ export default async function CityPage({
         </div>
       </section>
 
+      <section className="py-16 px-5 sm:px-8 bg-cream-warm">
+        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row gap-4 items-center justify-between card-warm p-8">
+          <div>
+            <h2 className="font-display text-2xl text-ink leading-tight">
+              Page traiteur dédiée à {c.name}
+            </h2>
+            <p className="text-ink-soft mt-2">
+              Formules chef à domicile, carte complète et événements à {c.name}.
+            </p>
+          </div>
+          <Link
+            href={`/paella-${c.slug}`}
+            className="btn-ghost shrink-0 group"
+          >
+            Voir paella {c.name} <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
+      </section>
+
       <section className="py-20 px-5 sm:px-8 bg-cream">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-display text-3xl text-ink mb-6">

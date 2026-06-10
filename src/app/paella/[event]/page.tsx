@@ -38,7 +38,7 @@ const eventContent: Record<
       { title: "Devis en ligne en 7 étapes", text: "Vous composez vous-même votre devis en ligne (non contractuel), on revient vers vous pour caler les détails." },
     ],
     faqs: [
-      { q: "Quel budget pour un mariage avec paella ?", a: "Comptez 18 à 21 €/pers pour la paella selon la version choisie, à compléter avec tapas, planches, sangria et vins. Frais de déplacement calculés selon le lieu. Devis personnalisé via notre formulaire en ligne." },
+      { q: "Quel budget pour un mariage avec paella ?", a: "Comptez de 18 à 21 €/pers pour la paella selon la version choisie (Fruits de mer & Poulet bio 18 €, Royale 21 €), à compléter avec tapas, planches, sangria et vins. Frais de déplacement calculés selon le lieu. Devis personnalisé via notre formulaire en ligne." },
       { q: "Combien d'invités pour un mariage paella ?", a: "J'interviens à partir de 23 invités pour la formule chef à domicile. Pour les très grands événements, appelez-moi, on adapte le matériel et l'équipe." },
       { q: "Combien de temps à l'avance réserver ?", a: "Idéalement plusieurs mois pour les samedis de juin à septembre, qui se remplissent vite. Préavis minimum 72 h pour le chef à domicile." },
       { q: "Vous déplacez-vous où pour un mariage ?", a: "Je me déplace de septembre à juin jusqu'au Cap Ferret. Toute l'année jusqu'à Biganos. Pour les autres communes (Bordeaux notamment), c'est sur étude." },
@@ -46,13 +46,13 @@ const eventContent: Record<
   },
   entreprise: {
     hooks: [
-      { title: "Version Bodega pour le cocktail", text: "Nos paellas existent en version Bodega — fruits de mer décortiqués, sans carapaces. Idéal pour le service debout en cocktail dînatoire." },
+      { title: "Paella Del Pueblo pour le cocktail", text: "La Paella Del Pueblo — travers de porc, poulet bio, jambon Serrano, gambas — est idéale pour le service debout en cocktail dînatoire." },
       { title: "Chef à domicile pour effet wow", text: "Pour vos lancements, séminaires, soirées clients — la paella cuisinée sur place devant vos invités fait parler de votre événement." },
       { title: "Facture entreprise", text: "Devis détaillé, facturation pro. On reste cool sur la forme mais carré sur le fond." },
       { title: "Tapas, planches, sangrias", text: "Carpaccio de poulpe, gambas Espelette, chipirons, planches de Pata Negra. Et la sangria maison en Bag-in-Box pour rester fraîche pendant toute la soirée." },
     ],
     faqs: [
-      { q: "Quelle formule pour un cocktail entreprise ?", a: "La paella en version Bodega (fruits de mer décortiqués) accompagnée de tapas et planches de charcuterie ibérique. Service debout, format propre." },
+      { q: "Quelle formule pour un cocktail entreprise ?", a: "La Paella Del Pueblo (travers de porc, poulet bio, jambon Serrano, gambas) accompagnée de tapas et planches de charcuterie ibérique. Service debout, format propre." },
       { q: "Vous gérez la vaisselle pour un événement entreprise ?", a: "Kit couverts bambou éco-responsable disponible en option à 1,50 €/pers. Pour la vaisselle complète, on étudie au cas par cas." },
       { q: "Quel délai pour réserver ?", a: "48 h minimum pour la livraison, 72 h pour le chef à domicile. Pour vos événements stratégiques, prévoyez 2 à 4 semaines." },
       { q: "Vous livrez à Bordeaux pour un événement entreprise ?", a: "Sur étude. Notre zone principale est le Bassin d'Arcachon ; pour Bordeaux et la métropole, contactez-nous et on calcule les frais de déplacement." },
@@ -62,14 +62,14 @@ const eventContent: Record<
     hooks: [
       { title: "Livraison à domicile dès 10 personnes", text: "Pour vos anniversaires entre amis ou en famille, on livre la paella chaude chez vous, prête à servir. Vous restez maître de votre soirée." },
       { title: "Chef à domicile dès 23 invités", text: "Pour les grandes tablées, je viens cuisiner sur place. Zéro stress côté logistique, effet \"wahou\" côté invités." },
-      { title: "Carte personnalisable", text: "Mes 4 paellas (Royale, Del Pueblo, Fruits de mer & Poisson, Fruits de mer & Poulet bio), planches de Pata Negra, sangria maison. J'adapte selon vos envies." },
-      { title: "Tarif clair, sans surprise", text: "Paellas de 18 à 21 €/pers, planches de 20 à 48 €, sangria 27 € le Bag-in-Box 3L. Vous composez votre devis en ligne." },
+      { title: "Carte personnalisable", text: "Mes 4 paellas (Fruits de mer & Poulet bio, Fruits de mer & Poisson, Del Pueblo, Royale), planches de Pata Negra, sangria maison. J'adapte selon vos envies." },
+      { title: "Tarif clair, sans surprise", text: "Paellas de 18 à 21 €/pers, planches de 21 à 29 €, sangria maison BIB 3 L à 27 €. Vous composez votre devis en ligne." },
     ],
     faqs: [
       { q: "Combien coûte une paella pour 30 personnes ?", a: "Entre 540 € (paella Fruits de mer & Poulet bio à 18 €/pers) et 630 € (paella Royale à 21 €/pers) pour la paella seule, à compléter selon votre carte." },
       { q: "Préavis pour un anniversaire ?", a: "48 h minimum pour la livraison, 72 h pour le chef à domicile. En haute saison, prévoyez plusieurs semaines à l'avance." },
       { q: "Vous gérez la vaisselle ?", a: "Option kit couverts bambou éco-responsable à 1,50 €/pers. Pour la vaisselle complète, sur étude." },
-      { q: "Anniversaire enfant possible ?", a: "Bien sûr — la paella Fruits de mer & Poulet bio est douce et plaît aux enfants. J'adapte le menu selon vos invités." },
+      { q: "Anniversaire enfant possible ?", a: "Bien sûr — la paella Fruits de mer & Poulet est douce et plaît aux enfants. J'adapte le menu selon vos invités." },
     ],
   },
   bapteme: {

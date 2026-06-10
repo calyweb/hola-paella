@@ -30,8 +30,8 @@ export async function generateMetadata({
       url,
       title: `Paella ${c.name} · Hola Paella`,
       description: c.delivery
-        ? `Paella livree ou cuisinee sur place a ${c.name}. De 18 a 21 EUR/pers.`
-        : `Chef paella a domicile a ${c.name}. Des 23 invites, de 18 a 21 EUR/pers.`,
+        ? `Paella livrée ou cuisinée sur place à ${c.name}. À partir de 18 €/pers.`
+        : `Chef paella à domicile à ${c.name}. Dès 23 invités, à partir de 18 €/pers.`,
       images: ["/images/hero-paella.jpg"],
     },
   };
@@ -52,38 +52,38 @@ export default async function PaellaCityPage({
   const faqs = c.delivery
     ? [
         {
-          q: `Comment commander une paella a ${c.name} ?`,
-          a: `Remplissez le formulaire de devis en ligne avec votre date, nombre d'invites et preferences. Je vous reponds sous 24h avec une proposition sur mesure.`,
+          q: `Comment commander une paella à ${c.name} ?`,
+          a: `Remplissez le formulaire de devis en ligne avec votre date, nombre d'invités et préférences. Je vous réponds sous 24 h avec une proposition sur mesure.`,
         },
         {
-          q: `Quelles paellas proposez-vous a ${c.name} ?`,
-          a: "4 paellas au choix : Royale (gambas, lotte, langoustines, poulet bio - 21 EUR/pers), Del Pueblo (travers, poulet, Serrano, gambas - 20 EUR/pers), Fruits de mer & Poisson (19 EUR/pers), Fruits de mer & Poulet bio (18 EUR/pers). Toutes disponibles en version classique ou Bodega.",
+          q: `Quelles paellas proposez-vous à ${c.name} ?`,
+          a: "4 paellas au choix : Fruits de mer & Poulet bio (18 €/pers), Fruits de mer & Poisson (19 €/pers), Del Pueblo (20 €/pers), Royale — gambas sauvages, poulet bio, lotte, langoustines (21 €/pers).",
         },
         {
-          q: `Livrez-vous ou cuisinez-vous sur place a ${c.name} ?`,
-          a: `Les deux. Livraison a domicile des 10 personnes (reservation 48h), chef a domicile des 23 invites (reservation 72h). ${c.name} est dans ma zone de livraison principale.`,
+          q: `Livrez-vous ou cuisinez-vous sur place à ${c.name} ?`,
+          a: `Les deux. Livraison à domicile dès 10 personnes (réservation 48 h), chef à domicile dès 23 invités (réservation 72 h). ${c.name} est dans ma zone de livraison principale.`,
         },
         {
           q: `Que proposez-vous en dehors de la paella ?`,
-          a: "Tapas (carpaccio de poulpe, gambas, chipirons), planches de charcuterie iberique (Pata Negra 36 mois, Chorizo Bellota), sangria maison rouge ou blanche en Bag-in-Box, vins espagnols.",
+          a: "Tapas tartinables (surimi, aubergine vegan, rillettes chorizo/chèvre, crevettes, friture de calamars, chipirons), planches de charcuterie ibérique (Pata Negra 36 mois, Chorizo Bellota), sangria maison rouge ou blanche, vins espagnols.",
         },
       ]
     : [
         {
-          q: `Comment commander une paella a ${c.name} ?`,
-          a: `Remplissez le formulaire de devis en ligne avec votre date, nombre d'invites et preferences. Je vous reponds sous 24h avec une proposition sur mesure.`,
+          q: `Comment commander une paella à ${c.name} ?`,
+          a: `Remplissez le formulaire de devis en ligne avec votre date, nombre d'invités et préférences. Je vous réponds sous 24 h avec une proposition sur mesure.`,
         },
         {
-          q: `Quelles paellas proposez-vous a ${c.name} ?`,
-          a: "4 paellas au choix : Royale (gambas, lotte, langoustines, poulet bio - 21 EUR/pers), Del Pueblo (travers, poulet, Serrano, gambas - 20 EUR/pers), Fruits de mer & Poisson (19 EUR/pers), Fruits de mer & Poulet bio (18 EUR/pers). Toutes disponibles en version classique ou Bodega.",
+          q: `Quelles paellas proposez-vous à ${c.name} ?`,
+          a: "4 paellas au choix : Fruits de mer & Poulet bio (18 €/pers), Fruits de mer & Poisson (19 €/pers), Del Pueblo (20 €/pers), Royale — gambas sauvages, poulet bio, lotte, langoustines (21 €/pers).",
         },
         {
-          q: `Quel est le minimum d'invites a ${c.name} ?`,
-          a: `Je me deplace a ${c.name} des 23 invites pour la formule chef a domicile. Je viens avec mon materiel complet et je cuisine devant vos invites. Reservation 72h a l'avance.`,
+          q: `Quel est le minimum d'invités à ${c.name} ?`,
+          a: `Je me déplace à ${c.name} dès 23 invités pour la formule chef à domicile. Je viens avec mon matériel complet et je cuisine devant vos invités. Réservation 72 h à l'avance.`,
         },
         {
           q: `Que proposez-vous en dehors de la paella ?`,
-          a: "Tapas (carpaccio de poulpe, gambas, chipirons), planches de charcuterie iberique (Pata Negra 36 mois, Chorizo Bellota), sangria maison rouge ou blanche en Bag-in-Box, vins espagnols.",
+          a: "Tapas tartinables (surimi, aubergine vegan, rillettes chorizo/chèvre, crevettes, friture de calamars, chipirons), planches de charcuterie ibérique (Pata Negra 36 mois, Chorizo Bellota), sangria maison rouge ou blanche, vins espagnols.",
         },
       ];
 
@@ -119,25 +119,25 @@ export default async function PaellaCityPage({
             <div>
               <div className="pill mb-5">
                 <span className="text-saffron-dark">&#10022;</span>{" "}
-                {c.delivery ? "Livraison & chef a domicile" : "Chef traiteur a domicile"}
+                {c.delivery ? "Livraison & chef à domicile" : "Chef traiteur à domicile"}
               </div>
               <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl text-ink leading-[1.02]">
                 Paella
                 <br />
-                <span className="italic font-light text-terracotta">a {c.name}.</span>
+                <span className="italic font-light text-terracotta">à {c.name}.</span>
               </h1>
               <p className="mt-6 text-ink-soft text-lg leading-relaxed max-w-xl">
                 {c.delivery ? (
                   <>
-                    Commandez votre paella a {c.name} : livraison a domicile des 10 personnes
-                    ou chef sur place des 23 invites. Tapas, planches iberiques, sangria maison.
-                    Du producteur a votre table.
+                    Commandez votre paella à {c.name} : livraison à domicile dès 10 personnes
+                    ou chef sur place dès 23 invités. Tapas, planches ibériques, sangria maison.
+                    Du producteur à votre table.
                   </>
                 ) : (
                   <>
-                    Je me deplace a {c.name} avec mon materiel pour cuisiner votre paella
-                    devant vos invites, des 23 personnes. Tapas, planches iberiques, sangria
-                    maison. Reservation 72h a l&apos;avance.
+                    Je me déplace à {c.name} avec mon matériel pour cuisiner votre paella
+                    devant vos invités, dès 23 personnes. Tapas, planches ibériques, sangria
+                    maison. Réservation 72 h à l&apos;avance.
                   </>
                 )}
               </p>
@@ -153,7 +153,7 @@ export default async function PaellaCityPage({
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/hero-paella.jpg"
-                alt={`Paella a ${c.name}`}
+                alt={`Paella à ${c.name}`}
                 fill
                 priority
                 className="object-cover"
@@ -168,17 +168,17 @@ export default async function PaellaCityPage({
         <div className="max-w-5xl mx-auto">
           <h2 className="font-display text-4xl sm:text-5xl text-ink leading-tight max-w-2xl">
             {c.delivery ? (
-              <>Nos paellas <span className="italic font-light">livrees a {c.name}.</span></>
+              <>Nos paellas <span className="italic font-light">livrées à {c.name}.</span></>
             ) : (
-              <>Nos paellas <span className="italic font-light">a {c.name}.</span></>
+              <>Nos paellas <span className="italic font-light">à {c.name}.</span></>
             )}
           </h2>
           <div className="mt-10 grid md:grid-cols-2 gap-5">
             {[
-              { name: "Paella Royale", price: "21", desc: "Gambas sauvages, poulet bio, lotte, langoustines." },
-              { name: "Paella Del Pueblo", price: "20", desc: "Travers de porc, poulet bio, Serrano, gambas." },
+              { name: "Fruits de mer & Poulet", price: "18", desc: "Gambas sauvages, poulet bio." },
               { name: "Fruits de mer & Poisson", price: "19", desc: "Gambas sauvages, lotte." },
-              { name: "Fruits de mer & Poulet bio", price: "18", desc: "Gambas sauvages, poulet bio." },
+              { name: "Del Pueblo", price: "20", desc: "Travers de porc, poulet bio, jambon Serrano, gambas." },
+              { name: "Royale", price: "21", desc: "Gambas sauvages, poulet bio, lotte, langoustines." },
             ].map((p) => (
               <div key={p.name} className="card-warm p-7 flex justify-between items-start">
                 <div>
@@ -190,11 +190,11 @@ export default async function PaellaCityPage({
             ))}
           </div>
           <p className="mt-6 text-ink-soft text-sm">
-            Toutes servies sur riz au safran, moules, calamars, chorizo, poivrons et epices.
-            Version classique ou Bodega (fruits de mer decortiques).
+            Toutes servies sur riz au safran, moules, calamars, chorizo, poivrons et épices.
+            Toutes servies sur riz au safran, moules, calamars, chorizo, poivrons et épices.
           </p>
           <Link href="/carte" className="inline-flex items-center gap-2 text-[15px] font-semibold text-ink hover:text-terracotta transition-colors group mt-4">
-            Voir la carte complete
+            Voir la carte complète
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
@@ -203,7 +203,7 @@ export default async function PaellaCityPage({
       <section className="py-20 px-5 sm:px-8 bg-paper">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-display text-4xl sm:text-5xl text-ink leading-tight max-w-2xl">
-            Comment ca marche <span className="italic font-light">a {c.name} ?</span>
+            Comment ça marche <span className="italic font-light">à {c.name} ?</span>
           </h2>
           <div className={`mt-10 grid ${c.delivery ? "md:grid-cols-3" : "md:grid-cols-2"} gap-5`}>
             {c.delivery ? (
@@ -211,17 +211,17 @@ export default async function PaellaCityPage({
                 <div className="card-warm p-7">
                   <div className="text-saffron font-display text-4xl mb-3">01</div>
                   <h3 className="font-display text-xl text-ink leading-tight mb-2">Composez votre menu</h3>
-                  <p className="text-ink-soft text-[15px] leading-relaxed">Paellas, tapas, planches, sangrias, vins. Vous choisissez, je m&apos;adapte a votre budget et vos envies.</p>
+                  <p className="text-ink-soft text-[15px] leading-relaxed">Paellas, tapas, planches, sangrias, vins. Vous choisissez, je m&apos;adapte à votre budget et vos envies.</p>
                 </div>
                 <div className="card-warm p-7">
                   <div className="text-saffron font-display text-4xl mb-3">02</div>
                   <h3 className="font-display text-xl text-ink leading-tight mb-2">Je cuisine le jour J</h3>
-                  <p className="text-ink-soft text-[15px] leading-relaxed">Livraison chaude a {c.name} des 10 personnes. Chef a domicile des 23 invites — je viens avec tout mon materiel.</p>
+                  <p className="text-ink-soft text-[15px] leading-relaxed">Livraison chaude à {c.name} dès 10 personnes. Chef à domicile dès 23 invités — je viens avec tout mon matériel.</p>
                 </div>
                 <div className="card-warm p-7">
                   <div className="text-saffron font-display text-4xl mb-3">03</div>
                   <h3 className="font-display text-xl text-ink leading-tight mb-2">Vous profitez</h3>
-                  <p className="text-ink-soft text-[15px] leading-relaxed">Tout est pret. Vous servez vos invites, vous passez une bonne soiree. Le reste, c&apos;est mon affaire.</p>
+                  <p className="text-ink-soft text-[15px] leading-relaxed">Tout est prêt. Vous servez vos invités, vous passez une bonne soirée. Le reste, c&apos;est mon affaire.</p>
                 </div>
               </>
             ) : (
@@ -229,12 +229,12 @@ export default async function PaellaCityPage({
                 <div className="card-warm p-7">
                   <div className="text-saffron font-display text-4xl mb-3">01</div>
                   <h3 className="font-display text-xl text-ink leading-tight mb-2">Composez votre menu</h3>
-                  <p className="text-ink-soft text-[15px] leading-relaxed">Paellas, tapas, planches, sangrias, vins. Vous choisissez, je m&apos;adapte a votre budget et vos envies. Devis en ligne sous 24h.</p>
+                  <p className="text-ink-soft text-[15px] leading-relaxed">Paellas, tapas, planches, sangrias, vins. Vous choisissez, je m&apos;adapte à votre budget et vos envies. Devis en ligne sous 24 h.</p>
                 </div>
                 <div className="card-warm p-7">
                   <div className="text-saffron font-display text-4xl mb-3">02</div>
                   <h3 className="font-display text-xl text-ink leading-tight mb-2">Je viens cuisiner chez vous</h3>
-                  <p className="text-ink-soft text-[15px] leading-relaxed">J&apos;arrive a {c.name} avec mon materiel complet et je cuisine votre paella en direct, devant vos invites. Des 23 personnes.</p>
+                  <p className="text-ink-soft text-[15px] leading-relaxed">J&apos;arrive à {c.name} avec mon matériel complet et je cuisine votre paella en direct, devant vos invités. Dès 23 personnes.</p>
                 </div>
               </>
             )}
@@ -242,10 +242,31 @@ export default async function PaellaCityPage({
         </div>
       </section>
 
+      {c.delivery && (
+        <section className="py-16 px-5 sm:px-8 bg-cream">
+          <div className="max-w-5xl mx-auto flex flex-col sm:flex-row gap-4 items-center justify-between card-warm p-8">
+            <div>
+              <h2 className="font-display text-2xl text-ink leading-tight">
+                Page livraison dédiée à {c.name}
+              </h2>
+              <p className="text-ink-soft mt-2">
+                Horaires, quartiers desservis, conditions et FAQ spécifiques à la livraison.
+              </p>
+            </div>
+            <Link
+              href={`/livraison-paella-${c.slug}`}
+              className="btn-ghost shrink-0 group"
+            >
+              Voir livraison {c.name} <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </section>
+      )}
+
       <section className="py-20 px-5 sm:px-8 bg-cream">
         <div className="max-w-3xl mx-auto">
           <h2 className="font-display text-4xl sm:text-5xl text-ink leading-tight mb-10">
-            Questions frequentes
+            Questions fréquentes
           </h2>
           <div className="space-y-3">
             {faqs.map((f) => (
@@ -283,7 +304,7 @@ export default async function PaellaCityPage({
       <section className="py-16 px-5 sm:px-8 bg-cream">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-display text-3xl text-ink mb-6">
-            Paella a {c.name} pour quel evenement&nbsp;?
+            Paella à {c.name} pour quel événement&nbsp;?
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-3">
             {events.map((ev) => (
@@ -304,7 +325,7 @@ export default async function PaellaCityPage({
 
       <section className="py-24 px-5 sm:px-8 bg-paper text-center">
         <h2 className="font-display text-4xl sm:text-5xl text-ink leading-tight max-w-2xl mx-auto">
-          Votre paella a <span className="italic">{c.name},</span> c&apos;est par ici.
+          Votre paella à <span className="italic">{c.name},</span> c&apos;est par ici.
         </h2>
         <Link href="/devis" className="btn-primary mt-7 group">
           Demander un devis <ArrowRight size={18} />
