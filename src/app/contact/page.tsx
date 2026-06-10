@@ -66,7 +66,7 @@ export default function ContactPage() {
             <div className="text-xs uppercase tracking-[0.16em] text-ink-soft mb-1">Réservation</div>
             <div className="font-display text-2xl text-ink leading-tight">Minimum 48 à 72h à l&apos;avance</div>
             <div className="text-ink-soft text-sm mt-2 leading-relaxed">
-              48h pour la livraison, 72h pour une prestation à domicile
+              Plus tôt vous réservez, plus vous avez de chances d&apos;avoir votre date.
             </div>
           </div>
         </div>
