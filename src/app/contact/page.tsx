@@ -38,7 +38,7 @@ export default function ContactPage() {
             </div>
             <div className="text-xs uppercase tracking-[0.16em] text-ink-soft mb-1">Téléphone</div>
             <div className="font-display text-3xl text-ink">06 46 19 82 34</div>
-            <div className="text-ink-soft text-sm mt-2">Du lundi au samedi, de 9h à 19h</div>
+            <div className="text-ink-soft text-sm mt-2">Tous les jours, de 10h à 19h</div>
           </a>
 
           <a href="mailto:contact@hola-paella.fr" className="card-warm p-8 group block">
