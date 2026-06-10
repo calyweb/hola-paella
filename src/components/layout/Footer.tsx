@@ -103,6 +103,14 @@ export function Footer() {
             <li><Link href="/paella-bapteme" className="hover:text-saffron">Paella baptême</Link></li>
             <li><Link href="/paella-entreprise" className="hover:text-saffron">Paella entreprise</Link></li>
             <li><Link href="/paella-soiree-privee" className="hover:text-saffron">Paella soirée privée</Link></li>
+            <li><Link href="/paella-evjf" className="hover:text-saffron">Paella EVJF</Link></li>
+            <li><Link href="/paella-evg" className="hover:text-saffron">Paella EVG</Link></li>
+            <li><Link href="/paella-communion" className="hover:text-saffron">Paella communion</Link></li>
+            <li><Link href="/paella-depart-retraite" className="hover:text-saffron">Paella départ retraite</Link></li>
+            <li><Link href="/paella-cousinade" className="hover:text-saffron">Paella cousinade</Link></li>
+            <li><Link href="/paella-repas-de-chantier" className="hover:text-saffron">Paella repas de chantier</Link></li>
+            <li><Link href="/paella-club-sportif" className="hover:text-saffron">Paella club sportif</Link></li>
+            <li><Link href="/paella-associations" className="hover:text-saffron">Paella associations</Link></li>
           </ul>
 
           <div className="flex flex-col md:flex-row gap-4 justify-between text-xs text-cream/50 pt-6 border-t border-cream/10">

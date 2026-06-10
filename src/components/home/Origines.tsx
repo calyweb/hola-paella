@@ -6,21 +6,21 @@ const piliers = [
     color: "text-terracotta",
     bg: "bg-terracotta/8",
     title: "Cuisinée devant vous",
-    desc: "Je me déplace avec mon matériel complet et je cuisine sur place, devant vos invités. La paella se fait en direct chez vous, le jour J.",
+    desc: "Je me déplace avec tout le matériel nécessaire et je cuisine sur place, devant vos invités. La paella se fait en direct chez vous, le jour J.",
   },
   {
     icon: Leaf,
     color: "text-olive",
     bg: "bg-olive/8",
     title: "Producteurs locaux",
-    desc: "Chipirons et fruits de mer pêchés sur la Côte Basque, poulet bio, sangrias et plats préparés dans mes locaux.",
+    desc: "Chipirons et fruits de mer, poulet bio, sangrias et plats préparés dans mes locaux.",
   },
   {
     icon: MapPin,
     color: "text-saffron-dark",
     bg: "bg-saffron/15",
     title: "Charcuterie ibérique",
-    desc: "Pata Negra Bellota 36 mois, Serrano Duroc 24 mois, Chorizo Bellota. Tous tranchés et dressés sur planche, servis avec piments guindillas.",
+    desc: "Pata Negra 36 mois, Serrano Duroc 24 mois, Chorizo ibérique. Tous tranchés et dressés sur planche, servis avec piments guindillas.",
   },
   {
     icon: Wine,
@@ -44,7 +44,7 @@ export function Origines() {
               <span className="brush">avant tout.</span>
             </h2>
             <p className="mt-7 text-ink-soft text-lg leading-relaxed">
-              Je suis Nicolas, chef d&apos;<strong className="text-ink font-medium">Hola Paella, traiteur espagnol basé sur le Bassin d&apos;Arcachon</strong>. Après 20 ans en restauration, je livre à domicile sur le Bassin d&apos;Arcachon et je viens cuisiner sur place jusqu&apos;à Bordeaux.
+              Je suis Nicolas, chef d&apos;<strong className="text-ink font-medium">Hola Paella, traiteur paella sur le Bassin d&apos;Arcachon</strong>. Après plus de 20 ans en restauration, je livre à domicile sur le Bassin d&apos;Arcachon et je viens cuisiner sur place jusqu&apos;à Bordeaux et alentours.
             </p>
           </div>
 

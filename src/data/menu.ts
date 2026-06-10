@@ -22,6 +22,7 @@ export interface MenuItem {
   cartonUnit?: string;
   classicVersion?: boolean;
   nouveaute?: boolean;
+  surDevis?: boolean;
 }
 
 export const categoryMeta: Record<
@@ -86,7 +87,7 @@ export const menu: MenuItem[] = [
     price: 18,
     unit: "/ pers.",
     highlights: ["Poulet désossé", "Gambas décortiquées"],
-    image: "/images/products/paella-bodega.jpg",
+    image: "/images/paella-poulet-bodega.png",
     classicVersion: true,
   },
   {
@@ -99,7 +100,7 @@ export const menu: MenuItem[] = [
     price: 19,
     unit: "/ pers.",
     highlights: ["Gambas décortiquées", "Lotte"],
-    image: "/images/products/paella-mer.jpg",
+    image: "/images/paella-poisson-bodega.png",
     classicVersion: true,
   },
   {
@@ -112,7 +113,7 @@ export const menu: MenuItem[] = [
     price: 21,
     unit: "/ pers.",
     highlights: ["Gambas décortiquées", "Poulet désossé", "Lotte", "Langoustines décortiquées"],
-    image: "/images/products/paella-royale.jpg",
+    image: "/images/paella-royale-bodega.png",
     classicVersion: true,
   },
   {
@@ -125,8 +126,20 @@ export const menu: MenuItem[] = [
     price: 20,
     unit: "/ pers.",
     highlights: ["Travers de porc", "Gambas décortiquées", "Jambon Serrano"],
-    image: "/images/products/paella-bodega.jpg",
+    image: "/images/paella-del-pueblo.png",
     signature: true,
+  },
+  {
+    slug: "paella-sur-mesure",
+    name: "Paella sur mesure",
+    category: "paellas",
+    tagline: "Homard, truffes, gambas tigrées… j'adapte.",
+    description:
+      "Vous avez une idée précise, un ingrédient en tête, un budget particulier ? Je m'adapte et je source les meilleurs produits pour vous. Rien n'est impossible.",
+    price: 0,
+    unit: "",
+    image: "",
+    surDevis: true,
   },
 
   // TAPAS — ~4 personnes par plat
@@ -139,7 +152,7 @@ export const menu: MenuItem[] = [
       "Savourez la finesse du poulpe réhaussé par les arômes typiques de la cuisine galicienne.",
     price: 30,
     unit: "/ plat (env. 8 pers.)",
-    image: "/images/products/chipirons.jpg",
+    image: "/images/tapas-poulpe.png",
     signature: true,
     nouveaute: true,
   },
@@ -152,18 +165,18 @@ export const menu: MenuItem[] = [
       "Gambas décortiquées par nos soins pour un plaisir immédiat sans se salir les doigts.",
     price: 16,
     unit: "/ plat (env. 4 pers.)",
-    image: "/images/products/gambas.jpg",
+    image: "/images/tapas-gambas.png",
   },
   {
     slug: "chipirons-lard-pyrenees",
     name: "Chipirons au lard poivré des Pyrénées",
     category: "tapas",
-    tagline: "Pêchés sur la Côte Basque.",
+    tagline: "Tout tendre, à l'heure de l'apéritif.",
     description:
-      "Pêchés sur la Côte Basque, ce petit calamar très tendre est un régal à l'heure de l'apéritif.",
+      "Ce petit calamar très tendre est un régal à l'heure de l'apéritif.",
     price: 16,
     unit: "/ plat (env. 4 pers.)",
-    image: "/images/products/chipirons.jpg",
+    image: "/images/tapas-chipirons.png",
     signature: true,
   },
 
@@ -177,7 +190,7 @@ export const menu: MenuItem[] = [
       "Fuet extra, Chorizo ibérique, Jambon Serrano Duroc affinage 24 mois. Servie avec piments guindillas.",
     price: 21,
     unit: "/ planche 8 pers.",
-    image: "/images/products/planche-decouverte.jpg",
+    image: "/images/planche-decouverte.png",
   },
   {
     slug: "planche-pena",
@@ -188,7 +201,7 @@ export const menu: MenuItem[] = [
       "Saucisson Fuet extra, Chorizo ibérique, Jambon Serrano Duroc, Jambon ibérique « Pata Negra » affinage 36 mois. Servie avec piments guindillas.",
     price: 25,
     unit: "/ planche 8 pers.",
-    image: "/images/products/planche-iberique.jpg",
+    image: "/images/planche-pena.png",
   },
   {
     slug: "planche-iberique",
@@ -199,8 +212,7 @@ export const menu: MenuItem[] = [
       "Fuet extra, Chorizo ibérique, Jambon ibérique « Pata Negra » affinage 36 mois. Servie avec piments guindillas.",
     price: 29,
     unit: "/ planche 8 pers.",
-    image: "/images/products/planche-iberique.jpg",
-    signature: true,
+    image: "/images/planche-iberique.png",
   },
   // PLANCHES PRODUIT UNIQUE — pour les amateurs d'un seul produit
   {
@@ -212,7 +224,7 @@ export const menu: MenuItem[] = [
       "Laissez votre Chorizo Pata Negra à température ambiante 30 minutes avant dégustation pour optimiser le fondant du gras et révéler son goût exquis.",
     price: 22,
     unit: "/ planche 8 pers.",
-    image: "/images/products/planche-decouverte.jpg",
+    image: "/images/planche-chorizo.png",
   },
   {
     slug: "planche-serrano-duroc",
@@ -223,7 +235,7 @@ export const menu: MenuItem[] = [
       "La race Duroc est reconnue pour ses qualités gustatives, surtout après 24 mois d'affinage.",
     price: 22,
     unit: "/ planche 8 pers.",
-    image: "/images/products/planche-iberique.jpg",
+    image: "/images/planche-serrano.png",
   },
   {
     slug: "planche-pata-negra",
@@ -234,8 +246,7 @@ export const menu: MenuItem[] = [
       "Le meilleur jambon du monde. Le Pata Negra est le jambon des connaisseurs — 3 ans d'affinage pour ce produit d'exception.",
     price: 48,
     unit: "/ planche 8 pers.",
-    image: "/images/products/planche-iberique.jpg",
-    signature: true,
+    image: "/images/planche-pata-negra.png",
   },
 
   // SANGRIAS — BIB
@@ -250,7 +261,7 @@ export const menu: MenuItem[] = [
     unit: "/ BIB 3L",
     cartonPrice: 39,
     cartonUnit: "/ BIB 5L",
-    image: "/images/products/sangria-rouge.jpg",
+    image: "/images/sangria-rouge.png",
   },
   {
     slug: "sangria-blanche",
@@ -263,23 +274,9 @@ export const menu: MenuItem[] = [
     unit: "/ BIB 3L",
     cartonPrice: 39,
     cartonUnit: "/ BIB 5L",
-    image: "/images/products/sangria-blanche.jpg",
+    image: "/images/sangria-blanche.png",
   },
 
-  // ROSÉ
-  {
-    slug: "chamboredon-belle-rose-2023",
-    name: "Chamboredon Belle Rose 2023",
-    category: "vins",
-    tagline: "Rosé · IGP Coteaux de Béziers · 75cl.",
-    description:
-      "Rosé typique du Languedoc, Cinsault très digeste et rafraîchissant.",
-    price: 13,
-    unit: "/ btl 75cl",
-    cartonPrice: 65,
-    cartonUnit: "/ carton de 6",
-    image: "/images/products/albarino.jpg",
-  },
   // ROUGES
   {
     slug: "bodega-san-gregorio-las-martas-2021",
@@ -292,7 +289,7 @@ export const menu: MenuItem[] = [
     unit: "/ btl 75cl",
     cartonPrice: 65,
     cartonUnit: "/ carton de 6",
-    image: "/images/products/rioja.jpg",
+    image: "/images/vin-rose.png",
   },
   {
     slug: "villa-del-camino-tinto-rioja-2022",
@@ -305,7 +302,7 @@ export const menu: MenuItem[] = [
     unit: "/ btl 75cl",
     cartonPrice: 70,
     cartonUnit: "/ carton de 6",
-    image: "/images/products/rioja.jpg",
+    image: "/images/vin-rouge-las-martas.png",
   },
   // BLANC
   {
@@ -319,7 +316,21 @@ export const menu: MenuItem[] = [
     unit: "/ btl 75cl",
     cartonPrice: 60,
     cartonUnit: "/ carton de 6",
-    image: "/images/products/albarino.jpg",
+    image: "/images/vin-blanc.png",
+  },
+  // ROSÉ
+  {
+    slug: "chamboredon-belle-rose-2023",
+    name: "Chamboredon Belle Rose 2023",
+    category: "vins",
+    tagline: "Rosé · IGP Coteaux de Béziers · 75cl.",
+    description:
+      "Rosé typique du Languedoc, Cinsault très digeste et rafraîchissant.",
+    price: 13,
+    unit: "/ btl 75cl",
+    cartonPrice: 65,
+    cartonUnit: "/ carton de 6",
+    image: "/images/vin-rouge-rioja.png",
   },
 
   // EXTRAS
@@ -344,7 +355,7 @@ export const menu: MenuItem[] = [
     unit: "/ btl 1,5L",
     cartonPrice: 12,
     cartonUnit: "/ carton de 6",
-    image: "/images/products/couverts.jpg",
+    image: "/images/eau-plate-v3.png",
   },
   {
     slug: "eau-abatilles-petillante",
@@ -356,7 +367,7 @@ export const menu: MenuItem[] = [
     unit: "/ btl 1L",
     cartonPrice: 15,
     cartonUnit: "/ carton de 6",
-    image: "/images/products/couverts.jpg",
+    image: "/images/eau-petillante-v2.png",
   },
 ];
 

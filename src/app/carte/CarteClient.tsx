@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { menu, categoryMeta, type Category } from "@/data/menu";
 
@@ -52,14 +53,22 @@ export function CarteClient() {
                 {items.map((item) => (
                   <article key={item.slug} className="card-warm overflow-hidden flex flex-col">
                     <div className="relative aspect-[5/3] overflow-hidden bg-saffron/10">
-                      <Image
-                        src={item.image}
-                        alt={item.name}
-                        fill
-                        loading="lazy"
-                        className="object-cover transition-transform duration-700 hover:scale-105"
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                      />
+                      {item.surDevis ? (
+                        <div className="w-full h-full bg-terracotta flex flex-col items-center justify-center gap-3 px-6 text-center">
+                          <div className="text-saffron text-4xl">✦</div>
+                          <div className="font-display text-paper text-2xl leading-tight">Paella sur mesure</div>
+                          <div className="text-paper/60 text-xs uppercase tracking-[0.2em]">Homard · Truffes · Prestige</div>
+                        </div>
+                      ) : (
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          fill
+                          loading="lazy"
+                          className="object-cover transition-transform duration-700 hover:scale-105"
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                        />
+                      )}
                       {item.signature && !item.nouveaute && (
                         <div className="absolute top-3 left-3 bg-saffron text-ink text-[11px] uppercase tracking-[0.14em] font-semibold px-3 py-1 rounded-full">
                           ✦ Signature
@@ -78,12 +87,16 @@ export function CarteClient() {
                         {item.description}
                       </p>
                       <div className="mt-5 pt-4 border-t border-ink/8 flex items-center justify-between gap-4 flex-wrap">
-                        <span className="font-display text-xl text-ink">
-                          {item.price}€
-                          <span className="text-xs font-body text-ink-soft font-normal ml-1">
-                            {item.unit}
+                        {item.surDevis ? (
+                          <span className="font-display text-xl text-ink">Sur devis</span>
+                        ) : (
+                          <span className="font-display text-xl text-ink">
+                            {item.price}€
+                            <span className="text-xs font-body text-ink-soft font-normal ml-1">
+                              {item.unit}
+                            </span>
                           </span>
-                        </span>
+                        )}
                         {item.cartonPrice && (
                           <span className="text-sm text-ink-soft">
                             <span className="font-semibold text-ink">{item.cartonPrice}€</span>{" "}

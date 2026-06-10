@@ -57,7 +57,7 @@ export default function AboutPage() {
         <div className="max-w-[1440px] mx-auto grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-center">
           <div className="relative aspect-[4/3] rounded-[1.5rem] overflow-hidden bg-saffron/10">
             <Image
-              src="/images/about-team.jpg"
+              src="/images/nicolas-chef-paysage.png"
               alt="Nicolas Cubie, chef Hola Paella"
               fill
               priority

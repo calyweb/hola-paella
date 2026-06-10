@@ -1,7 +1,7 @@
 const faqs = [
   {
     q: "Où livrez-vous la paella à domicile ?",
-    a: "Je livre sur le Bassin d'Arcachon (Pyla, Arcachon, La Teste-de-Buch, Cazaux, La Hume, Gujan-Mestras, Le Teich), dès 10 personnes. Réservation 48h à l'avance. Règlement à la livraison en CB ou espèces.",
+    a: "Je livre sur le Bassin d'Arcachon (Pyla, Arcachon, La Teste-de-Buch, Cazaux, La Hume, Gujan-Mestras, Le Teich), dès 10 personnes. Réservation 48h minimum à l'avance. Règlement à la livraison en CB ou espèces.",
   },
   {
     q: "Pour le chef à domicile, jusqu'où vous déplacez-vous ?",
