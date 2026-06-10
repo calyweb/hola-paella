@@ -55,8 +55,8 @@ export default function ContactPage() {
               <MapPin size={20} />
             </div>
             <div className="text-xs uppercase tracking-[0.16em] text-ink-soft mb-1">Zone d&apos;intervention</div>
-            <div className="font-display text-2xl text-ink leading-tight">La Teste-de-Buch, 33260</div>
-            <div className="text-ink-soft text-sm mt-2 leading-relaxed">Bassin d&apos;Arcachon · Bordeaux Métropole</div>
+            <div className="font-display text-2xl text-ink leading-tight">Gironde · Nord des Landes</div>
+            <div className="text-ink-soft text-sm mt-2 leading-relaxed">Installé sur le Bassin d&apos;Arcachon</div>
           </div>
 
           <div className="card-warm p-8">
