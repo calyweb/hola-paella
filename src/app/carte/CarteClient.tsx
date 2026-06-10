@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { menu, categoryMeta, type Category } from "@/data/menu";
 
-const order: Category[] = ["paellas", "tapas", "planches", "sangrias", "bieres", "vins", "eaux", "extras"];
+const order: Category[] = ["paellas", "tapas", "planches", "sangrias", "vins", "eaux", "extras"];
 
 export function CarteClient() {
   const [active, setActive] = useState<Category>("paellas");

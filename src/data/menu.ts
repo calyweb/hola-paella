@@ -3,7 +3,6 @@ export type Category =
   | "tapas"
   | "planches"
   | "sangrias"
-  | "bieres"
   | "vins"
   | "eaux"
   | "extras";
@@ -53,15 +52,9 @@ export const categoryMeta: Record<
     emoji: "🍷",
     accent: "terracotta",
   },
-  bieres: {
-    label: "Bières",
-    tagline: "Bière pression à domicile · location tireuse + fût.",
-    emoji: "🍺",
-    accent: "saffron",
-  },
   vins: {
     label: "Vins",
-    tagline: "Commandez 5 bouteilles, on vous offre la 6ème ! · Rouges, rosé, blanc · 75cl.",
+    tagline: "Rouges, rosé, blanc · 75cl.",
     emoji: "🍇",
     accent: "olive",
   },
@@ -271,41 +264,6 @@ export const menu: MenuItem[] = [
     cartonPrice: 39,
     cartonUnit: "/ BIB 5L",
     image: "/images/products/sangria-blanche.jpg",
-  },
-
-  // BIÈRES — location tireuse + fûts
-  {
-    slug: "location-tireuse",
-    name: "Location tireuse à bière",
-    category: "bieres",
-    tagline: "Livraison et reprise incluses.",
-    description:
-      "Location de la tireuse à bière pour votre événement. À combiner avec un fût Stella Artois ou Leffe.",
-    price: 30,
-    unit: "/ location",
-    image: "/images/products/couverts.jpg",
-  },
-  {
-    slug: "fut-stella-artois",
-    name: "Fût Stella Artois 6L",
-    category: "bieres",
-    tagline: "Bière blonde · environ 12 pintes.",
-    description:
-      "Fût Stella Artois 6 litres, environ 12 pintes. À utiliser avec la tireuse à bière.",
-    price: 48,
-    unit: "/ fût 6L",
-    image: "/images/products/couverts.jpg",
-  },
-  {
-    slug: "fut-leffe",
-    name: "Fût Leffe 6L",
-    category: "bieres",
-    tagline: "Bière d'abbaye · environ 12 pintes.",
-    description:
-      "Fût Leffe 6 litres, environ 12 pintes. À utiliser avec la tireuse à bière.",
-    price: 56,
-    unit: "/ fût 6L",
-    image: "/images/products/couverts.jpg",
   },
 
   // ROSÉ
