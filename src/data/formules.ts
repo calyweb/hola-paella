@@ -6,6 +6,7 @@ export interface Formule {
   description: string;
   minGuests: number;
   notice: string;
+  noticeNote?: string;
   zone: string;
   includes: string[];
   highlight?: boolean;
@@ -23,12 +24,14 @@ export const formules: Formule[] = [
     description:
       "Je cuisine dans mes locaux, je livre chaud chez vous. Vous gardez la maîtrise de votre soirée, je garantis le goût dans l'assiette. Règlement à la livraison, CB ou espèces.",
     minGuests: 10,
-    notice: "48h à l'avance",
+    notice: "48h à l'avance minimum",
+    noticeNote: "Notre agenda se remplit rapidement, réservez vite !",
     zone: "Pyla · Arcachon · La Teste · Cazaux · La Hume · Gujan · Le Teich",
     includes: [
-      "Paella cuisinée le jour même",
+      "Paella cuisinée pour vous à la dernière minute",
+      "Livrée chaude dans le plat de cuisson",
       "Tapas et planches dressées",
-      "Sélection de boissons locales",
+      "Sélection de boissons",
       "Kit couverts bambou éco (option · 1,50 €/pers)",
     ],
     highlight: true,
@@ -39,18 +42,19 @@ export const formules: Formule[] = [
   {
     slug: "chef-prive",
     name: "Chef à domicile",
-    badge: "Dès 23 personnes",
+    badge: "Dès 24 personnes",
     tagline: "Je viens chez vous, avec mon matériel.",
     description:
       "J'arrive avec mon matériel et je cuisine votre repas devant vos invités. Vous profitez de la soirée, je m'occupe du reste — l'organisation, la cuisson, le service. Bassin d'Arcachon & Bordeaux.",
-    minGuests: 23,
-    notice: "72h à l'avance",
+    minGuests: 24,
+    notice: "72h à l'avance minimum",
+    noticeNote: "Notre agenda se remplit rapidement, réservez vite !",
     zone: "Bassin d'Arcachon & Bordeaux",
     includes: [
       "J'arrive avec tout mon matériel",
       "Cuisson en direct devant vos invités",
       "Mise en place du repas",
-      "Sélection de boissons locales",
+      "Sélection de boissons",
       "Kit couverts bambou éco (option · 1,50 €/pers)",
     ],
     highlight: true,

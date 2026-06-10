@@ -73,6 +73,9 @@ export default function FormulesPage() {
                 <div>
                   <dt className="text-xs uppercase tracking-[0.16em] text-ink-soft">Réservation</dt>
                   <dd className="font-display text-xl text-ink mt-1">{f.notice}</dd>
+                  {f.noticeNote && (
+                    <dd className="text-sm text-ink-soft mt-1 italic">{f.noticeNote}</dd>
+                  )}
                 </div>
                 <div>
                   <dt className="text-xs uppercase tracking-[0.16em] text-ink-soft">Zone</dt>
