@@ -15,7 +15,7 @@ export function Formules() {
             servie <span className="brush brush-terracotta">à votre manière.</span>
           </h2>
           <p className="mt-6 text-ink-soft text-lg leading-relaxed">
-            Que vous receviez 10 amis ou 80 invités, j&apos;adapte le geste sans rien céder
+            Que vous receviez 10 amis ou un grand nombre d&apos;invités, j&apos;adapte le geste sans rien céder
             sur la qualité.
           </p>
         </div>
@@ -29,11 +29,6 @@ export function Formules() {
                 f.highlight ? "ring-2 ring-saffron" : ""
               }`}
             >
-              {f.highlight && (
-                <div className="absolute top-5 left-5 z-10 inline-flex items-center gap-1 bg-saffron text-ink text-[11px] uppercase tracking-[0.18em] font-semibold px-3 py-1.5 rounded-full border border-saffron-dark shadow-lg">
-                  <span>✦</span> Notre signature
-                </div>
-              )}
 
               <div className="relative aspect-[16/10] overflow-hidden bg-saffron/10">
                 <Image

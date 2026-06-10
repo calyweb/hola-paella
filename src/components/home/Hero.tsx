@@ -28,9 +28,9 @@ export function Hero() {
               soin chez des producteurs locaux et espagnols, et mes vins sauront accompagner
               avec goût vos plats et vos soirées tapas.{" "}
               <strong className="text-ink font-medium">
-                Sur Bordeaux et le Bassin d&apos;Arcachon
+                Sur le Bassin d&apos;Arcachon et jusqu&apos;à Bordeaux
               </strong>
-              , dès 10 personnes en livraison, dès 23 pour la cuisson sur place.
+              , dès 10 personnes en livraison, dès 24 pour la cuisson sur place.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mt-9">
@@ -51,10 +51,6 @@ export function Hero() {
                 <span className="ml-2 text-sm text-ink-soft">
                   Travelers&apos; Choice <span className="text-ink-soft/50">·</span> TripAdvisor
                 </span>
-              </div>
-              <div className="hidden sm:block h-6 w-px bg-ink/15" />
-              <div className="text-sm text-ink-soft">
-                <span className="font-medium text-ink">Dès 10 personnes</span> · Livraison ou chef à domicile
               </div>
             </div>
           </div>
@@ -92,7 +88,7 @@ export function Hero() {
                   </defs>
                   <text className="font-display text-[10px] tracking-[0.2em]" fill="currentColor">
                     <textPath href="#circle">
-                      BORDEAUX · ARCACHON · DEPUIS 2018 ·
+                      {"DEPUIS 2018 · BASSIN D'ARCACHON · "}
                     </textPath>
                   </text>
                 </svg>

@@ -52,8 +52,9 @@ export const formules: Formule[] = [
     zone: "Bassin d'Arcachon & Bordeaux",
     includes: [
       "J'arrive avec tout mon matériel",
+      "100% autonome, soyez rassurés",
       "Cuisson en direct devant vos invités",
-      "Mise en place du repas",
+      "Service convivial autour du plat",
       "Sélection de boissons",
       "Kit couverts bambou éco (option · 1,50 €/pers)",
     ],
