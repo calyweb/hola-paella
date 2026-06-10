@@ -21,6 +21,8 @@ export interface MenuItem {
   signature?: boolean;
   cartonPrice?: number;
   cartonUnit?: string;
+  classicVersion?: boolean;
+  nouveaute?: boolean;
 }
 
 export const categoryMeta: Record<
@@ -29,7 +31,7 @@ export const categoryMeta: Record<
 > = {
   paellas: {
     label: "Paellas",
-    tagline: "5 paellas au choix — cuisson au feu de bois, riz bomba, safran.",
+    tagline: "4 paellas déclinables en 2 versions · cuisson au feu de bois, riz bomba, safran.",
     emoji: "🥘",
     accent: "saffron",
   },
@@ -78,61 +80,66 @@ export const categoryMeta: Record<
 };
 
 export const menu: MenuItem[] = [
-  // PAELLAS — base commune : moules, calamars, chorizo, petits pois, poivrons, oignons, riz bomba, safran & épices
+  // PAELLAS — base commune : moules, calamars, chorizo, poivrons, riz bomba, safran & épices
+  // Version Bodéga (défaut) = poulet désossé, gambas décortiquées — prêts à déguster
+  // Version Classique = poulet avec os, gambas entières avec coquille — même prix
   {
     slug: "paella-fruits-de-mer-poulet",
-    name: "Paella Fruits de mer & Poulet",
+    name: "Paella Fruits de mer & Poulet Bodéga",
     category: "paellas",
-    tagline: "Gambas sauvages & Poulet bio.",
+    tagline: "Poulet désossé · Gambas décortiquées.",
     description:
-      "Riz au safran, moules, calamars, chorizo, poivrons et épices. Gambas sauvages et poulet bio.",
+      "Version Bodéga : poulet désossé, gambas décortiquées — prêts à déguster. Riz au safran, moules, calamars, chorizo, poivrons et épices.",
     price: 18,
     unit: "/ pers.",
-    highlights: ["Gambas sauvages", "Poulet bio"],
+    highlights: ["Poulet désossé", "Gambas décortiquées"],
     image: "/images/products/paella-bodega.jpg",
+    classicVersion: true,
   },
   {
     slug: "paella-fruits-de-mer-poisson",
-    name: "Paella Fruits de mer & Poisson",
+    name: "Paella Fruits de mer & Poisson Bodéga",
     category: "paellas",
-    tagline: "Gambas sauvages et Lotte.",
+    tagline: "Gambas décortiquées · Lotte.",
     description:
-      "Riz au safran, moules, calamars, chorizo, poivrons et épices. Gambas sauvages et lotte.",
+      "Version Bodéga : gambas décortiquées et lotte. Riz au safran, moules, calamars, chorizo, poivrons et épices.",
     price: 19,
     unit: "/ pers.",
-    highlights: ["Gambas sauvages", "Lotte"],
+    highlights: ["Gambas décortiquées", "Lotte"],
     image: "/images/products/paella-mer.jpg",
+    classicVersion: true,
+  },
+  {
+    slug: "paella-royale",
+    name: "Paella Royale Bodéga",
+    category: "paellas",
+    tagline: "Gambas décortiquées · Poulet désossé · Lotte · Langoustines décortiquées.",
+    description:
+      "Version Bodéga : gambas décortiquées, poulet désossé, lotte et langoustines décortiquées. Riz au safran, moules, calamars, chorizo, poivrons et épices.",
+    price: 21,
+    unit: "/ pers.",
+    highlights: ["Gambas décortiquées", "Poulet désossé", "Lotte", "Langoustines décortiquées"],
+    image: "/images/products/paella-royale.jpg",
+    classicVersion: true,
   },
   {
     slug: "paella-del-pueblo",
     name: "Paella Del Pueblo",
     category: "paellas",
-    tagline: "Travers de porc, Poulet bio, Jambon Serrano, Gambas.",
+    tagline: "Travers de porc · Poulet désossé · Jambon Serrano · Gambas décortiquées.",
     description:
-      "Travers de porc, poulet bio, jambon Serrano et gambas décortiquées. Riz au safran, moules, calamars, chorizo, poivrons et épices.",
+      "Tout désossé et décortiqué. Travers de porc, poulet désossé, jambon Serrano et gambas décortiquées. Riz au safran, moules, calamars, chorizo, poivrons et épices.",
     price: 20,
     unit: "/ pers.",
     highlights: ["Travers de porc", "Gambas décortiquées", "Jambon Serrano"],
     image: "/images/products/paella-bodega.jpg",
-  },
-  {
-    slug: "paella-royale",
-    name: "Paella Royale",
-    category: "paellas",
-    tagline: "Gambas sauvages, Poulet bio, Lotte, Langoustines.",
-    description:
-      "Riz au safran, moules, calamars, chorizo, poivrons et épices. Gambas sauvages, poulet bio, lotte et langoustines.",
-    price: 21,
-    unit: "/ pers.",
-    highlights: ["Gambas sauvages", "Lotte", "Langoustines", "Poulet bio"],
-    image: "/images/products/paella-royale.jpg",
     signature: true,
   },
 
   // TAPAS — ~4 personnes par plat
   {
     slug: "carpaccio-poulpe-galicienne",
-    name: "Carpaccio de poulpe à la Galicienne",
+    name: "Émincé de poulpe à la Galicienne",
     category: "tapas",
     tagline: "Environ 8 personnes.",
     description:
@@ -141,6 +148,7 @@ export const menu: MenuItem[] = [
     unit: "/ plat (env. 8 pers.)",
     image: "/images/products/chipirons.jpg",
     signature: true,
+    nouveaute: true,
   },
   {
     slug: "gambas-ail-espelette",
@@ -163,6 +171,7 @@ export const menu: MenuItem[] = [
     price: 16,
     unit: "/ plat (env. 4 pers.)",
     image: "/images/products/chipirons.jpg",
+    signature: true,
   },
 
   // PLANCHES DÉGUSTATION — 1 planche / 8 personnes, servies avec piments guindillas
@@ -170,9 +179,9 @@ export const menu: MenuItem[] = [
     slug: "planche-decouverte",
     name: "Planche Découverte",
     category: "planches",
-    tagline: "Fuet extra · Chorizo Bellota · Serrano Duroc 24 mois.",
+    tagline: "Fuet extra · Chorizo ibérique · Serrano Duroc 24 mois.",
     description:
-      "Fuet extra, Chorizo Bellota, Jambon Serrano Duroc affinage 24 mois. Servie avec piments guindillas.",
+      "Fuet extra, Chorizo ibérique, Jambon Serrano Duroc affinage 24 mois. Servie avec piments guindillas.",
     price: 21,
     unit: "/ planche 8 pers.",
     image: "/images/products/planche-decouverte.jpg",
@@ -181,9 +190,9 @@ export const menu: MenuItem[] = [
     slug: "planche-pena",
     name: "Planche Peña",
     category: "planches",
-    tagline: "Fuet extra · Chorizo Bellota · Serrano Duroc · Pata Negra 36 mois.",
+    tagline: "Fuet extra · Chorizo ibérique · Serrano Duroc · Pata Negra 36 mois.",
     description:
-      "Saucisson Fuet extra, Chorizo Bellota, Jambon Serrano Duroc, Jambon Ibérique Bellota Pata Negra affinage 36 mois. Servie avec piments guindillas.",
+      "Saucisson Fuet extra, Chorizo ibérique, Jambon Serrano Duroc, Jambon ibérique « Pata Negra » affinage 36 mois. Servie avec piments guindillas.",
     price: 25,
     unit: "/ planche 8 pers.",
     image: "/images/products/planche-iberique.jpg",
@@ -192,9 +201,9 @@ export const menu: MenuItem[] = [
     slug: "planche-iberique",
     name: "Planche Ibérique",
     category: "planches",
-    tagline: "Fuet extra · Chorizo Bellota · Pata Negra 36 mois.",
+    tagline: "Fuet extra · Chorizo ibérique · Pata Negra 36 mois.",
     description:
-      "Fuet extra, Chorizo Bellota, Jambon Ibérique Bellota Pata Negra affinage 36 mois. Servie avec piments guindillas.",
+      "Fuet extra, Chorizo ibérique, Jambon ibérique « Pata Negra » affinage 36 mois. Servie avec piments guindillas.",
     price: 29,
     unit: "/ planche 8 pers.",
     image: "/images/products/planche-iberique.jpg",
@@ -203,7 +212,7 @@ export const menu: MenuItem[] = [
   // PLANCHES PRODUIT UNIQUE — pour les amateurs d'un seul produit
   {
     slug: "planche-chorizo-bellota",
-    name: "Planche Chorizo Bellota",
+    name: "Planche Chorizo ibérique",
     category: "planches",
     tagline: "Planche d'un seul produit · Pata Negra Bellota.",
     description:

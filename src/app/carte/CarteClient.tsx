@@ -60,9 +60,14 @@ export function CarteClient() {
                         className="object-cover transition-transform duration-700 hover:scale-105"
                         sizes="(max-width: 768px) 100vw, 33vw"
                       />
-                      {item.signature && (
+                      {item.signature && !item.nouveaute && (
                         <div className="absolute top-3 left-3 bg-saffron text-ink text-[11px] uppercase tracking-[0.14em] font-semibold px-3 py-1 rounded-full">
                           ✦ Signature
+                        </div>
+                      )}
+                      {item.nouveaute && (
+                        <div className="absolute top-3 left-3 bg-terracotta text-paper text-[11px] uppercase tracking-[0.14em] font-semibold px-3 py-1 rounded-full">
+                          ✦ Nouveauté
                         </div>
                       )}
                     </div>
@@ -83,6 +88,11 @@ export function CarteClient() {
                           <span className="text-sm text-ink-soft">
                             <span className="font-semibold text-ink">{item.cartonPrice}€</span>{" "}
                             {item.cartonUnit}
+                          </span>
+                        )}
+                        {item.classicVersion && (
+                          <span className="text-[11px] text-ink-soft border border-ink/15 rounded-full px-2.5 py-1 leading-none">
+                            Dispo aussi en version classique
                           </span>
                         )}
                       </div>

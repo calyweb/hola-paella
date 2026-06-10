@@ -50,7 +50,7 @@ export function Header() {
           <div className="leading-none hidden sm:block">
             <div className="font-display text-xl text-ink tracking-tight">Hola Paella</div>
             <div className="text-[10px] uppercase tracking-[0.18em] text-ink-soft mt-1">
-              Bordeaux · Bassin d&apos;Arcachon
+              Bassin d&apos;Arcachon · Bordeaux
             </div>
           </div>
         </Link>

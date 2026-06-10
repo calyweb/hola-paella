@@ -39,7 +39,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <div className="text-saffron text-xs uppercase tracking-[0.2em] mb-4">Hola Paella</div>
             <p className="text-cream/65 max-w-md leading-relaxed">
-              Je suis Nicolas Cubie, traiteur espagnol sur le Bassin d&apos;Arcachon depuis 2018. Livraison sur le Bassin d&apos;Arcachon, chef à domicile jusqu&apos;à Bordeaux. Produits sélectionnés en Espagne et chez mes producteurs locaux.
+              Je suis Nicolas Cubie, traiteur espagnol sur le Bassin d&apos;Arcachon depuis 2018. Livraison sur le sud Bassin d&apos;Arcachon, chef à domicile jusqu&apos;à Bordeaux. Produits sélectionnés en Espagne et chez mes producteurs locaux.
             </p>
           </div>
 

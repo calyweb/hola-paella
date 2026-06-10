@@ -240,6 +240,70 @@ export const events = [
       "Crémaillère, retrouvailles, soirée entre amis — je livre votre paella à domicile ou je viens cuisiner sur place. Tapas, planches ibériques, sangria maison. Du Bassin d'Arcachon à Bordeaux.",
     badge: "Dès 10 invités",
   },
+  {
+    slug: "evjf",
+    name: "Paella EVJF",
+    h1: "Traiteur paella pour EVJF",
+    intro:
+      "Enterrement de vie de jeune fille sur le Bassin d'Arcachon ? Je livre la paella à domicile dès 10 personnes ou je viens cuisiner sur place pour une ambiance festive garantie. Sangrias maison, tapas, planches ibériques.",
+    badge: "Dès 10 invités",
+  },
+  {
+    slug: "evg",
+    name: "Paella EVG",
+    h1: "Traiteur paella pour EVG",
+    intro:
+      "Enterrement de vie de garçon sur le Bassin d'Arcachon ou à Bordeaux ? La paella au feu de bois cuisinée devant vous, c'est le format idéal. Livraison dès 10 personnes ou chef à domicile pour l'effet spectacle.",
+    badge: "Dès 10 invités",
+  },
+  {
+    slug: "repas-de-chantier",
+    name: "Paella repas de chantier",
+    h1: "Traiteur paella pour repas de chantier",
+    intro:
+      "Repas d'équipe sur chantier, livraison directe sur site. Paella chaude prête à servir dès 10 personnes, sans prise de tête. Format pratique, généreux et convivial.",
+    badge: "Dès 10 personnes",
+  },
+  {
+    slug: "communion",
+    name: "Paella communion",
+    h1: "Traiteur paella pour communion",
+    intro:
+      "Pour la communion de votre enfant, je prépare un repas festif adapté à tous les âges. Paella livrée chaude dès 10 personnes ou chef à domicile dès 23 invités. Menu personnalisable selon vos invités.",
+    badge: "Dès 10 invités",
+  },
+  {
+    slug: "depart-retraite",
+    name: "Paella départ retraite",
+    h1: "Traiteur paella pour départ à la retraite",
+    intro:
+      "Fêtez un départ à la retraite comme il se doit : paella au feu de bois, sangrias maison et planches de Pata Negra. Livraison sur le Bassin d'Arcachon dès 10 personnes, chef à domicile jusqu'à Bordeaux.",
+    badge: "Dès 10 invités",
+  },
+  {
+    slug: "cousinade",
+    name: "Paella cousinade",
+    h1: "Traiteur paella pour cousinade",
+    intro:
+      "La cousinade, c'est fait pour se retrouver autour d'un grand plat. La paella, c'est exactement ça : généreux, convivial, adapté aux grands groupes. Livraison dès 10 personnes ou chef à domicile.",
+    badge: "10 à 200 invités",
+  },
+  {
+    slug: "club-sportif",
+    name: "Paella club sportif",
+    h1: "Traiteur paella pour club sportif",
+    intro:
+      "Fin de saison, tournoi, gala sportif — la paella est le plat idéal pour réunir votre club. Livraison sur site ou chef à domicile. Tarifs adaptés aux groupes, devis sur mesure.",
+    badge: "Dès 10 personnes",
+  },
+  {
+    slug: "associations",
+    name: "Paella associations",
+    h1: "Traiteur paella pour associations",
+    intro:
+      "Assemblée générale, repas annuel, collecte de fonds — je propose des tarifs adaptés aux associations sur le Bassin d'Arcachon et à Bordeaux. Livraison dès 10 personnes ou animation sur place.",
+    badge: "Dès 10 personnes",
+  },
 ];
 
 export function localBusinessJsonLd() {

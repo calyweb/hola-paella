@@ -14,12 +14,12 @@ const values = [
   {
     n: "01",
     title: "Le produit avant tout",
-    text: "Charcuterie ibérique, chipirons et fruits de mer pêchés sur la Côte Basque, fromages traditionnels espagnols, vins bio d'Espagne. Je choisis, je goûte, je tranche.",
+    text: "Charcuterie ibérique, chipirons et fruits de mer, vins espagnols sélectionnés. Je choisis, je goûte, je tranche pour vous.",
   },
   {
     n: "02",
     title: "Cuisiné, pas réchauffé",
-    text: "Je cuisine mes paellas le jour même. Pour la formule chef à domicile, j'arrive avec mon matériel et je cuis devant vos invités. C'est ça qui change tout.",
+    text: "Je cuisine mes paellas le jour même au dernier moment. Pour la formule chef à domicile, j'arrive avec mon matériel et je cuisine devant vos invités. C'est ça qui change tout.",
   },
   {
     n: "03",
@@ -71,7 +71,7 @@ export default function AboutPage() {
             <p>
               Après <strong className="text-ink font-medium">20 ans dans le monde de la restauration</strong>,
               j&apos;ai lancé Hola Paella en 2018&nbsp;: un concept pratique et convivial,
-              pour des paellas, tapas et planches servis chez vous — livraison sur le Bassin d&apos;Arcachon, chef à domicile jusqu&apos;à Bordeaux.
+              pour des paellas et planches de charcuterie servis chez vous — livraison sur le Bassin d&apos;Arcachon, chef à domicile jusqu&apos;à Bordeaux.
             </p>
             <p>
               L&apos;idée&nbsp;? Vous laisser profiter d&apos;une soirée ou d&apos;une journée sans le stress
@@ -79,8 +79,8 @@ export default function AboutPage() {
               la formule chef à domicile, je cuisine directement chez vous devant vos invités.
             </p>
             <p>
-              Je suis attaché à la qualité des produits avant tout. Charcuterie ibérique Pata Negra et Bellota,
-              chipirons et fruits de mer pêchés sur la Côte Basque, poulet bio, vins espagnols sélectionnés.
+              Je suis attaché à la qualité des produits avant tout. Charcuterie ibérique,
+              chipirons et fruits de mer, poulet bio, vins espagnols sélectionnés.
               Mes sangrias sont préparées dans mes locaux et livrées en Bag-in-Box pour rester fraîches
               tout au long du repas.
             </p>

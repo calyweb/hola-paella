@@ -100,6 +100,118 @@ const eventContent: Record<
       { q: "Peut-on commander uniquement des tapas et planches ?", a: "Oui, sans problème. Tapas, planches de charcuterie ibérique et sangria — un format apéritif dînatoire très demandé." },
     ],
   },
+  evjf: {
+    hooks: [
+      { title: "Livraison sur le Bassin dès 10", text: "Je livre la paella chaude à domicile pour votre EVJF. Sangrias maison, tapas, planches — l'apéro et le plat réunis." },
+      { title: "Chef à domicile pour l'effet spectacle", text: "Pour un EVJF inoubliable, je viens cuisiner sur place. La paella en direct, ça crée l'ambiance tout de suite." },
+      { title: "Sangrias maison incluses", text: "Sangria rouge ou blanche préparée dans nos locaux, en Bag-in-Box 3 ou 5 litres. Le combo gagnant pour une soirée réussie." },
+      { title: "Devis rapide sous 24 h", text: "Dites-moi la date, le lieu et le nombre de filles — je vous réponds avec une proposition claire sous 24 h." },
+    ],
+    faqs: [
+      { q: "Vous livrez pour un EVJF sur le Bassin d'Arcachon ?", a: "Oui, je livre sur le sud Bassin d'Arcachon dès 10 personnes. Chef à domicile dès 23 invités, jusqu'à Bordeaux." },
+      { q: "Quel menu pour un EVJF ?", a: "Paella + sangrias + tapas, c'est la formule EVJF idéale. Je m'adapte à votre nombre d'invitées et votre budget." },
+      { q: "Combien de personnes minimum ?", a: "10 pour la livraison, 23 pour le chef à domicile." },
+      { q: "Quel délai pour réserver ?", a: "Minimum 48 h, mais les week-ends de printemps-été partent vite. Prévenez dès que la date est fixée." },
+    ],
+  },
+  evg: {
+    hooks: [
+      { title: "Paella au feu de bois pour l'EVG", text: "La paella cuisinée en direct devant le groupe, c'est le format parfait pour un EVG — convivial, généreux, mémorable." },
+      { title: "Livraison ou chef à domicile", text: "Livraison chaude dès 10 personnes sur le Bassin, chef sur place dès 23 invités jusqu'à Bordeaux." },
+      { title: "Sangrias et planches pour l'apéro", text: "Sangria maison en BIB, planches de Pata Negra, tapas — l'apéro est aussi sérieux que la paella." },
+      { title: "Devis sous 24 h", text: "Date, lieu, nombre — envoyez votre demande, je reviens sous 24 h avec une proposition sur mesure." },
+    ],
+    faqs: [
+      { q: "Vous faites les EVG sur le Bassin d'Arcachon ?", a: "Oui, livraison sur le sud Bassin dès 10 personnes, chef à domicile dès 23 invités sur tout le Bassin et jusqu'à Bordeaux." },
+      { q: "Quel menu pour un EVG ?", a: "Paella Royale ou Del Pueblo pour le plat, sangrias maison, tapas et planches de Pata Negra pour l'apéro. Je m'adapte." },
+      { q: "Combien de personnes minimum ?", a: "10 pour la livraison, 23 pour le chef à domicile." },
+      { q: "Vous livrez le dimanche ?", a: "Oui, je travaille 7 jours sur 7. Les EVG ont souvent lieu le week-end — c'est mon quotidien." },
+    ],
+  },
+  "repas-de-chantier": {
+    hooks: [
+      { title: "Livraison directe sur site", text: "Je livre la paella chaude directement sur votre chantier, prête à servir. Pas de logistique, pas de vaisselle compliquée." },
+      { title: "Format pratique et généreux", text: "La paella, c'est le plat idéal pour nourrir une équipe : généreux, facile à servir, convivial. Dès 10 personnes." },
+      { title: "Kit couverts inclus en option", text: "Kit couvert à usage unique disponible à 1,50 €/pers. Pratique sur chantier, sans corvée de vaisselle." },
+      { title: "Devis rapide sous 24 h", text: "Date, lieu de livraison et nombre de personnes — je vous envoie un devis clair sous 24 h." },
+    ],
+    faqs: [
+      { q: "Vous livrez sur les chantiers du Bassin d'Arcachon ?", a: "Oui, je livre sur le sud Bassin d'Arcachon dès 10 personnes. Donnez-moi l'adresse et l'heure, je m'organise." },
+      { q: "Quelle paella pour un repas de chantier ?", a: "La Paella Fruits de mer & Poulet bio (18 €/pers) ou Del Pueblo (20 €/pers) sont les plus adaptées. Copieuses et faciles à servir." },
+      { q: "Vous fournissez les couverts ?", a: "Oui, kit couvert à usage unique en option à 1,50 €/pers. Pratique et sans contrainte sur un chantier." },
+      { q: "Quel délai pour commander ?", a: "Minimum 48 h à l'avance. Pour les grandes équipes, prévenez dès que possible." },
+    ],
+  },
+  communion: {
+    hooks: [
+      { title: "Menu adapté à tous les âges", text: "La paella Fruits de mer & Poulet bio plaît aux petits comme aux grands. J'adapte les portions et le menu selon vos invités." },
+      { title: "Livraison dès 10 personnes", text: "Paella livrée chaude chez vous, prête à servir. Vous profitez de la cérémonie, je m'occupe du repas." },
+      { title: "Chef à domicile dès 23 invités", text: "Pour une communion avec plus d'invités, je viens cuisiner sur place. Ambiance conviviale garantie." },
+      { title: "Carte à composer selon vos envies", text: "Tapas, planches de charcuterie ibérique, sangria maison — je compose le menu avec vous selon votre budget." },
+    ],
+    faqs: [
+      { q: "Quel budget pour une communion avec paella ?", a: "De 18 à 21 €/pers pour la paella, à compléter avec tapas, planches et sangria. Devis sur mesure via le formulaire." },
+      { q: "La paella convient-elle aux enfants ?", a: "Oui, la paella Fruits de mer & Poulet bio est douce et appréciée des enfants. Je peux adapter les portions." },
+      { q: "Combien de personnes minimum ?", a: "10 pour la livraison, 23 pour le chef à domicile." },
+      { q: "Quel délai pour réserver ?", a: "48 h minimum. Pour les communions du printemps, réservez dès que la date est connue, le carnet se remplit vite." },
+    ],
+  },
+  "depart-retraite": {
+    hooks: [
+      { title: "Un repas à la hauteur de l'événement", text: "Un départ à la retraite, ça se fête dignement. Paella au feu de bois, sangrias maison, planches de Pata Negra — le menu idéal." },
+      { title: "Chef à domicile pour l'effet wow", text: "Je viens cuisiner sur place devant les collègues et amis. La paella en direct, c'est le moment fort de la soirée." },
+      { title: "Livraison dès 10 personnes", text: "Pour un pot de départ plus intime, je livre la paella chaude à domicile ou au bureau. Simple et généreux." },
+      { title: "Devis en ligne sous 24 h", text: "Composez votre menu en ligne et recevez un devis personnalisé sous 24 h." },
+    ],
+    faqs: [
+      { q: "Vous livrez pour un départ en retraite à Bordeaux ?", a: "Je livre sur le sud Bassin d'Arcachon. Pour Bordeaux, je me déplace avec mon matériel pour cuisiner sur place dès 23 invités." },
+      { q: "Quel format pour un pot de départ ?", a: "Livraison dès 10 personnes pour un pot convivial, chef à domicile dès 23 invités pour une soirée plus festive." },
+      { q: "Vous gérez la facture pro ?", a: "Oui, je fournis un devis et une facture en bonne et due forme." },
+      { q: "Quel délai pour réserver ?", a: "Minimum 48 h, idéalement 1 à 2 semaines à l'avance pour être sûr d'avoir votre date." },
+    ],
+  },
+  cousinade: {
+    hooks: [
+      { title: "Le plat idéal pour les grands rassemblements", text: "La paella, c'est fait pour les retrouvailles en famille. Grand format, convivial, tout le monde se sert — l'esprit cousinade." },
+      { title: "Chef à domicile pour l'ambiance", text: "Je viens cuisiner sur place devant toute la famille. La cuisson en direct au feu de bois, ça crée le rassemblement." },
+      { title: "Livraison dès 10 personnes", text: "Pour les cousines et cousins plus proches, je livre la paella chaude directement chez vous." },
+      { title: "Carte complète à composer", text: "Tapas, planches ibériques, sangria maison — je compose le menu avec vous pour que tout le monde se régale." },
+    ],
+    faqs: [
+      { q: "Vous intervenez pour de grands groupes ?", a: "Oui, je m'adapte aux petits comme aux grands groupes. Pour plus de 80 personnes, contactez-moi pour qu'on dimensionne ensemble." },
+      { q: "La paella convient-elle à tous les âges ?", a: "Absolument. La paella Fruits de mer & Poulet est appréciée de tous, des enfants aux grands-parents." },
+      { q: "Vous vous déplacez loin pour une cousinade ?", a: "Je livre sur le sud Bassin d'Arcachon et me déplace jusqu'à Bordeaux et la Gironde pour le chef à domicile." },
+      { q: "Quel délai pour réserver ?", a: "Minimum 48 h, mais pour les grandes réunions de famille, mieux vaut prévoir plusieurs semaines à l'avance." },
+    ],
+  },
+  "club-sportif": {
+    hooks: [
+      { title: "Fin de saison, tournoi, gala", text: "La paella réunit tout le club autour d'un grand plat. Conviviale, généreuse, adaptée aux grands groupes." },
+      { title: "Livraison sur site dès 10 personnes", text: "Je livre directement sur votre terrain ou salle des fêtes. Prêt à servir, sans contrainte logistique." },
+      { title: "Chef à domicile pour l'effet spectacle", text: "Pour les grandes occasions, je viens cuisiner en direct devant les membres du club. Moment fort garanti." },
+      { title: "Tarifs groupes adaptés", text: "Devis sur mesure selon vos besoins. Je m'adapte à votre budget et à votre format." },
+    ],
+    faqs: [
+      { q: "Vous livrez sur les terrains de sport du Bassin ?", a: "Oui, je livre sur le sud Bassin d'Arcachon dès 10 personnes. Donnez-moi l'adresse, je m'adapte." },
+      { q: "Vous proposez des tarifs pour les clubs sportifs ?", a: "Je fais des devis sur mesure selon le nombre de personnes. Contactez-moi pour qu'on adapte ensemble." },
+      { q: "Vous fournissez les couverts ?", a: "Kit couvert à usage unique en option à 1,50 €/pers. Pratique pour les repas en extérieur." },
+      { q: "Quel délai pour réserver ?", a: "Minimum 48 h pour la livraison, 72 h pour le chef sur place. Pour les grands événements sportifs, prévenez à l'avance." },
+    ],
+  },
+  associations: {
+    hooks: [
+      { title: "Repas annuel, AG, collecte de fonds", text: "La paella est le plat des rassemblements associatifs : généreux, simple à organiser, apprécié de tous." },
+      { title: "Livraison sur site dès 10 personnes", text: "Je livre directement sur votre lieu d'événement. Pas de cuisine à gérer, vous vous concentrez sur votre association." },
+      { title: "Chef à domicile pour animer la soirée", text: "Pour vos grandes soirées, je viens cuisiner sur place. La paella en direct crée toujours l'animation." },
+      { title: "Devis adapté à votre budget", text: "Je m'adapte aux contraintes des associations. Contactez-moi pour qu'on trouve la formule qui vous convient." },
+    ],
+    faqs: [
+      { q: "Vous proposez des tarifs pour les associations ?", a: "Je fais des devis sur mesure. Expliquez-moi votre projet et votre budget, on trouvera une solution." },
+      { q: "Vous livrez pour des événements associatifs sur le Bassin ?", a: "Oui, je livre sur le sud Bassin d'Arcachon dès 10 personnes, chef à domicile sur tout le Bassin et jusqu'à Bordeaux." },
+      { q: "Vous fournissez les couverts ?", a: "Kit couvert éco-responsable à usage unique en option à 1,50 €/pers." },
+      { q: "Quel délai pour réserver ?", a: "Minimum 48 h, mais pour les grands repas annuels, réservez plusieurs semaines à l'avance." },
+    ],
+  },
 };
 
 export default async function EventPage({
