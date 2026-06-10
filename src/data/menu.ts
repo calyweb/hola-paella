@@ -217,7 +217,7 @@ export const menu: MenuItem[] = [
     tagline: "Planche d'un seul produit · Pata Negra.",
     description:
       "Laissez votre Chorizo Pata Negra à température ambiante 30 minutes avant dégustation pour optimiser le fondant du gras et révéler son goût exquis.",
-    price: 20,
+    price: 22,
     unit: "/ planche 8 pers.",
     image: "/images/products/planche-decouverte.jpg",
   },
