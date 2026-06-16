@@ -22,7 +22,7 @@ export async function generateMetadata({
     title: `${e.name} — Traiteur paella sur le Bassin d'Arcachon & Bordeaux`,
     description: e.intro.substring(0, 160),
     alternates: { canonical: url },
-    openGraph: { url, title: e.h1, description: e.intro, images: ["/images/hero-paella.jpg"] },
+    openGraph: { url, title: e.h1, description: e.intro, images: ["/images/hero-banner.png"] },
   };
 }
 
@@ -33,13 +33,13 @@ const eventContent: Record<
   mariage: {
     hooks: [
       { title: "Je cuisine sur place", text: "Je viens avec mon matériel et je cuisine votre paella devant vos invités. Spectacle dans l'assiette, photos sublimes, c'est ce que j'aime faire." },
-      { title: "Carte mariage à composer", text: "Tapas et planches de Pata Negra à l'apéritif, paella au plat principal, sangria maison Bag-in-Box. J'adapte le menu à vos envies et votre budget." },
+      { title: "Un repas à votre image", text: "Tapas et planches de Pata Negra à l'apéritif, paella au plat principal, sangria maison Bag-in-Box. J'adapte à vos envies et votre budget." },
       { title: "Cool, mais carré sur les délais", text: "On reste accessibles, sans jargon. Carnets qui se remplissent vite en saison — on confirme votre date contre acompte." },
       { title: "Devis en ligne en 7 étapes", text: "Vous composez vous-même votre devis en ligne (non contractuel), on revient vers vous pour caler les détails." },
     ],
     faqs: [
       { q: "Quel budget pour un mariage avec paella ?", a: "Comptez de 18 à 21 €/pers pour la paella selon la version choisie (Fruits de mer & Poulet bio 18 €, Royale 21 €), à compléter avec tapas, planches, sangria et vins. Frais de déplacement calculés selon le lieu. Devis personnalisé via notre formulaire en ligne." },
-      { q: "Combien d'invités pour un mariage paella ?", a: "J'interviens à partir de 23 invités pour la formule chef à domicile. Pour les très grands événements, appelez-moi, on adapte le matériel et l'équipe." },
+      { q: "Combien d'invités pour un mariage paella ?", a: "J'interviens à partir de 24 invités pour la formule chef à domicile. Pour les très grands événements, appelez-moi, on adapte le matériel et l'équipe." },
       { q: "Combien de temps à l'avance réserver ?", a: "Idéalement plusieurs mois pour les samedis de juin à septembre, qui se remplissent vite. Préavis minimum 72 h pour le chef à domicile." },
       { q: "Vous déplacez-vous où pour un mariage ?", a: "Je me déplace de septembre à juin jusqu'au Cap Ferret. Toute l'année jusqu'à Biganos. Pour les autres communes (Bordeaux notamment), c'est sur étude." },
     ],
@@ -61,8 +61,8 @@ const eventContent: Record<
   anniversaire: {
     hooks: [
       { title: "Livraison à domicile dès 10 personnes", text: "Pour vos anniversaires entre amis ou en famille, on livre la paella chaude chez vous, prête à servir. Vous restez maître de votre soirée." },
-      { title: "Chef à domicile dès 23 invités", text: "Pour les grandes tablées, je viens cuisiner sur place. Zéro stress côté logistique, effet \"wahou\" côté invités." },
-      { title: "Carte personnalisable", text: "Mes 4 paellas (Fruits de mer & Poulet bio, Fruits de mer & Poisson, Del Pueblo, Royale), planches de Pata Negra, sangria maison. J'adapte selon vos envies." },
+      { title: "Chef à domicile dès 24 invités", text: "Pour les grandes tablées, je viens cuisiner sur place. Zéro stress côté logistique, effet \"wahou\" côté invités." },
+      { title: "Carte personnalisable", text: "Mes 4 paellas (Fruits de mer & Poulet Bodéga, Fruits de mer & Poisson Bodéga, Del Pueblo, Royale Bodéga), planches de charcuterie ibérique, sangria maison. J'adapte selon vos envies." },
       { title: "Tarif clair, sans surprise", text: "Paellas de 18 à 21 €/pers, planches de 21 à 29 €, sangria maison BIB 3 L à 27 €. Vous composez votre devis en ligne." },
     ],
     faqs: [
@@ -77,7 +77,7 @@ const eventContent: Record<
       { title: "Un repas convivial et généreux", text: "La paella, c'est le plat familial par excellence. Tout le monde se sert, on partage, on profite — parfait pour un baptême." },
       { title: "Menu adaptable pour les enfants", text: "La paella Fruits de mer & Poulet bio plaît aux petits comme aux grands. J'adapte les quantités et le menu selon vos invités." },
       { title: "Livraison dès 10 personnes", text: "Paella livrée chaude chez vous, prête à servir. Vous vous occupez de la cérémonie, je m'occupe du repas." },
-      { title: "Chef à domicile dès 23 invités", text: "Pour un baptême plus grand, je viens avec mon matériel et je cuisine devant vos invités. Moment convivial garanti." },
+      { title: "Chef à domicile dès 24 invités", text: "Pour un baptême plus grand, je viens avec mon matériel et je cuisine devant vos invités. Moment convivial garanti." },
     ],
     faqs: [
       { q: "Quel budget pour un baptême avec paella ?", a: "De 18 à 21 €/pers pour la paella, à compléter avec tapas, planches et sangria selon vos envies. Devis sur mesure via le formulaire en ligne." },
@@ -89,12 +89,12 @@ const eventContent: Record<
   "soiree-privee": {
     hooks: [
       { title: "Zéro prise de tête", text: "Je livre la paella chaude chez vous, prête à servir. Vous ouvrez la porte, vous servez vos invités, c'est tout." },
-      { title: "L'apéro complet", text: "Tapas (carpaccio de poulpe, gambas, chipirons), planches de Pata Negra Bellota 36 mois, sangria maison en Bag-in-Box. L'apéro est aussi bon que le plat." },
-      { title: "Chef sur place pour les grandes soirées", text: "Dès 23 invités, je viens cuisiner chez vous. La paella se fait devant vos invités — ça lance toujours la soirée." },
+      { title: "L'apéro complet", text: "Tapas (poulpe à la Galicienne, gambas, chipirons), planches de charcuterie ibérique (Pata Negra 36 mois, Chorizo ibérique, Serrano Duroc), sangria maison en Bag-in-Box. L'apéro est aussi bon que le plat." },
+      { title: "Chef sur place pour les grandes soirées", text: "Dès 24 invités, je viens cuisiner chez vous. La paella se fait devant vos invités — ça lance toujours la soirée." },
       { title: "Devis en ligne en 5 minutes", text: "Vous composez votre menu, je vous envoie une proposition sous 24 h. Pas de mauvaise surprise à la facture." },
     ],
     faqs: [
-      { q: "Combien de personnes minimum ?", a: "10 invités pour la livraison, 23 pour le chef à domicile. En dessous de 10, appelez-moi, on voit ensemble." },
+      { q: "Combien de personnes minimum ?", a: "10 invités pour la livraison, 24 pour le chef à domicile. En dessous de 10, appelez-moi, on voit ensemble." },
       { q: "Jusqu'à quelle heure livrez-vous ?", a: "Je m'adapte à votre programme. Dites-moi l'heure du repas, je livre en conséquence." },
       { q: "Vous fournissez les couverts ?", a: "Kit couverts bambou éco-responsable en option à 1,50 €/pers. Compostable, élégant." },
       { q: "Peut-on commander uniquement des tapas et planches ?", a: "Oui, sans problème. Tapas, planches de charcuterie ibérique et sangria — un format apéritif dînatoire très demandé." },
@@ -108,23 +108,23 @@ const eventContent: Record<
       { title: "Devis rapide sous 24 h", text: "Dites-moi la date, le lieu et le nombre de filles — je vous réponds avec une proposition claire sous 24 h." },
     ],
     faqs: [
-      { q: "Vous livrez pour un EVJF sur le Bassin d'Arcachon ?", a: "Oui, je livre sur le sud Bassin d'Arcachon dès 10 personnes. Chef à domicile dès 23 invités, jusqu'à Bordeaux." },
+      { q: "Vous livrez pour un EVJF sur le Bassin d'Arcachon ?", a: "Oui, je livre sur le sud Bassin d'Arcachon dès 10 personnes. Chef à domicile dès 24 invités, jusqu'à Bordeaux." },
       { q: "Quel menu pour un EVJF ?", a: "Paella + sangrias + tapas, c'est la formule EVJF idéale. Je m'adapte à votre nombre d'invitées et votre budget." },
-      { q: "Combien de personnes minimum ?", a: "10 pour la livraison, 23 pour le chef à domicile." },
+      { q: "Combien de personnes minimum ?", a: "10 pour la livraison, 24 pour le chef à domicile." },
       { q: "Quel délai pour réserver ?", a: "Minimum 48 h, mais les week-ends de printemps-été partent vite. Prévenez dès que la date est fixée." },
     ],
   },
   evg: {
     hooks: [
       { title: "Paella au feu de bois pour l'EVG", text: "La paella cuisinée en direct devant le groupe, c'est le format parfait pour un EVG — convivial, généreux, mémorable." },
-      { title: "Livraison ou chef à domicile", text: "Livraison chaude dès 10 personnes sur le Bassin, chef sur place dès 23 invités jusqu'à Bordeaux." },
+      { title: "Livraison ou chef à domicile", text: "Livraison chaude dès 10 personnes sur le Bassin, chef sur place dès 24 invités jusqu'à Bordeaux." },
       { title: "Sangrias et planches pour l'apéro", text: "Sangria maison en BIB, planches de Pata Negra, tapas — l'apéro est aussi sérieux que la paella." },
       { title: "Devis sous 24 h", text: "Date, lieu, nombre — envoyez votre demande, je reviens sous 24 h avec une proposition sur mesure." },
     ],
     faqs: [
-      { q: "Vous faites les EVG sur le Bassin d'Arcachon ?", a: "Oui, livraison sur le sud Bassin dès 10 personnes, chef à domicile dès 23 invités sur tout le Bassin et jusqu'à Bordeaux." },
+      { q: "Vous faites les EVG sur le Bassin d'Arcachon ?", a: "Oui, livraison sur le sud Bassin dès 10 personnes, chef à domicile dès 24 invités sur tout le Bassin et jusqu'à Bordeaux." },
       { q: "Quel menu pour un EVG ?", a: "Paella Royale ou Del Pueblo pour le plat, sangrias maison, tapas et planches de Pata Negra pour l'apéro. Je m'adapte." },
-      { q: "Combien de personnes minimum ?", a: "10 pour la livraison, 23 pour le chef à domicile." },
+      { q: "Combien de personnes minimum ?", a: "10 pour la livraison, 24 pour le chef à domicile." },
       { q: "Vous livrez le dimanche ?", a: "Oui, je travaille 7 jours sur 7. Les EVG ont souvent lieu le week-end — c'est mon quotidien." },
     ],
   },
@@ -146,13 +146,13 @@ const eventContent: Record<
     hooks: [
       { title: "Menu adapté à tous les âges", text: "La paella Fruits de mer & Poulet bio plaît aux petits comme aux grands. J'adapte les portions et le menu selon vos invités." },
       { title: "Livraison dès 10 personnes", text: "Paella livrée chaude chez vous, prête à servir. Vous profitez de la cérémonie, je m'occupe du repas." },
-      { title: "Chef à domicile dès 23 invités", text: "Pour une communion avec plus d'invités, je viens cuisiner sur place. Ambiance conviviale garantie." },
+      { title: "Chef à domicile dès 24 invités", text: "Pour une communion avec plus d'invités, je viens cuisiner sur place. Ambiance conviviale garantie." },
       { title: "Carte à composer selon vos envies", text: "Tapas, planches de charcuterie ibérique, sangria maison — je compose le menu avec vous selon votre budget." },
     ],
     faqs: [
       { q: "Quel budget pour une communion avec paella ?", a: "De 18 à 21 €/pers pour la paella, à compléter avec tapas, planches et sangria. Devis sur mesure via le formulaire." },
       { q: "La paella convient-elle aux enfants ?", a: "Oui, la paella Fruits de mer & Poulet bio est douce et appréciée des enfants. Je peux adapter les portions." },
-      { q: "Combien de personnes minimum ?", a: "10 pour la livraison, 23 pour le chef à domicile." },
+      { q: "Combien de personnes minimum ?", a: "10 pour la livraison, 24 pour le chef à domicile." },
       { q: "Quel délai pour réserver ?", a: "48 h minimum. Pour les communions du printemps, réservez dès que la date est connue, le carnet se remplit vite." },
     ],
   },
@@ -164,8 +164,8 @@ const eventContent: Record<
       { title: "Devis en ligne sous 24 h", text: "Composez votre menu en ligne et recevez un devis personnalisé sous 24 h." },
     ],
     faqs: [
-      { q: "Vous livrez pour un départ en retraite à Bordeaux ?", a: "Je livre sur le sud Bassin d'Arcachon. Pour Bordeaux, je me déplace avec mon matériel pour cuisiner sur place dès 23 invités." },
-      { q: "Quel format pour un pot de départ ?", a: "Livraison dès 10 personnes pour un pot convivial, chef à domicile dès 23 invités pour une soirée plus festive." },
+      { q: "Vous livrez pour un départ en retraite à Bordeaux ?", a: "Je livre sur le sud Bassin d'Arcachon. Pour Bordeaux, je me déplace avec mon matériel pour cuisiner sur place dès 24 invités." },
+      { q: "Quel format pour un pot de départ ?", a: "Livraison dès 10 personnes pour un pot convivial, chef à domicile dès 24 invités pour une soirée plus festive." },
       { q: "Vous gérez la facture pro ?", a: "Oui, je fournis un devis et une facture en bonne et due forme." },
       { q: "Quel délai pour réserver ?", a: "Minimum 48 h, idéalement 1 à 2 semaines à l'avance pour être sûr d'avoir votre date." },
     ],
@@ -239,7 +239,7 @@ export default async function EventPage({
       />
 
       <section className="warm-bg pt-12 pb-20 px-5 sm:px-8">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-[1440px] mx-auto">
           <nav className="text-xs uppercase tracking-[0.16em] text-ink-soft mb-6">
             <Link href="/" className="hover:text-terracotta">Accueil</Link>
             <span className="mx-2">/</span>
@@ -259,7 +259,7 @@ export default async function EventPage({
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mt-7">
                 <Link href="/devis" className="btn-primary group">
-                  Devis pour {e.name.toLowerCase()} <ArrowRight size={18} />
+                  Devis {e.name.toLowerCase().replace("paella pour ", "paella ")} <ArrowRight size={18} />
                 </Link>
                 <a href={`tel:${SITE.phone}`} className="btn-ghost">
                   <Phone size={16} /> {SITE.phoneDisplay}
@@ -268,7 +268,7 @@ export default async function EventPage({
             </div>
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/hero-paella.jpg"
+                src="/images/hero-banner.png"
                 alt={e.h1}
                 fill
                 className="object-cover"
@@ -280,9 +280,9 @@ export default async function EventPage({
       </section>
 
       <section className="py-20 px-5 sm:px-8 bg-paper">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="font-display text-4xl sm:text-5xl text-ink leading-tight max-w-2xl">
-            Notre approche pour <span className="italic font-light">{e.name.toLowerCase()}.</span>
+        <div className="max-w-[1440px] mx-auto">
+          <h2 className="font-display text-4xl sm:text-5xl text-ink leading-tight">
+            Pourquoi choisir <span className="italic font-light">Hola Paella ?</span>
           </h2>
           <div className="mt-10 grid md:grid-cols-2 gap-5">
             {content.hooks.map((b) => (
@@ -299,9 +299,9 @@ export default async function EventPage({
       </section>
 
       <section className="py-20 px-5 sm:px-8 bg-cream">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-[1440px] mx-auto">
           <h2 className="font-display text-4xl sm:text-5xl text-ink leading-tight mb-10">
-            Vos questions sur {e.name.toLowerCase()}
+            Questions fréquentes
           </h2>
           <div className="space-y-3">
             {content.faqs.map((f) => (
@@ -314,19 +314,19 @@ export default async function EventPage({
         </div>
       </section>
 
-      <section className="py-16 px-5 sm:px-8 bg-paper">
-        <div className="max-w-5xl mx-auto">
+      <section className="pt-10 pb-6 px-5 sm:px-8 bg-paper">
+        <div className="max-w-[1440px] mx-auto">
           <h2 className="font-display text-3xl text-ink mb-6">
             Nos zones d&apos;intervention
           </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-            {cities.filter((c) => c.delivery).slice(0, 4).map((c) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-3">
+            {cities.map((c) => (
               <Link
                 key={c.slug}
-                href={`/livraison-paella-${c.slug}`}
+                href={`/paella-${c.slug}`}
                 className="card-warm p-5 hover:bg-saffron/10 group"
               >
-                <div className="font-display text-lg text-ink">{e.name.split(" ").slice(0, 2).join(" ")} {c.name}</div>
+                <div className="font-display text-lg text-ink">Paella {c.name}</div>
                 <div className="text-sm text-ink-soft mt-1 flex items-center gap-1">
                   Voir <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -336,8 +336,8 @@ export default async function EventPage({
         </div>
       </section>
 
-      <section className="py-24 px-5 sm:px-8 bg-paper text-center">
-        <h2 className="font-display text-4xl sm:text-5xl text-ink leading-tight max-w-2xl mx-auto">
+      <section className="py-14 px-5 sm:px-8 bg-paper text-center">
+        <h2 className="font-display text-4xl sm:text-5xl text-ink leading-tight mx-auto">
           On en parle&nbsp;?
         </h2>
         <p className="mt-4 text-ink-soft">Réponse à votre demande sous 24 h.</p>

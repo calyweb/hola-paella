@@ -37,7 +37,7 @@ export const formules: Formule[] = [
     highlight: true,
     startingPrice: 18,
     cta: "Je suis intéressé",
-    image: "/images/ambiance/livraison.jpg",
+    image: "/images/formule-livraison.png",
   },
   {
     slug: "chef-prive",
@@ -45,11 +45,11 @@ export const formules: Formule[] = [
     badge: "Dès 24 personnes",
     tagline: "Je viens chez vous, avec mon matériel.",
     description:
-      "J'arrive avec mon matériel et je cuisine votre repas devant vos invités. Vous profitez de la soirée, je m'occupe du reste — l'organisation, la cuisson, le service. Bassin d'Arcachon & Bordeaux.",
+      "J'arrive avec mon matériel et je cuisine votre repas devant vos invités. Vous profitez de la soirée, je m'occupe du reste — l'organisation, la cuisson, le service. Bassin d'Arcachon, Landes & Bordeaux.",
     minGuests: 24,
     notice: "72h à l'avance minimum",
     noticeNote: "Notre agenda se remplit rapidement, réservez vite !",
-    zone: "Du Bassin d'Arcachon jusqu'à Bordeaux",
+    zone: "Du Bassin d'Arcachon, dans les Landes et jusqu'à Bordeaux",
     includes: [
       "J'arrive avec tout mon matériel",
       "100% autonome, soyez rassurés",
@@ -61,7 +61,7 @@ export const formules: Formule[] = [
     highlight: true,
     startingPrice: 18,
     cta: "Je suis intéressé",
-    image: "/images/ambiance/chef-prive.jpg",
+    image: "/images/formule-chef.png",
   },
 ];
 

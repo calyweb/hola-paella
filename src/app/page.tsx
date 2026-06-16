@@ -5,7 +5,7 @@ import { Origines } from "@/components/home/Origines";
 import { Mood } from "@/components/home/Mood";
 import { Testimonials } from "@/components/home/Testimonials";
 import { FAQ } from "@/components/home/FAQ";
-import { JsonLd, faqJsonLd } from "@/lib/seo";
+import { JsonLd, faqJsonLd, breadcrumbJsonLd, SITE } from "@/lib/seo";
 
 const homeFaqs = [
   {
@@ -18,7 +18,7 @@ const homeFaqs = [
   },
   {
     q: "Quel est le minimum de personnes ?",
-    a: "10 personnes pour la livraison à domicile, 23 personnes pour la formule chef à domicile.",
+    a: "10 personnes pour la livraison à domicile, 24 personnes pour la formule chef à domicile.",
   },
   {
     q: "Combien de temps à l'avance dois-je réserver ?",
@@ -26,14 +26,17 @@ const homeFaqs = [
   },
   {
     q: "Pour le chef à domicile, jusqu'où vous déplacez-vous ?",
-    a: "Je me déplace sur tout le Bassin d'Arcachon et jusqu'à Bordeaux, dès 23 personnes. Réservation 72h à l'avance.",
+    a: "Je me déplace sur tout le Bassin d'Arcachon et jusqu'à Bordeaux, dès 24 personnes. Réservation 72h à l'avance.",
   },
 ];
 
 export default function Home() {
   return (
     <>
-      <JsonLd data={faqJsonLd(homeFaqs)} />
+      <JsonLd data={[
+        faqJsonLd(homeFaqs),
+        breadcrumbJsonLd([{ name: "Accueil", url: SITE.url }]),
+      ]} />
       <Hero />
       <Formules />
       <Signatures />

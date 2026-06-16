@@ -7,7 +7,7 @@ import { menu, categoryMeta, type Category } from "@/data/menu";
 
 const formuleOptions = [
   { id: "livraison", label: "Livraison à domicile", desc: "Dès 10 personnes · réservation 48h à l'avance" },
-  { id: "chef-prive", label: "Chef privé chez vous", desc: "Dès 23 personnes · cuisson au feu de bois sur place" },
+  { id: "chef-prive", label: "Chef privé chez vous", desc: "Dès 24 personnes · cuisson au feu de bois sur place" },
   { id: "indecis", label: "Je ne sais pas encore", desc: "Je vous aide à choisir selon votre événement" },
 ];
 

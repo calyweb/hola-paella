@@ -16,13 +16,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/mentions-legales`, lastModified: lastUpdate, changeFrequency: "yearly", priority: 0.3 },
   ];
 
-  const cityPages: MetadataRoute.Sitemap = cities.filter((c) => c.delivery).map((c) => ({
-    url: `${base}/livraison-paella-${c.slug}`,
-    lastModified: lastUpdate,
-    changeFrequency: "monthly" as const,
-    priority: 0.85,
-  }));
-
   // Pages "Paella [ville]" pour toutes les villes
   const paellaCityPages: MetadataRoute.Sitemap = cities.map((c) => ({
     url: `${base}/paella-${c.slug}`,
@@ -38,5 +31,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...main, ...cityPages, ...paellaCityPages, ...eventPages];
+  return [...main, ...paellaCityPages, ...eventPages];
 }

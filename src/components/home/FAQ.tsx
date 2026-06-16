@@ -1,19 +1,15 @@
 const faqs = [
   {
-    q: "Où livrez-vous la paella à domicile ?",
+    q: "Dans quelles villes livrez-vous ?",
     a: "Je livre sur le Bassin d'Arcachon (Pyla, Arcachon, La Teste-de-Buch, Cazaux, La Hume, Gujan-Mestras, Le Teich), dès 10 personnes. Réservation 48h minimum à l'avance. Règlement à la livraison en CB ou espèces.",
   },
   {
     q: "Pour le chef à domicile, jusqu'où vous déplacez-vous ?",
-    a: "Je me déplace sur tout le Bassin d'Arcachon et jusqu'à Bordeaux, dès 23 personnes. Réservation 72h à l'avance.",
+    a: "Je me déplace sur tout le Bassin d'Arcachon, dans les Landes et jusqu'à Bordeaux, dès 24 personnes. Réservation 72h à l'avance.",
   },
   {
     q: "Combien coûte une paella ?",
     a: "Mes 4 paellas vont de 18 €/pers (Fruits de mer & Poulet bio) à 21 €/pers (Royale : gambas sauvages, poulet bio, lotte, langoustines). Tarif identique en livraison ou avec chef sur place — les frais de déplacement du chef sont calculés selon le lieu.",
-  },
-  {
-    q: "Quel est le minimum de personnes ?",
-    a: "10 personnes pour la livraison à domicile, 23 personnes pour la formule chef à domicile (je viens avec mon matériel et je cuisine devant vos invités).",
   },
   {
     q: "Combien de temps à l'avance dois-je réserver ?",
@@ -21,11 +17,11 @@ const faqs = [
   },
   {
     q: "Que proposez-vous en dehors de la paella ?",
-    a: "Tapas tartinables (surimi, aubergine vegan, rillettes chorizo/chèvre, crevettes, friture de calamars, chipirons), planches de charcuterie ibérique (Pata Negra, Serrano, Chorizo Bellota), sangrias maison rouge ou blanche, vins espagnols.",
+    a: "Des tapas (émincé de poulpe à la Galicienne, gambas à l'ail et piment d'Espelette, chipirons au lard poivré des Pyrénées), des planches de charcuterie ibérique (Fuet, Chorizo ibérique, Serrano Duroc, Pata Negra 36 mois), des sangrias maison rouge ou blanche en Bag-in-Box, et des vins espagnols (rouge, blanc, rosé).",
   },
   {
-    q: "Peut-on personnaliser le menu ?",
-    a: "Bien sûr. J'établis un menu en fonction de vos envies et de votre budget. Allergies, régimes, repas enfants — je m'adapte. Précisez-le sur votre demande de devis.",
+    q: "Peut-on personnaliser une paella ?",
+    a: "Oui, et c'est même une spécialité. Je propose une paella sur mesure pour ceux qui ont un ingrédient précis en tête — homard, truffes, gambas tigrées… Je source les meilleurs produits selon votre budget. Demandez-moi un devis.",
   },
 ];
 
@@ -57,7 +53,7 @@ export function FAQ() {
               className="bg-cream/60 border border-ink/8 rounded-2xl overflow-hidden group"
             >
               <summary className="px-6 py-5 flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
-                <span className="font-display text-lg text-ink leading-snug">{f.q}</span>
+                <h3 className="font-display text-lg text-ink leading-snug m-0">{f.q}</h3>
                 <span className="w-8 h-8 rounded-full bg-paper border border-ink/10 flex items-center justify-center shrink-0 transition-transform group-open:rotate-45">
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
                     <path d="M7.5 2v11M2 7.5h11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>

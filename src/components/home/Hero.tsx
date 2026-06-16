@@ -28,7 +28,7 @@ export function Hero() {
               soin chez des producteurs locaux et espagnols, et mes vins sauront accompagner
               avec goût vos plats et vos soirées tapas.{" "}
               <strong className="text-ink font-medium">
-                Sur le Bassin d&apos;Arcachon et jusqu&apos;à Bordeaux
+                Sur le Bassin d&apos;Arcachon, dans les Landes et jusqu&apos;à Bordeaux
               </strong>
               , dès 10 personnes en livraison, dès 24 pour la cuisson sur place.
             </p>
@@ -67,7 +67,7 @@ export function Hero() {
 
               <div className="absolute inset-4 rounded-[3rem] overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/hero-paella.jpg"
+                  src="/images/hero-banner.png"
                   alt="Paella royale dans une paella en cuivre"
                   fill
                   priority
@@ -87,8 +87,8 @@ export function Hero() {
                     <path id="circle" d="M 50 50 m -38 0 a 38 38 0 1 1 76 0 a 38 38 0 1 1 -76 0" />
                   </defs>
                   <text className="font-display text-[10px] tracking-[0.2em]" fill="currentColor">
-                    <textPath href="#circle">
-                      {"DEPUIS 2018 · BASSIN D'ARCACHON · "}
+                    <textPath href="#circle" textLength="239" lengthAdjust="spacing">
+                      {"BASSIN D’ARCACHON . DEPUIS 2018 . "}
                     </textPath>
                   </text>
                 </svg>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { formules } from "@/data/formules";
-import { SITE, JsonLd, breadcrumbJsonLd } from "@/lib/seo";
+import { SITE, JsonLd, breadcrumbJsonLd, serviceJsonLd } from "@/lib/seo";
 
 export const metadata = {
   title: "Nos formules",
@@ -13,10 +13,24 @@ export const metadata = {
 export default function FormulesPage() {
   return (
     <>
-      <JsonLd data={breadcrumbJsonLd([
-        { name: "Accueil", url: SITE.url },
-        { name: "Nos formules", url: `${SITE.url}/formules` },
-      ])} />
+      <JsonLd data={[
+        breadcrumbJsonLd([
+          { name: "Accueil", url: SITE.url },
+          { name: "Nos formules", url: `${SITE.url}/formules` },
+        ]),
+        serviceJsonLd(
+          "Livraison paella à domicile",
+          "Paella livrée chaude prête à servir, dès 10 personnes. Bassin d'Arcachon. Réservation 48h à l'avance.",
+          undefined,
+          `${SITE.url}/formules#livraison`,
+        ),
+        serviceJsonLd(
+          "Chef paella à domicile",
+          "Nicolas se déplace avec son matériel et cuisine votre paella sur place devant vos invités, dès 24 personnes. Bassin d'Arcachon, Landes et Bordeaux. Réservation 72h à l'avance.",
+          undefined,
+          `${SITE.url}/formules#chef`,
+        ),
+      ]} />
       <section className="warm-bg pt-16 pb-14 px-5 sm:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="pill mb-5">Nos formules</div>

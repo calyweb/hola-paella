@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { getMenuByCategory } from "@/data/menu";
 
 export function Signatures() {
-  const items = getMenuByCategory("paellas").filter((item) => item.slug !== "paella-del-pueblo");
+  const items = getMenuByCategory("paellas").filter((item) => item.image);
 
   return (
     <section className="py-24 lg:py-32 px-5 sm:px-8 bg-cream">
@@ -24,7 +24,7 @@ export function Signatures() {
           </Link>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
           {items.map((item, idx) => (
             <article
               key={item.slug}
@@ -49,17 +49,11 @@ export function Signatures() {
               <div className="p-5 lg:p-6 flex flex-col flex-1">
                 <h3 className="font-display text-xl text-ink leading-tight">{item.name}</h3>
                 <p className="mt-1 italic text-terracotta text-sm">{item.tagline}</p>
-                <p className="mt-3 text-ink-soft text-sm leading-relaxed flex-1">{item.description}</p>
-                <div className="mt-4 pt-4 border-t border-ink/8 flex items-center justify-between gap-3 flex-wrap">
+                <div className="mt-4 pt-4 border-t border-ink/8">
                   <span className="font-display text-xl text-ink">
                     {item.price}€
                     <span className="text-xs font-body text-ink-soft font-normal ml-1">{item.unit}</span>
                   </span>
-                  {item.classicVersion && (
-                    <span className="text-[11px] text-ink-soft border border-ink/15 rounded-full px-2.5 py-1 leading-none">
-                      Dispo aussi en version classique
-                    </span>
-                  )}
                 </div>
               </div>
             </article>

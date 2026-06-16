@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: "%s · Hola Paella",
   },
   description:
-    "Traiteur paella sur Bordeaux et le Bassin d'Arcachon. J'installe ma plancha géante chez vous et je cuisine votre paella en direct devant vos invités. Mariages, anniversaires, événements d'entreprise. Livraison dès 10 pers, chef à domicile dès 23 invités.",
+    "Traiteur paella Bassin d'Arcachon & Bordeaux. Livraison à domicile dès 10 pers ou chef cuisinant sur place dès 24 invités. Mariages, anniversaires, entreprises — devis 24h.",
   applicationName: "Hola Paella",
   authors: [{ name: "Nicolas Cubie", url: "https://hola-paella.fr/a-propos" }],
   creator: "Hola Paella",
@@ -91,9 +91,9 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/logo.png" />
         <meta name="geo.region" content="FR-NAQ" />
-        <meta name="geo.placename" content="Arcachon, Bordeaux" />
-        <meta name="geo.position" content="44.6588;-1.1681" />
-        <meta name="ICBM" content="44.6588, -1.1681" />
+        <meta name="geo.placename" content="La Teste-de-Buch" />
+        <meta name="geo.position" content="44.62580;-1.14530" />
+        <meta name="ICBM" content="44.62580, -1.14530" />
       </head>
       <body className="min-h-full flex flex-col bg-cream text-ink">
         <JsonLd data={[localBusinessJsonLd(), {
@@ -104,6 +104,14 @@ export default function RootLayout({
           url: SITE.url,
           publisher: { "@id": `${SITE.url}#business` },
           inLanguage: "fr-FR",
+          potentialAction: {
+            "@type": "SearchAction",
+            target: {
+              "@type": "EntryPoint",
+              urlTemplate: `${SITE.url}/devis?q={search_term_string}`,
+            },
+            "query-input": "required name=search_term_string",
+          },
         }]} />
         <Header />
         <main className="flex-1">{children}</main>

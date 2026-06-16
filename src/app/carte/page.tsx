@@ -12,7 +12,7 @@ export const metadata = {
 };
 
 export default function CartePage() {
-  const menuItems = menu.map((m) => ({ name: m.name, description: m.description, price: m.price, category: m.category }));
+  const menuItems = menu.filter((m) => !m.surDevis).map((m) => ({ name: m.name, description: m.description, price: m.price, category: m.category }));
   return (
     <>
       <JsonLd data={[

@@ -4,28 +4,28 @@ import { ArrowRight } from "lucide-react";
 
 const shots = [
   {
-    src: "/images/ambiance/copper.jpg",
-    alt: "Socarrat doré dans une paella en cuivre",
+    src: "/images/mood-1.png",
+    alt: "Repas convivial en terrasse autour d'une paella au coucher du soleil",
     span: "row-span-2",
-    caption: "La socarrat",
+    caption: "L'ambiance",
   },
   {
-    src: "/images/ambiance/ingredients.jpg",
-    alt: "Safran, paprika, gambas, citron — ingrédients de paella",
+    src: "/images/mood-2.png",
+    alt: "Planche de charcuterie ibérique avec sangria maison",
     span: "",
-    caption: "Le sourcing",
+    caption: "L'apéro",
   },
   {
-    src: "/images/ambiance/sangria-pour.jpg",
-    alt: "Sangria maison versée dans un verre avec orange et glace",
+    src: "/images/mood-3.png",
+    alt: "Chef Nicolas qui cuisine la paella devant les invités",
     span: "",
-    caption: "La sangria",
+    caption: "La cuisson",
   },
   {
-    src: "/images/ambiance/table.jpg",
-    alt: "Table d'été dressée pour un dîner avec paella au centre",
+    src: "/images/mood-4.png",
+    alt: "Tablée festive autour d'une paella au bord de l'eau",
     span: "col-span-2",
-    caption: "Le dressage",
+    caption: "Le repas",
   },
 ];
 

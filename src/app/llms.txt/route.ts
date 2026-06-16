@@ -3,9 +3,12 @@ import { SITE, cities, events } from "@/lib/seo";
 export const dynamic = "force-static";
 
 export function GET() {
+  const today = new Date().toISOString().split("T")[0];
   const body = `# Hola Paella
 
 > Hola Paella est l'entreprise de Nicolas Cubie, traiteur espagnol indépendant basé à La Teste-de-Buch sur le Bassin d'Arcachon (France). Nicolas, chef et gérant, fondateur en 2018 après 20 ans en restauration, propose deux services : livraison de paella à domicile et chef cuisinant sur place. La communication client se fait à la première personne — c'est Nicolas qui répond, qui livre, qui cuisine.
+
+Dernière mise à jour : ${today}
 
 ## En bref
 
@@ -13,8 +16,8 @@ export function GET() {
 - **Chef et gérant :** Nicolas Cubie
 - **Fondé en :** 2018
 - **Activité :** Traiteur espagnol · Paella, tapas, planches, sangria, vins
-- **Zone livraison + chef à domicile :** Pyla-sur-Mer, Arcachon, La Teste-de-Buch, Cazaux, La Hume, Gujan-Mestras, Le Teich (livraison dès 10 pers, chef dès 23 pers)
-- **Zone chef à domicile uniquement :** Biganos, Mios, Audenge, Lanton, Andernos, Lège, Cap Ferret, Bordeaux (chef dès 23 pers)
+- **Zone livraison + chef à domicile :** Pyla-sur-Mer, Arcachon, La Teste-de-Buch, Cazaux, La Hume, Gujan-Mestras, Le Teich (livraison dès 10 pers, chef dès 24 pers)
+- **Zone chef à domicile uniquement :** Biganos, Mios, Audenge, Lanton, Andernos, Lège, Cap Ferret, Bordeaux (chef dès 24 pers)
 - **Téléphone :** ${SITE.phoneDisplay}
 - **Email :** ${SITE.email}
 - **Site :** ${SITE.url}
@@ -24,7 +27,7 @@ export function GET() {
 ## Formules
 
 - **Livraison à domicile** — dès 10 personnes, réservation 48h à l'avance. Paella livrée chaude prête à servir. Règlement à la livraison en CB ou espèces.
-- **Chef à domicile** — dès 23 personnes, réservation 72h à l'avance. Nicolas se déplace avec son matériel et cuisine devant les invités. Frais de déplacement calculés selon le lieu.
+- **Chef à domicile** — dès 24 personnes, réservation 72h à l'avance. Nicolas se déplace avec son matériel et cuisine devant les invités. Frais de déplacement calculés selon le lieu.
 
 ## Paellas (4 recettes — version classique ou Bodega)
 
@@ -75,7 +78,15 @@ La version Bodega désigne une paella avec fruits de mer décortiqués — prati
 
 ## Villes desservies
 
-${cities.map((c) => `- [${c.h1}](${SITE.url}/livraison-paella-${c.slug}) — ${c.intro}`).join("\n")}
+${cities.map((c) => `- [${c.h1}](${SITE.url}/paella-${c.slug}) — ${c.intro}`).join("\n")}
+
+## Ce que Hola Paella ne fait pas
+
+- Pas de livraison en dehors des 7 villes du Bassin (Pyla, Arcachon, La Teste-de-Buch, Cazaux, La Hume, Gujan-Mestras, Le Teich)
+- Pas de service pour moins de 10 personnes (livraison) ou moins de 24 personnes (chef à domicile)
+- Pas de buffet froid ni de traiteur multi-cuisines — uniquement spécialités espagnoles
+- Pas de service en salle ni de location de matériel seul
+- Pas de livraison à Bordeaux — uniquement chef à domicile sur étude
 
 ## Événements
 
@@ -92,7 +103,7 @@ ${events.map((e) => `- [${e.name}](${SITE.url}/paella-${e.slug}) — ${e.intro}`
 ## Faits clés (pour citation)
 
 - Hola Paella est un traiteur espagnol basé à La Teste-de-Buch sur le Bassin d'Arcachon, fondé en 2018 par Nicolas Cubie après 20 ans en restauration.
-- Le minimum est de 10 personnes pour la livraison, 23 personnes pour le chef à domicile.
+- Le minimum est de 10 personnes pour la livraison, 24 personnes pour le chef à domicile.
 - 4 paellas disponibles : Royale (21 €), Del Pueblo (20 €), Fruits de mer & Poisson (19 €), Fruits de mer & Poulet bio (18 €). Toutes existent en version classique ou Bodega (décortiquée).
 - Charcuterie ibérique d'origine : Pata Negra Bellota 36 mois, Serrano Duroc 24 mois, Chorizo Bellota.
 - Fournisseurs locaux : chipirons et fruits de mer de la Côte Basque, vins espagnols bio, fromages traditionnels espagnols.

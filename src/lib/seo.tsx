@@ -10,15 +10,18 @@ export const SITE = {
   serviceArea: [
     "Arcachon",
     "La Teste-de-Buch",
+    "Pyla-sur-Mer",
+    "Cazaux",
+    "La Hume",
     "Gujan-Mestras",
     "Le Teich",
-    "Pyla-sur-Mer",
     "Biganos",
-    "Cap Ferret",
-    "Lège-Cap-Ferret",
+    "Mios",
     "Audenge",
+    "Lanton",
     "Andernos-les-Bains",
-    "Le Porge",
+    "Lège-Cap-Ferret",
+    "Cap Ferret",
     "Bordeaux",
   ],
   social: {
@@ -37,7 +40,7 @@ export const cities = [
     delivery: true,
     h1: "Livraison paella à Pyla-sur-Mer",
     intro:
-      "Je livre votre paella à Pyla-sur-Mer et au pied de la Dune du Pilat dès 10 personnes. Pour les grands événements (dès 23 invités), je viens cuisiner sur place avec mon matériel.",
+      "Je livre votre paella à Pyla-sur-Mer et au pied de la Dune du Pilat dès 10 personnes. Pour les grands événements (dès 24 invités), je viens cuisiner sur place avec mon matériel.",
     distance: "Zone de livraison · sans frais",
     quartiers: ["Pyla-sur-Mer", "Pilat-Plage"],
     geo: { lat: 44.5828, lng: -1.2056 },
@@ -48,7 +51,7 @@ export const cities = [
     delivery: true,
     h1: "Livraison paella à Arcachon",
     intro:
-      "Je livre ma paella à domicile à Arcachon dès 10 personnes, réservation 48h à l'avance. Pour les événements de 23 invités et plus, je me déplace avec mon matériel et je cuisine sur place, devant vos invités.",
+      "Je livre ma paella à domicile à Arcachon dès 10 personnes, réservation 48h à l'avance. Pour les événements de 24 invités et plus, je me déplace avec mon matériel et je cuisine sur place, devant vos invités.",
     distance: "Zone de livraison · sans frais",
     quartiers: ["Centre-ville", "Ville d'Hiver", "L'Aiguillon", "Le Moulleau", "Pereire", "Abatilles"],
     geo: { lat: 44.6588, lng: -1.1681 },
@@ -59,7 +62,7 @@ export const cities = [
     delivery: true,
     h1: "Livraison paella à La Teste-de-Buch",
     intro:
-      "Basé à La Teste-de-Buch, c'est ma zone principale. Je livre votre paella à domicile dès 10 personnes, et je me déplace aussi pour cuisiner sur place dès 23 invités. Cazaux inclus.",
+      "Basé à La Teste-de-Buch, c'est ma zone principale. Je livre votre paella à domicile dès 10 personnes, et je me déplace aussi pour cuisiner sur place dès 24 invités. Cazaux inclus.",
     distance: "Zone de livraison · sans frais",
     quartiers: ["La Teste centre", "Cazaux", "La Hume", "Les Prés salés"],
     geo: { lat: 44.6308, lng: -1.1428 },
@@ -70,7 +73,7 @@ export const cities = [
     delivery: true,
     h1: "Livraison paella à Cazaux",
     intro:
-      "Je livre votre paella à Cazaux dès 10 personnes, réservation 48h à l'avance. Chef à domicile également disponible dès 23 invités. Cazaux fait partie de ma zone de livraison principale.",
+      "Je livre votre paella à Cazaux dès 10 personnes, réservation 48h à l'avance. Chef à domicile également disponible dès 24 invités. Cazaux fait partie de ma zone de livraison principale.",
     distance: "Zone de livraison · sans frais",
     quartiers: ["Cazaux centre", "Lac de Cazaux"],
     geo: { lat: 44.5833, lng: -1.1333 },
@@ -81,7 +84,7 @@ export const cities = [
     delivery: true,
     h1: "Livraison paella à La Hume",
     intro:
-      "Je livre votre paella à La Hume dès 10 personnes, réservation 48h à l'avance. Chef à domicile également disponible dès 23 invités. Zone de livraison principale.",
+      "Je livre votre paella à La Hume dès 10 personnes, réservation 48h à l'avance. Chef à domicile également disponible dès 24 invités. Zone de livraison principale.",
     distance: "Zone de livraison · sans frais",
     quartiers: ["La Hume", "Port de La Hume"],
     geo: { lat: 44.6400, lng: -1.0900 },
@@ -92,7 +95,7 @@ export const cities = [
     delivery: true,
     h1: "Livraison paella à Gujan-Mestras",
     intro:
-      "Je livre votre paella à Gujan-Mestras dès 10 personnes, réservation 48h à l'avance. Chef à domicile également disponible dès 23 invités. Zone de livraison principale.",
+      "Je livre votre paella à Gujan-Mestras dès 10 personnes, réservation 48h à l'avance. Chef à domicile également disponible dès 24 invités. Zone de livraison principale.",
     distance: "Zone de livraison · sans frais",
     quartiers: ["Gujan centre", "Mestras", "Port de Larros"],
     geo: { lat: 44.6342, lng: -1.0681 },
@@ -103,7 +106,7 @@ export const cities = [
     delivery: true,
     h1: "Livraison paella au Teich",
     intro:
-      "Le Teich est dans ma zone de livraison. Paella livrée chaude à domicile dès 10 personnes, réservation 48h à l'avance. Chef à domicile aussi disponible dès 23 invités.",
+      "Le Teich est dans ma zone de livraison. Paella livrée chaude à domicile dès 10 personnes, réservation 48h à l'avance. Chef à domicile aussi disponible dès 24 invités.",
     distance: "Zone de livraison · sans frais",
     quartiers: ["Le Teich centre", "Réserve ornithologique"],
     geo: { lat: 44.6342, lng: -1.0214 },
@@ -116,7 +119,7 @@ export const cities = [
     delivery: false,
     h1: "Chef paella à domicile à Biganos",
     intro:
-      "Je me déplace à Biganos avec mon matériel pour cuisiner votre paella sur place, devant vos invités. Dès 23 personnes. Tapas, planches ibériques et sangria maison au programme.",
+      "Je me déplace à Biganos avec mon matériel pour cuisiner votre paella sur place, devant vos invités. Dès 24 personnes. Tapas, planches ibériques et sangria maison au programme.",
     distance: "Chef à domicile · Bassin d'Arcachon",
     quartiers: ["Biganos centre", "Facture", "Marais"],
     geo: { lat: 44.6442, lng: -0.9758 },
@@ -127,7 +130,7 @@ export const cities = [
     delivery: false,
     h1: "Chef paella à domicile à Mios",
     intro:
-      "Je me déplace à Mios pour cuisiner votre paella sur place dès 23 invités. J'arrive avec tout mon matériel, je cuisine devant vos invités.",
+      "Je me déplace à Mios pour cuisiner votre paella sur place dès 24 invités. J'arrive avec tout mon matériel, je cuisine devant vos invités.",
     distance: "Chef à domicile · Bassin d'Arcachon",
     quartiers: ["Mios centre", "Marcheprime"],
     geo: { lat: 44.6050, lng: -0.9350 },
@@ -138,7 +141,7 @@ export const cities = [
     delivery: false,
     h1: "Chef paella à domicile à Audenge",
     intro:
-      "Je me déplace à Audenge avec mon matériel pour cuisiner votre paella devant vos invités, dès 23 personnes. Réservation 72h à l'avance.",
+      "Je me déplace à Audenge avec mon matériel pour cuisiner votre paella devant vos invités, dès 24 personnes. Réservation 72h à l'avance.",
     distance: "Chef à domicile · Bassin d'Arcachon",
     quartiers: ["Audenge centre", "Le port", "Certes et Graveyron"],
     geo: { lat: 44.6833, lng: -1.0167 },
@@ -149,7 +152,7 @@ export const cities = [
     delivery: false,
     h1: "Chef paella à domicile à Lanton",
     intro:
-      "Je me déplace à Lanton et ses environs pour cuisiner votre paella sur place dès 23 invités. Cuisson en direct devant vos invités.",
+      "Je me déplace à Lanton et ses environs pour cuisiner votre paella sur place dès 24 invités. Cuisson en direct devant vos invités.",
     distance: "Chef à domicile · Bassin d'Arcachon",
     quartiers: ["Lanton centre", "Cassy", "Taussat", "Blagon"],
     geo: { lat: 44.7000, lng: -1.0333 },
@@ -160,7 +163,7 @@ export const cities = [
     delivery: false,
     h1: "Chef paella à domicile à Andernos",
     intro:
-      "Je me déplace à Andernos-les-Bains pour cuisiner votre paella sur place dès 23 invités. Mariages, anniversaires, soirées privées. Réservation 72h à l'avance.",
+      "Je me déplace à Andernos-les-Bains pour cuisiner votre paella sur place dès 24 invités. Mariages, anniversaires, soirées privées. Réservation 72h à l'avance.",
     distance: "Chef à domicile · Bassin d'Arcachon",
     quartiers: ["Andernos centre", "Le Mauret", "Le Coulin", "Port ostréicole"],
     geo: { lat: 44.7444, lng: -1.1025 },
@@ -171,7 +174,7 @@ export const cities = [
     delivery: false,
     h1: "Chef paella à domicile à Lège",
     intro:
-      "Je me déplace à Lège-Cap-Ferret pour cuisiner votre paella sur place dès 23 invités. Toute la presqu'île est dans ma zone d'intervention.",
+      "Je me déplace à Lège-Cap-Ferret pour cuisiner votre paella sur place dès 24 invités. Toute la presqu'île est dans ma zone d'intervention.",
     distance: "Chef à domicile · Bassin d'Arcachon",
     quartiers: ["Lège centre", "Arès", "Le Canon", "Claouey"],
     geo: { lat: 44.7667, lng: -1.1500 },
@@ -182,7 +185,7 @@ export const cities = [
     delivery: false,
     h1: "Chef paella à domicile au Cap Ferret",
     intro:
-      "Je me déplace au Cap Ferret avec mon matériel pour cuisiner votre paella en direct, devant vos invités. Dès 23 invités. Mariages, anniversaires, soirées privées.",
+      "Je me déplace au Cap Ferret avec mon matériel pour cuisiner votre paella en direct, devant vos invités. Dès 24 invités. Mariages, anniversaires, soirées privées.",
     distance: "Chef à domicile · Bassin d'Arcachon",
     quartiers: ["Le Phare", "L'Herbe", "Piraillan", "Claouey", "Petit Piquey", "Grand Piquey", "Les Jacquets"],
     geo: { lat: 44.6342, lng: -1.2392 },
@@ -205,8 +208,8 @@ export const events = [
     name: "Paella pour mariage",
     h1: "Traiteur paella pour mariage",
     intro:
-      "Pour votre mariage sur le Bassin d'Arcachon ou au Cap Ferret, je propose un service traiteur sur mesure : je viens avec mon matériel et je cuisine la paella devant vos invités. Tapas, planches de Pata Negra, sangrias maison. Dès 23 invités.",
-    badge: "Dès 23 invités",
+      "Pour votre mariage sur le Bassin d'Arcachon ou au Cap Ferret, je propose un service traiteur sur mesure : je viens avec mon matériel et je cuisine la paella devant vos invités. Tapas, planches de Pata Negra, sangrias maison. Dès 24 invités.",
+    badge: "Dès 24 invités",
   },
   {
     slug: "entreprise",
@@ -221,7 +224,7 @@ export const events = [
     name: "Paella anniversaire",
     h1: "Traiteur paella pour anniversaire",
     intro:
-      "Anniversaire en famille ou entre amis : je m'occupe de la cuisine, vous profitez de vos invités. Livraison à domicile dès 10 personnes ou chef à domicile pour les grands rassemblements (dès 23 invités).",
+      "Anniversaire en famille ou entre amis : je m'occupe de la cuisine, vous profitez de vos invités. Livraison à domicile dès 10 personnes ou chef à domicile pour les grands rassemblements (dès 24 invités).",
     badge: "10 à 80 invités",
   },
   {
@@ -229,7 +232,7 @@ export const events = [
     name: "Paella baptême",
     h1: "Traiteur paella pour baptême",
     intro:
-      "Pour le baptême de votre enfant, je prépare un repas convivial et généreux. Paella livrée chaude dès 10 personnes, ou chef à domicile dès 23 invités. Menu adaptable pour les enfants.",
+      "Pour le baptême de votre enfant, je prépare un repas convivial et généreux. Paella livrée chaude dès 10 personnes, ou chef à domicile dès 24 invités. Menu adaptable pour les enfants.",
     badge: "Dès 10 invités",
   },
   {
@@ -269,7 +272,7 @@ export const events = [
     name: "Paella communion",
     h1: "Traiteur paella pour communion",
     intro:
-      "Pour la communion de votre enfant, je prépare un repas festif adapté à tous les âges. Paella livrée chaude dès 10 personnes ou chef à domicile dès 23 invités. Menu personnalisable selon vos invités.",
+      "Pour la communion de votre enfant, je prépare un repas festif adapté à tous les âges. Paella livrée chaude dès 10 personnes ou chef à domicile dès 24 invités. Menu personnalisable selon vos invités.",
     badge: "Dès 10 invités",
   },
   {
@@ -309,7 +312,7 @@ export const events = [
 export function localBusinessJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "FoodService"],
+    "@type": ["LocalBusiness", "FoodEstablishment", "CateringService"],
     "@id": `${SITE.url}#business`,
     name: SITE.name,
     description: SITE.tagline,
@@ -317,12 +320,13 @@ export function localBusinessJsonLd() {
     telephone: SITE.phone,
     email: SITE.email,
     priceRange: "€€",
-    image: `${SITE.url}/logo.png`,
+    image: `${SITE.url}/images/hero-paella.jpg`,
     logo: `${SITE.url}/logo.png`,
     foundingDate: SITE.founded,
-    founder: { "@type": "Person", name: SITE.chefName, jobTitle: "Chef et gérant" },
+    founder: { "@id": `${SITE.url}/a-propos#nicolas-cubie` },
     address: {
       "@type": "PostalAddress",
+      streetAddress: "5 Rue Béranger",
       addressLocality: "La Teste-de-Buch",
       addressRegion: "Nouvelle-Aquitaine",
       postalCode: "33260",
@@ -335,7 +339,7 @@ export function localBusinessJsonLd() {
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.8",
-      reviewCount: "113",
+      reviewCount: "40",
       bestRating: "5",
       worstRating: "1",
     },
@@ -384,11 +388,13 @@ export function personJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": `${SITE.url}/a-propos#nicolas-cubie`,
     name: SITE.chefName,
     jobTitle: "Chef traiteur",
+    description: "Nicolas Cubie est chef traiteur espagnol indépendant, fondateur d'Hola Paella en 2018 après 20 ans en restauration. Basé à La Teste-de-Buch, il propose la livraison de paella et le service chef à domicile sur le Bassin d'Arcachon et jusqu'à Bordeaux.",
     worksFor: { "@id": `${SITE.url}#business` },
     knowsAbout: ["Paella", "Spanish cuisine", "Catering", "Tapas", "Charcuterie ibérique"],
-    image: `${SITE.url}/images/about-team.jpg`,
+    image: `${SITE.url}/images/nicolas-chef-paysage.png`,
     url: `${SITE.url}/a-propos`,
     sameAs: [SITE.social.instagram, SITE.social.facebook],
   };
