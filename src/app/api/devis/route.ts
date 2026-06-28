@@ -1,14 +1,22 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
+import { menu } from "@/data/menu";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   const data = await request.json();
 
-  const { formule, event, guests, date, location, items, name, email, phone, message } = data;
+  const { formule, event, guests, date, location, items, prenom, name, email, phone, message } = data;
+  const fullName = `${prenom ?? ""} ${name ?? ""}`.trim();
 
-  const itemsList = items?.length > 0 ? items.join(", ") : "Aucune sélection";
+  const itemsList = items?.length > 0
+    ? items.map((slug: string) => menu.find((m) => m.slug === slug)?.name ?? slug).join(", ")
+    : "Aucune sélection";
+
+  const formattedDate = date
+    ? new Date(date + "T12:00:00").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })
+    : "Non précisée";
 
   try {
     await resend.emails.send({
@@ -16,7 +24,7 @@ export async function POST(request: Request) {
       to: "contact@hola-paella.fr",
       cc: "yo.cremonese@gmail.com",
       replyTo: email,
-      subject: `Nouveau devis — ${event} · ${guests} pers. · ${name}`,
+      subject: `Nouveau devis — ${event} · ${guests} pers. · ${fullName}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; color: #1a1a1a;">
           <h2 style="color: #c0533a;">Nouvelle demande de devis</h2>
@@ -25,7 +33,7 @@ export async function POST(request: Request) {
             <tr><td style="padding: 8px 0; color: #666; width: 160px;">Événement</td><td style="padding: 8px 0; font-weight: 600;">${event}</td></tr>
             <tr><td style="padding: 8px 0; color: #666;">Formule</td><td style="padding: 8px 0; font-weight: 600;">${formule === "chef-prive" ? "Chef privé à domicile" : formule === "livraison" ? "Livraison à domicile" : "À définir"}</td></tr>
             <tr><td style="padding: 8px 0; color: #666;">Invités</td><td style="padding: 8px 0; font-weight: 600;">${guests} personnes</td></tr>
-            <tr><td style="padding: 8px 0; color: #666;">Date</td><td style="padding: 8px 0; font-weight: 600;">${date || "Non précisée"}</td></tr>
+            <tr><td style="padding: 8px 0; color: #666;">Date</td><td style="padding: 8px 0; font-weight: 600;">${formattedDate}</td></tr>
             <tr><td style="padding: 8px 0; color: #666;">Lieu</td><td style="padding: 8px 0; font-weight: 600;">${location || "Non précisé"}</td></tr>
             <tr><td style="padding: 8px 0; color: #666;">Carte</td><td style="padding: 8px 0;">${itemsList}</td></tr>
           </table>
@@ -34,7 +42,7 @@ export async function POST(request: Request) {
 
           <h3 style="color: #c0533a;">Contact</h3>
           <table style="width: 100%; border-collapse: collapse;">
-            <tr><td style="padding: 6px 0; color: #666; width: 160px;">Nom</td><td style="padding: 6px 0; font-weight: 600;">${name}</td></tr>
+            <tr><td style="padding: 6px 0; color: #666; width: 160px;">Nom</td><td style="padding: 6px 0; font-weight: 600;">${fullName}</td></tr>
             <tr><td style="padding: 6px 0; color: #666;">Email</td><td style="padding: 6px 0;"><a href="mailto:${email}" style="color: #c0533a;">${email}</a></td></tr>
             <tr><td style="padding: 6px 0; color: #666;">Téléphone</td><td style="padding: 6px 0;"><a href="tel:${phone}" style="color: #c0533a;">${phone}</a></td></tr>
           </table>

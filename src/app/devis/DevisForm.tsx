@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import { Check, ArrowRight, Sparkles } from "lucide-react";
 import { menu, categoryMeta, type Category } from "@/data/menu";
@@ -35,6 +35,7 @@ export function DevisForm() {
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
+  const topRef = useRef<HTMLDivElement>(null);
   const [sendError, setSendError] = useState(false);
   const [data, setData] = useState({
     formule: "",
@@ -43,6 +44,7 @@ export function DevisForm() {
     date: "",
     location: "",
     items: [] as string[],
+    prenom: "",
     name: "",
     email: "",
     phone: "",
@@ -60,6 +62,11 @@ export function DevisForm() {
   const update = (k: keyof typeof data, v: unknown) =>
     setData((d) => ({ ...d, [k]: v }));
 
+  const goToStep = (n: number) => {
+    setStep(n);
+    setTimeout(() => topRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
+  };
+
   const toggleItem = (slug: string) => {
     setData((d) => ({
       ...d,
@@ -71,6 +78,7 @@ export function DevisForm() {
 
   const canNext1 = data.formule && data.event;
   const canNext2 = data.guests >= 10 && data.date && data.location;
+  const fullName = `${data.prenom} ${data.name}`.trim();
 
   if (submitted) {
     return (
@@ -96,7 +104,7 @@ export function DevisForm() {
   const orderedCats: Category[] = ["paellas", "tapas", "planches", "sangrias", "vins"];
 
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto" ref={topRef}>
       {/* Stepper */}
       <div className="flex items-center justify-center gap-3 mb-10">
         {[1, 2, 3, 4].map((n) => (
@@ -323,23 +331,31 @@ export function DevisForm() {
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
                 <label className="text-sm uppercase tracking-[0.16em] text-ink-soft mb-2 block">
-                  Votre nom
+                  Prénom
+                </label>
+                <input type="text" required value={data.prenom} onChange={(e) => update("prenom", e.target.value)} />
+              </div>
+              <div>
+                <label className="text-sm uppercase tracking-[0.16em] text-ink-soft mb-2 block">
+                  Nom
                 </label>
                 <input type="text" required value={data.name} onChange={(e) => update("name", e.target.value)} />
               </div>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-5">
               <div>
                 <label className="text-sm uppercase tracking-[0.16em] text-ink-soft mb-2 block">
                   Téléphone
                 </label>
                 <input type="tel" required value={data.phone} onChange={(e) => update("phone", e.target.value)} />
               </div>
-            </div>
-
-            <div>
-              <label className="text-sm uppercase tracking-[0.16em] text-ink-soft mb-2 block">
-                Email
-              </label>
-              <input type="email" required value={data.email} onChange={(e) => update("email", e.target.value)} />
+              <div>
+                <label className="text-sm uppercase tracking-[0.16em] text-ink-soft mb-2 block">
+                  Email
+                </label>
+                <input type="email" required value={data.email} onChange={(e) => update("email", e.target.value)} />
+              </div>
             </div>
 
             <div>
@@ -356,9 +372,10 @@ export function DevisForm() {
             <div className="bg-cream rounded-2xl p-5 text-sm">
               <div className="text-ink font-medium mb-2">Récapitulatif</div>
               <ul className="text-ink-soft space-y-1">
+                <li><span className="text-ink-soft/70">Nom·</span> {fullName || "—"}</li>
                 <li><span className="text-ink-soft/70">Événement·</span> {data.event || "—"}</li>
-                <li><span className="text-ink-soft/70">Format·</span> {data.formule || "—"}</li>
-                <li><span className="text-ink-soft/70">Date·</span> {data.date || "—"} pour {data.guests} pers.</li>
+                <li><span className="text-ink-soft/70">Format·</span> {data.formule === "chef-prive" ? "Chef privé à domicile" : data.formule === "livraison" ? "Livraison à domicile" : data.formule === "indecis" ? "À définir" : "—"}</li>
+                <li><span className="text-ink-soft/70">Date·</span> {data.date ? new Date(data.date + "T12:00:00").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) : "—"} pour {data.guests} pers.</li>
                 <li><span className="text-ink-soft/70">Lieu·</span> {data.location || "—"}</li>
                 {data.items.length > 0 && (
                   <li><span className="text-ink-soft/70">Carte·</span> {data.items.length} plats sélectionnés</li>
@@ -377,7 +394,7 @@ export function DevisForm() {
         <div className="flex items-center justify-between gap-3 mt-9 pt-7 border-t border-ink/8">
           <button
             type="button"
-            onClick={() => setStep(Math.max(1, step - 1))}
+            onClick={() => goToStep(Math.max(1, step - 1))}
             disabled={step === 1}
             className="cursor-pointer text-ink-soft hover:text-ink disabled:opacity-30 disabled:cursor-not-allowed text-sm"
           >
@@ -388,7 +405,7 @@ export function DevisForm() {
               {step === 3 && (
                 <button
                   type="button"
-                  onClick={() => setStep(4)}
+                  onClick={() => goToStep(4)}
                   className="text-sm text-ink-soft hover:text-ink underline underline-offset-2"
                 >
                   Passer cette étape
@@ -396,7 +413,7 @@ export function DevisForm() {
               )}
               <button
                 type="button"
-                onClick={() => setStep(step + 1)}
+                onClick={() => goToStep(step + 1)}
                 disabled={(step === 1 && !canNext1) || (step === 2 && !canNext2)}
                 className="cursor-pointer btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
               >
@@ -417,6 +434,7 @@ export function DevisForm() {
                   });
                   if (res.ok) {
                     setSubmitted(true);
+                    setTimeout(() => topRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
                   } else {
                     setSendError(true);
                   }
@@ -426,7 +444,7 @@ export function DevisForm() {
                   setSending(false);
                 }
               }}
-              disabled={!data.name || !data.email || !data.phone || sending}
+              disabled={!data.prenom || !data.name || !data.email || !data.phone || sending}
               className="cursor-pointer btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {sending ? "Envoi en cours…" : "Envoyer ma demande"} <ArrowRight size={16} />
