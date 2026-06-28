@@ -242,6 +242,23 @@ export default async function PaellaCityPage({
       </section>
 
 
+      {c.quartiers && c.quartiers.length > 0 && (
+        <section className="py-14 px-5 sm:px-8 bg-paper">
+          <div className="max-w-[1440px] mx-auto">
+            <h2 className="font-display text-3xl text-ink mb-6">
+              Quartiers desservis à {c.name}
+            </h2>
+            <ul className="flex flex-wrap gap-2">
+              {c.quartiers.map((q) => (
+                <li key={q} className="bg-cream rounded-full px-4 py-1.5 text-sm text-ink-soft border border-ink/8">
+                  {q}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
       <section className="py-20 px-5 sm:px-8 bg-cream">
         <div className="max-w-[1440px] mx-auto">
           <h2 className="font-display text-4xl sm:text-5xl text-ink leading-tight mb-10">
@@ -264,7 +281,7 @@ export default async function PaellaCityPage({
             Hola Paella près de chez vous
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-3">
-            {others.slice(0, 10).map((o) => (
+            {others.map((o) => (
               <Link
                 key={o.slug}
                 href={`/paella-${o.slug}`}
