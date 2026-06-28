@@ -104,14 +104,6 @@ export default function RootLayout({
           url: SITE.url,
           publisher: { "@id": `${SITE.url}#business` },
           inLanguage: "fr-FR",
-          potentialAction: {
-            "@type": "SearchAction",
-            target: {
-              "@type": "EntryPoint",
-              urlTemplate: `${SITE.url}/devis?q={search_term_string}`,
-            },
-            "query-input": "required name=search_term_string",
-          },
         }]} />
         <Header />
         <main className="flex-1">{children}</main>

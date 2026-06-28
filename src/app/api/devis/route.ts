@@ -1,0 +1,56 @@
+import { Resend } from "resend";
+import { NextResponse } from "next/server";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+export async function POST(request: Request) {
+  const data = await request.json();
+
+  const { formule, event, guests, date, location, items, name, email, phone, message } = data;
+
+  const itemsList = items?.length > 0 ? items.join(", ") : "Aucune sélection";
+
+  try {
+    await resend.emails.send({
+      from: "Hola Paella <devis@hola-paella.fr>",
+      to: "contact@hola-paella.fr",
+      cc: "yo.cremonese@gmail.com",
+      replyTo: email,
+      subject: `Nouveau devis — ${event} · ${guests} pers. · ${name}`,
+      html: `
+        <div style="font-family: sans-serif; max-width: 600px; color: #1a1a1a;">
+          <h2 style="color: #c0533a;">Nouvelle demande de devis</h2>
+
+          <table style="width: 100%; border-collapse: collapse; margin-top: 16px;">
+            <tr><td style="padding: 8px 0; color: #666; width: 160px;">Événement</td><td style="padding: 8px 0; font-weight: 600;">${event}</td></tr>
+            <tr><td style="padding: 8px 0; color: #666;">Formule</td><td style="padding: 8px 0; font-weight: 600;">${formule === "chef-prive" ? "Chef privé à domicile" : formule === "livraison" ? "Livraison à domicile" : "À définir"}</td></tr>
+            <tr><td style="padding: 8px 0; color: #666;">Invités</td><td style="padding: 8px 0; font-weight: 600;">${guests} personnes</td></tr>
+            <tr><td style="padding: 8px 0; color: #666;">Date</td><td style="padding: 8px 0; font-weight: 600;">${date || "Non précisée"}</td></tr>
+            <tr><td style="padding: 8px 0; color: #666;">Lieu</td><td style="padding: 8px 0; font-weight: 600;">${location || "Non précisé"}</td></tr>
+            <tr><td style="padding: 8px 0; color: #666;">Carte</td><td style="padding: 8px 0;">${itemsList}</td></tr>
+          </table>
+
+          <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
+
+          <h3 style="color: #c0533a;">Contact</h3>
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr><td style="padding: 6px 0; color: #666; width: 160px;">Nom</td><td style="padding: 6px 0; font-weight: 600;">${name}</td></tr>
+            <tr><td style="padding: 6px 0; color: #666;">Email</td><td style="padding: 6px 0;"><a href="mailto:${email}" style="color: #c0533a;">${email}</a></td></tr>
+            <tr><td style="padding: 6px 0; color: #666;">Téléphone</td><td style="padding: 6px 0;"><a href="tel:${phone}" style="color: #c0533a;">${phone}</a></td></tr>
+          </table>
+
+          ${message ? `
+          <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
+          <h3 style="color: #c0533a;">Message</h3>
+          <p style="color: #444; white-space: pre-line;">${message}</p>
+          ` : ""}
+        </div>
+      `,
+    });
+
+    return NextResponse.json({ ok: true });
+  } catch (error) {
+    console.error("Resend error:", error);
+    return NextResponse.json({ ok: false }, { status: 500 });
+  }
+}

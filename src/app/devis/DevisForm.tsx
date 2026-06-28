@@ -14,7 +14,17 @@ const formuleOptions = [
 const eventOptions = [
   "Mariage",
   "Anniversaire",
-  "Cocktail entreprise",
+  "Entreprise / Cocktail",
+  "Soirée privée",
+  "EVJF",
+  "EVG",
+  "Baptême",
+  "Communion",
+  "Départ retraite",
+  "Cousinade",
+  "Repas de chantier",
+  "Club sportif",
+  "Association",
   "Repas de famille",
   "Inauguration",
   "Autre",
@@ -24,6 +34,8 @@ export function DevisForm() {
   const searchParams = useSearchParams();
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState(false);
   const [data, setData] = useState({
     formule: "",
     event: "",
@@ -130,7 +142,7 @@ export function DevisForm() {
                     key={e}
                     type="button"
                     onClick={() => update("event", e)}
-                    className={`px-4 py-2.5 rounded-full border-[1.5px] text-sm transition-all ${
+                    className={`cursor-pointer px-4 py-2.5 rounded-full border-[1.5px] text-sm transition-all ${
                       data.event === e
                         ? "bg-terracotta text-paper border-terracotta"
                         : "bg-paper text-ink border-ink/12 hover:border-terracotta"
@@ -152,7 +164,7 @@ export function DevisForm() {
                     key={f.id}
                     type="button"
                     onClick={() => update("formule", f.id)}
-                    className={`w-full text-left p-4 rounded-2xl border-[1.5px] transition-all ${
+                    className={`cursor-pointer w-full text-left p-4 rounded-2xl border-[1.5px] transition-all ${
                       data.formule === f.id
                         ? "border-terracotta bg-terracotta/5"
                         : "border-ink/10 bg-paper hover:border-terracotta/40"
@@ -196,6 +208,7 @@ export function DevisForm() {
                   type="date"
                   value={data.date}
                   onChange={(e) => update("date", e.target.value)}
+                  className="cursor-pointer"
                 />
               </div>
               <div>
@@ -268,7 +281,7 @@ export function DevisForm() {
                             key={it.slug}
                             type="button"
                             onClick={() => toggleItem(it.slug)}
-                            className={`text-left px-4 py-3 rounded-xl border-[1.5px] transition-all flex items-start gap-3 ${
+                            className={`cursor-pointer text-left px-4 py-3 rounded-xl border-[1.5px] transition-all flex items-start gap-3 ${
                               checked
                                 ? "border-saffron bg-saffron/10"
                                 : "border-ink/10 bg-paper hover:border-saffron/40"
@@ -284,7 +297,7 @@ export function DevisForm() {
                             <div>
                               <div className="font-medium text-ink text-sm">{it.name}</div>
                               <div className="text-xs text-ink-soft">
-                                {it.price}€ {it.unit}
+                                {it.surDevis ? "Sur devis" : `${it.price}€ ${it.unit}`}
                               </div>
                             </div>
                           </button>
@@ -355,12 +368,18 @@ export function DevisForm() {
           </div>
         )}
 
+        {sendError && (
+          <p className="mt-4 text-sm text-red-600 text-center">
+            Une erreur est survenue. Réessayez ou appelez le{" "}
+            <a href="tel:+33646198234" className="font-medium underline">06 46 19 82 34</a>.
+          </p>
+        )}
         <div className="flex items-center justify-between gap-3 mt-9 pt-7 border-t border-ink/8">
           <button
             type="button"
             onClick={() => setStep(Math.max(1, step - 1))}
             disabled={step === 1}
-            className="text-ink-soft hover:text-ink disabled:opacity-30 disabled:cursor-not-allowed text-sm"
+            className="cursor-pointer text-ink-soft hover:text-ink disabled:opacity-30 disabled:cursor-not-allowed text-sm"
           >
             ← Retour
           </button>
@@ -379,7 +398,7 @@ export function DevisForm() {
                 type="button"
                 onClick={() => setStep(step + 1)}
                 disabled={(step === 1 && !canNext1) || (step === 2 && !canNext2)}
-                className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                className="cursor-pointer btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Étape suivante <ArrowRight size={16} />
               </button>
@@ -387,11 +406,30 @@ export function DevisForm() {
           ) : (
             <button
               type="button"
-              onClick={() => setSubmitted(true)}
-              disabled={!data.name || !data.email || !data.phone}
-              className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+              onClick={async () => {
+                setSending(true);
+                setSendError(false);
+                try {
+                  const res = await fetch("/api/devis", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data),
+                  });
+                  if (res.ok) {
+                    setSubmitted(true);
+                  } else {
+                    setSendError(true);
+                  }
+                } catch {
+                  setSendError(true);
+                } finally {
+                  setSending(false);
+                }
+              }}
+              disabled={!data.name || !data.email || !data.phone || sending}
+              className="cursor-pointer btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Envoyer ma demande <ArrowRight size={16} />
+              {sending ? "Envoi en cours…" : "Envoyer ma demande"} <ArrowRight size={16} />
             </button>
           )}
         </div>

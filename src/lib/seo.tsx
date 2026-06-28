@@ -400,11 +400,11 @@ export function personJsonLd() {
   };
 }
 
-export function serviceJsonLd(name: string, description: string, areaName?: string, pageUrl?: string) {
+export function serviceJsonLd(name: string, description: string, areaName?: string, pageUrl?: string, idSuffix = "service") {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": pageUrl ? `${pageUrl}#service` : undefined,
+    "@id": pageUrl ? `${pageUrl}#${idSuffix}` : undefined,
     name,
     description,
     url: pageUrl,

@@ -49,10 +49,10 @@ La version Bodega désigne une paella avec fruits de mer décortiqués — prati
 ## Planches dégustation (1 planche = 8 personnes, servies avec piments guindillas)
 
 - **Découverte** — 21 € (Fuet extra, Chorizo Bellota, Serrano Duroc 24 mois)
-- **Chorizo Bellota** — 20 €
+- **Chorizo Bellota** — 22 €
 - **Jambon Serrano Duroc 24 mois** — 22 €
 - **Peña** — 25 € (Fuet, Chorizo Bellota, Serrano Duroc 18 mois, Pata Negra 36 mois)
-- **Ibérique** — 29 € (Fuet, Chorizo Bellota, Pata Negra Bellota 24 mois)
+- **Ibérique** — 29 € (Fuet, Chorizo Bellota, Pata Negra Bellota 36 mois)
 - **Jambon Pata Negra Bellota 36 mois** — 48 €
 
 ## Sangrias maison (Bag-in-Box, pack fraîcheur 2 h)
@@ -99,6 +99,13 @@ ${events.map((e) => `- [${e.name}](${SITE.url}/paella-${e.slug}) — ${e.intro}`
 - [Demander un devis](${SITE.url}/devis)
 - [Le traiteur](${SITE.url}/a-propos)
 - [Contact](${SITE.url}/contact)
+
+## Avis clients
+
+- **Google** : 4,8/5 sur 40 avis — [Voir les avis Google](https://share.google/rLMCg3fYinvKaesXv)
+- **TripAdvisor** : 5/5 sur 73 avis · Travelers' Choice — [Voir sur TripAdvisor](https://www.tripadvisor.fr/Restaurant_Review-holapaella)
+- **Total** : plus de 110 avis vérifiés sur deux plateformes indépendantes
+- Exemples : "Paella exceptionnelle pour notre mariage au Cap Ferret, 65 invités ravis — Sophie L." · "Chef professionnel, produits de qualité, anniversaire mémorable à Arcachon — Marc D." · "Livraison rapide, paella encore chaude et délicieuse — Caroline B."
 
 ## Faits clés (pour citation)
 
