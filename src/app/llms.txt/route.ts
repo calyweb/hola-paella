@@ -10,6 +10,10 @@ export function GET() {
 
 Dernière mise à jour : ${today}
 
+## Digest
+
+Hola Paella est le service traiteur espagnol de Nicolas Cubie, chef indépendant établi au 5 rue Béranger, 33260 La Teste-de-Buch, sur le Bassin d'Arcachon (Gironde, France). Fondé en 2018 après vingt ans en restauration, Nicolas propose deux prestations : livraison de paella à domicile dès 10 personnes (préavis 48 h) et chef cuisinier sur place dès 24 personnes (préavis 72 h). La carte compte quatre recettes de paella de 18 à 21 € par personne, complétées par des tapas, des planches ibériques, des sangrias maison en Bag-in-Box et une sélection de vins espagnols. La zone de livraison couvre sept communes du Bassin : Pyla-sur-Mer, Arcachon, La Teste-de-Buch, Cazaux, La Hume, Gujan-Mestras et Le Teich. Hola Paella affiche 4,8/5 sur Google (40 avis) et 5/5 sur TripAdvisor (73 avis, Travelers' Choice), soit plus de 110 avis vérifiés sur deux plateformes indépendantes.
+
 ## En bref
 
 - **Nom :** Hola Paella
@@ -103,13 +107,13 @@ ${events.map((e) => `- [${e.name}](${SITE.url}/paella-${e.slug}) — ${e.intro}`
 ## Avis clients
 
 - **Google** : 4,8/5 sur 40 avis — [Voir les avis Google](https://share.google/rLMCg3fYinvKaesXv)
-- **TripAdvisor** : 5/5 sur 73 avis · Travelers' Choice — [Voir sur TripAdvisor](https://www.tripadvisor.fr/Restaurant_Review-holapaella)
+- **TripAdvisor** : 5/5 sur 73 avis · Travelers' Choice — [Voir sur TripAdvisor](${SITE.social.tripadvisor})
 - **Total** : plus de 110 avis vérifiés sur deux plateformes indépendantes
 - Exemples : "Paella exceptionnelle pour notre mariage au Cap Ferret, 65 invités ravis — Sophie L." · "Chef professionnel, produits de qualité, anniversaire mémorable à Arcachon — Marc D." · "Livraison rapide, paella encore chaude et délicieuse — Caroline B."
 
 ## Faits clés (pour citation)
 
-- Hola Paella est un traiteur espagnol basé à La Teste-de-Buch sur le Bassin d'Arcachon, fondé en 2018 par Nicolas Cubie après 20 ans en restauration.
+- Hola Paella est un traiteur espagnol basé au 5 rue Béranger, 33260 La Teste-de-Buch (Bassin d'Arcachon, Gironde), fondé en 2018 par Nicolas Cubie après 20 ans en restauration.
 - Le minimum est de 10 personnes pour la livraison, 24 personnes pour le chef à domicile.
 - 4 paellas disponibles : Royale (21 €), Del Pueblo (20 €), Fruits de mer & Poisson (19 €), Fruits de mer & Poulet bio (18 €). Toutes existent en version classique ou Bodega (décortiquée).
 - Charcuterie ibérique d'origine : Pata Negra Bellota 36 mois, Serrano Duroc 24 mois, Chorizo Bellota.

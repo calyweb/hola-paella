@@ -11,10 +11,22 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <>
-      <JsonLd data={breadcrumbJsonLd([
-        { name: "Accueil", url: SITE.url },
-        { name: "Contact", url: `${SITE.url}/contact` },
-      ])} />
+      <JsonLd data={[
+        {
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "@id": `${SITE.url}/contact#webpage`,
+          url: `${SITE.url}/contact`,
+          name: "Contact — Hola Paella",
+          description: "Joindre Hola Paella : téléphone, email, zone d'intervention. Bassin d'Arcachon et Bordeaux Métropole.",
+          isPartOf: { "@id": `${SITE.url}#business` },
+          mainEntity: { "@id": `${SITE.url}#business` },
+        },
+        breadcrumbJsonLd([
+          { name: "Accueil", url: SITE.url },
+          { name: "Contact", url: `${SITE.url}/contact` },
+        ]),
+      ]} />
       <section className="warm-bg pt-16 pb-14 px-5 sm:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="pill mb-5">Contact</div>

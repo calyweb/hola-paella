@@ -12,10 +12,33 @@ export const metadata = {
 export default function DevisPage() {
   return (
     <>
-      <JsonLd data={breadcrumbJsonLd([
-        { name: "Accueil", url: SITE.url },
-        { name: "Demander un devis", url: `${SITE.url}/devis` },
-      ])} />
+      <JsonLd data={[
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": `${SITE.url}/devis#webpage`,
+          url: `${SITE.url}/devis`,
+          name: "Demander un devis — Hola Paella",
+          description: "Demandez votre devis paella personnalisé. Réponse sous 24h pour votre événement sur le Bassin d'Arcachon ou à Bordeaux.",
+          isPartOf: { "@id": `${SITE.url}#business` },
+          potentialAction: {
+            "@type": "RequestQuoteAction",
+            target: {
+              "@type": "EntryPoint",
+              urlTemplate: `${SITE.url}/devis`,
+              actionPlatform: [
+                "https://schema.org/DesktopWebPlatform",
+                "https://schema.org/MobileWebPlatform",
+              ],
+            },
+            result: { "@type": "Quotation", url: `${SITE.url}/devis` },
+          },
+        },
+        breadcrumbJsonLd([
+          { name: "Accueil", url: SITE.url },
+          { name: "Demander un devis", url: `${SITE.url}/devis` },
+        ]),
+      ]} />
       <section className="warm-bg pt-16 pb-14 px-5 sm:px-8">
         <div className="max-w-5xl mx-auto text-center">
           <div className="pill mb-5">Devis personnalisé · Réponse sous 24h</div>

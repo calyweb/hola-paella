@@ -19,7 +19,7 @@ export async function generateMetadata({
   if (!e) return {};
   const url = `${SITE.url}/paella-${e.slug}`;
   return {
-    title: `${e.name} — Traiteur paella sur le Bassin d'Arcachon & Bordeaux`,
+    title: { absolute: `${e.name} · Traiteur Bassin d'Arcachon` },
     description: e.intro.substring(0, 160),
     alternates: { canonical: url },
     openGraph: { url, title: e.h1, description: e.intro, images: ["/images/hero-banner.png"] },
@@ -140,6 +140,8 @@ const eventContent: Record<
       { q: "Quelle paella pour un repas de chantier ?", a: "La Paella Fruits de mer & Poulet bio (18 €/pers) ou Del Pueblo (20 €/pers) sont les plus adaptées. Copieuses et faciles à servir." },
       { q: "Vous fournissez les couverts ?", a: "Oui, kit couvert à usage unique en option à 1,50 €/pers. Pratique et sans contrainte sur un chantier." },
       { q: "Quel délai pour commander ?", a: "Minimum 48 h à l'avance. Pour les grandes équipes, prévenez dès que possible." },
+      { q: "Peut-on commander pour une équipe qui mange à des horaires décalés ?", a: "C'est une vraie question de chantier. Je livre à l'heure convenue et la paella reste chaude environ une heure dans son contenant. Si votre équipe tourne en deux équipes, prévenez-moi — on peut organiser deux créneaux ou je vous conseille un contenant isotherme. L'essentiel, c'est que tout le monde mange chaud." },
+      { q: "La livraison est-elle possible sur des chantiers difficiles d'accès ?", a: "Oui, dans la grande majorité des cas. Donnez-moi l'adresse exacte et le meilleur accès au moment de la commande, je m'organise. J'ai l'habitude des zones industrielles et des entrées de chantier. Si l'accès est vraiment complexe, on définit ensemble un point de dépôt adapté." },
     ],
   },
   communion: {
@@ -196,6 +198,8 @@ const eventContent: Record<
       { q: "Vous proposez des tarifs pour les clubs sportifs ?", a: "Je fais des devis sur mesure selon le nombre de personnes. Contactez-moi pour qu'on adapte ensemble." },
       { q: "Vous fournissez les couverts ?", a: "Kit couvert à usage unique en option à 1,50 €/pers. Pratique pour les repas en extérieur." },
       { q: "Quel délai pour réserver ?", a: "Minimum 48 h pour la livraison, 72 h pour le chef sur place. Pour les grands événements sportifs, prévenez à l'avance." },
+      { q: "Vous intervenez aussi pour les repas d'après-match en semaine ?", a: "Oui, je m'adapte à vos horaires — semaine comme week-end. La livraison après un match du vendredi soir, c'est quelque chose que je fais régulièrement. Dites-moi l'heure du coup de sifflet final et l'heure à laquelle vous voulez manger, je gère le timing côté cuisine." },
+      { q: "Comment ça se passe concrètement le jour de la livraison pour un club ?", a: "Je livre directement dans votre vestiaire, salle des fêtes ou sur le terrain selon ce que vous avez prévu. La paella arrive prête à servir. Si vous n'avez pas de louche ni de plats de service, signalez-le en commande — je peux inclure le kit couvert à 1,50 €/pers. Comptez 10 minutes pour l'installation." },
     ],
   },
   associations: {
@@ -210,6 +214,8 @@ const eventContent: Record<
       { q: "Vous livrez pour des événements associatifs sur le Bassin ?", a: "Oui, je livre sur le sud Bassin d'Arcachon dès 10 personnes, chef à domicile sur tout le Bassin et jusqu'à Bordeaux." },
       { q: "Vous fournissez les couverts ?", a: "Kit couvert éco-responsable à usage unique en option à 1,50 €/pers." },
       { q: "Quel délai pour réserver ?", a: "Minimum 48 h, mais pour les grands repas annuels, réservez plusieurs semaines à l'avance." },
+      { q: "Peut-on utiliser la paella pour une soirée de collecte de fonds ?", a: "C'est un format qui marche très bien pour les associations. Un grand plat convivial, un prix lisible par convive, et je peux cuisiner sur place si vous voulez créer un moment d'animation autour du repas. Plusieurs associations du Bassin m'ont déjà sollicité dans ce cadre — n'hésitez pas à m'appeler pour qu'on en parle." },
+      { q: "Pouvez-vous fournir une facture adaptée à la comptabilité associative ?", a: "Oui, je fournis un devis et une facture en bonne et due forme, avec mention de la TVA et du détail des prestations. Si votre association a besoin d'un format particulier ou d'une commande en bon de commande, dites-le moi à la réservation, on s'adapte sans problème." },
     ],
   },
 };
@@ -271,6 +277,7 @@ export default async function EventPage({
                 src="/images/hero-banner.png"
                 alt={e.h1}
                 fill
+                priority
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 500px"
               />

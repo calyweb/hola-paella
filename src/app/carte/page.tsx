@@ -13,6 +13,7 @@ export const metadata = {
 
 export default function CartePage() {
   const menuItems = menu.filter((m) => !m.surDevis).map((m) => ({ name: m.name, description: m.description, price: m.price, category: m.category }));
+  const paellasPrincipales = menu.filter((m) => m.category === "paellas" && !m.surDevis);
   return (
     <>
       <JsonLd data={[
@@ -34,6 +35,38 @@ export default function CartePage() {
             4 paellas déclinables en 2 versions, trois tapas, six planches ibériques, sangrias maison et vins espagnols.
             Tout est à composer sur votre devis.
           </p>
+        </div>
+      </section>
+
+      <section className="bg-paper pt-14 pb-2 px-5 sm:px-8" aria-label="Nos paellas">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-display text-3xl sm:text-4xl text-ink mb-8 text-center">
+            Nos <span className="italic font-light">4 paellas</span>
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-5">
+            {paellasPrincipales.map((p) => (
+              <div key={p.slug} className="card-warm p-6 flex flex-col gap-1">
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="font-display text-lg text-ink leading-tight">{p.name}</h3>
+                  <span className="font-display text-xl text-ink shrink-0">
+                    {p.price}€<span className="text-xs font-body text-ink-soft font-normal ml-1">{p.unit}</span>
+                  </span>
+                </div>
+                <p className="text-terracotta italic text-sm">{p.tagline}</p>
+                <p className="text-ink-soft text-sm leading-relaxed mt-1">{p.description}</p>
+                {p.classicVersion && (
+                  <span className="mt-2 self-start text-[11px] text-ink-soft border border-ink/15 rounded-full px-2.5 py-1 leading-none">
+                    Dispo aussi en version classique
+                  </span>
+                )}
+                {p.signature && (
+                  <span className="mt-2 self-start text-[11px] bg-saffron text-ink rounded-full px-2.5 py-1 leading-none uppercase tracking-[0.12em] font-semibold">
+                    Signature
+                  </span>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

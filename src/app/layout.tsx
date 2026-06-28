@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: "%s · Hola Paella",
   },
   description:
-    "Traiteur paella Bassin d'Arcachon & Bordeaux. Livraison à domicile dès 10 pers ou chef cuisinant sur place dès 24 invités. Mariages, anniversaires, entreprises — devis 24h.",
+    "Paella livrée ou cuisinée sur place — Bassin d'Arcachon & Bordeaux. Chef à domicile dès 24 invités. Mariages, anniversaires, entreprises. Devis 24h.",
   applicationName: "Hola Paella",
   authors: [{ name: "Nicolas Cubie", url: "https://hola-paella.fr/a-propos" }],
   creator: "Hola Paella",
