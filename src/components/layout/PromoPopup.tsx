@@ -24,17 +24,17 @@ export function PromoPopup() {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center px-4 pb-4 sm:pb-4">
+    <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center">
       <button
         aria-label="Fermer"
         onClick={dismiss}
-        className="absolute inset-0 bg-ink/40 backdrop-blur-sm"
+        className="absolute inset-0 bg-ink/40 backdrop-blur-sm cursor-pointer"
       />
-      <div className="relative w-full max-w-md bg-paper rounded-3xl shadow-2xl overflow-hidden">
+      <div className="relative w-full bg-paper sm:rounded-3xl shadow-2xl overflow-hidden">
         <button
           aria-label="Fermer"
           onClick={dismiss}
-          className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-paper/90 hover:bg-paper flex items-center justify-center text-ink shadow-sm transition-colors"
+          className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-paper/90 hover:bg-paper flex items-center justify-center text-ink shadow-sm transition-colors cursor-pointer"
         >
           <X size={18} />
         </button>
