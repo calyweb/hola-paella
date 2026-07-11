@@ -24,13 +24,13 @@ export function PromoPopup() {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center">
+    <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center px-4 pb-4 sm:pb-4">
       <button
         aria-label="Fermer"
         onClick={dismiss}
         className="absolute inset-0 bg-ink/40 backdrop-blur-sm cursor-pointer"
       />
-      <div className="relative w-full bg-paper sm:rounded-3xl shadow-2xl overflow-hidden">
+      <div className="relative w-full max-w-md bg-paper rounded-3xl shadow-2xl overflow-hidden">
         <button
           aria-label="Fermer"
           onClick={dismiss}
@@ -66,7 +66,7 @@ export function PromoPopup() {
           </p>
 
           <div className="mt-7">
-            <Link href="/devis" onClick={dismiss} className="btn-primary group">
+            <Link href="/devis" onClick={dismiss} className="btn-primary w-full justify-center group">
               Demander un devis
             </Link>
           </div>
