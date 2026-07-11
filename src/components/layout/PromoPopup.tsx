@@ -51,8 +51,6 @@ export function PromoPopup() {
         </div>
 
         <div className="p-7 sm:p-8">
-          <div className="pill mb-4">Offre d&apos;été</div>
-
           <h2 className="font-display text-3xl sm:text-4xl text-ink leading-[1.05]">
             Livraison offerte
             <br />

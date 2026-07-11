@@ -86,6 +86,11 @@ export function CarteClient() {
                       <p className="text-ink-soft text-sm mt-3 leading-relaxed flex-1">
                         {item.description}
                       </p>
+                      {item.bodegaVersion && (
+                        <div className="mt-3 text-[13px] text-ink-soft bg-saffron/20 border border-saffron/40 font-medium rounded-xl px-3.5 py-2.5 leading-snug">
+                          {item.bodegaNote}
+                        </div>
+                      )}
                       <div className="mt-5 pt-4 border-t border-ink/8 flex items-center justify-between gap-4 flex-wrap">
                         {item.surDevis ? (
                           <span className="font-display text-xl text-ink">Sur devis</span>
@@ -101,11 +106,6 @@ export function CarteClient() {
                           <span className="text-sm text-ink-soft">
                             <span className="font-semibold text-ink">{item.cartonPrice}€</span>{" "}
                             {item.cartonUnit}
-                          </span>
-                        )}
-                        {item.bodegaVersion && (
-                          <span className="text-[11px] text-ink-soft border border-ink/15 rounded-full px-2.5 py-1 leading-none">
-                            {item.bodegaNote}
                           </span>
                         )}
                       </div>

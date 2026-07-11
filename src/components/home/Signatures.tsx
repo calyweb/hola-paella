@@ -55,6 +55,11 @@ export function Signatures() {
                     <span className="text-xs font-body text-ink-soft font-normal ml-1">{item.unit}</span>
                   </span>
                 </div>
+                {item.bodegaVersion && (
+                  <div className="mt-3 text-[11px] text-ink-soft bg-saffron/20 border border-saffron/40 font-medium rounded-lg px-2.5 py-1.5 leading-snug">
+                    Existe aussi en version Bodéga (décortiquée), même prix.
+                  </div>
+                )}
               </div>
             </article>
           ))}

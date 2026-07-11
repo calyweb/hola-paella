@@ -178,10 +178,10 @@ export default async function PaellaCityPage({
           </h2>
           <div className="mt-10 grid md:grid-cols-2 gap-5">
             {[
-              { name: "Fruits de mer & Poulet", price: "18", desc: "Poulet avec os, gambas entières." },
+              { name: "Fruits de mer & Poulet", price: "18", desc: "Poulet, gambas entières." },
               { name: "Fruits de mer & Poisson", price: "19", desc: "Gambas entières, lotte." },
               { name: "Del Pueblo", price: "20", desc: "Travers de porc, poulet désossé, jambon Serrano, gambas décortiquées." },
-              { name: "Royale", price: "21", desc: "Gambas entières, poulet avec os, lotte, langoustines entières." },
+              { name: "Royale", price: "21", desc: "Gambas entières, poulet, lotte, langoustines entières." },
             ].map((p) => (
               <div key={p.name} className="card-warm p-7 flex justify-between items-start">
                 <div>
