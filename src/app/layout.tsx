@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter, Bricolage_Grotesque } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
   description:
     "Paella livrée ou cuisinée sur place — Bassin d'Arcachon & Bordeaux. Chef à domicile dès 24 invités. Mariages, anniversaires, entreprises. Devis 24h.",
   applicationName: "Hola Paella",
-  authors: [{ name: "Nicolas Cubie", url: "https://hola-paella.fr/a-propos" }],
+  authors: [{ name: "Nicolas Cubie", url: `${SITE.url}/a-propos` }],
   creator: "Hola Paella",
   publisher: "Hola Paella",
   alternates: { canonical: SITE.url },
@@ -108,6 +109,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
