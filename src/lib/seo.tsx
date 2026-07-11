@@ -44,6 +44,7 @@ export const cities = [
     distance: "Zone de livraison · sans frais",
     quartiers: ["Pyla-sur-Mer", "Pilat-Plage"],
     geo: { lat: 44.5828, lng: -1.2056 },
+    paellaNote: "Idéal pour une réception les pieds dans le sable ou au pied de la Dune du Pilat.",
   },
   {
     slug: "arcachon",
@@ -55,6 +56,7 @@ export const cities = [
     distance: "Zone de livraison · sans frais",
     quartiers: ["Centre-ville", "Ville d'Hiver", "L'Aiguillon", "Le Moulleau", "Pereire", "Abatilles"],
     geo: { lat: 44.6588, lng: -1.1681 },
+    paellaNote: "Parfait pour une réception dans un cabanon tchanqué ou sur une terrasse du front de mer.",
   },
   {
     slug: "la-teste-de-buch",
@@ -66,6 +68,7 @@ export const cities = [
     distance: "Zone de livraison · sans frais",
     quartiers: ["La Teste centre", "Cazaux", "La Hume", "Les Prés salés"],
     geo: { lat: 44.6308, lng: -1.1428 },
+    paellaNote: "Je pars d'ici pour tout le Bassin — un vrai avantage sur les délais et la fraîcheur.",
   },
   {
     slug: "cazaux",
@@ -77,6 +80,7 @@ export const cities = [
     distance: "Zone de livraison · sans frais",
     quartiers: ["Cazaux centre", "Lac de Cazaux"],
     geo: { lat: 44.5833, lng: -1.1333 },
+    paellaNote: "Au bord du lac ou après une session de char à voile, la paella fait toujours l'unanimité.",
   },
   {
     slug: "la-hume",
@@ -88,6 +92,7 @@ export const cities = [
     distance: "Zone de livraison · sans frais",
     quartiers: ["La Hume", "Port de La Hume"],
     geo: { lat: 44.6400, lng: -1.0900 },
+    paellaNote: "Entre plage et campagne, la paella s'invite aussi bien en terrasse qu'au jardin.",
   },
   {
     slug: "gujan-mestras",
@@ -99,6 +104,7 @@ export const cities = [
     distance: "Zone de livraison · sans frais",
     quartiers: ["Gujan centre", "Mestras", "Port de Larros"],
     geo: { lat: 44.6342, lng: -1.0681 },
+    paellaNote: "Capitale de l'huître : nos planches ibériques et sangria se marient bien avec vos parcs à huîtres.",
   },
   {
     slug: "le-teich",
@@ -110,6 +116,7 @@ export const cities = [
     distance: "Zone de livraison · sans frais",
     quartiers: ["Le Teich centre", "Réserve ornithologique"],
     geo: { lat: 44.6342, lng: -1.0214 },
+    paellaNote: "Entre le port ostréicole et la réserve ornithologique, une paella en plein air prend tout son sens.",
   },
 
   // ── CHEF À DOMICILE UNIQUEMENT ──
@@ -123,6 +130,7 @@ export const cities = [
     distance: "Chef à domicile · Bassin d'Arcachon",
     quartiers: ["Biganos centre", "Facture", "Marais"],
     geo: { lat: 44.6442, lng: -0.9758 },
+    paellaNote: "Je m'installe volontiers dans un jardin ou une salle des fêtes du secteur pour votre événement.",
   },
   {
     slug: "mios",
@@ -134,6 +142,7 @@ export const cities = [
     distance: "Chef à domicile · Bassin d'Arcachon",
     quartiers: ["Mios centre", "Marcheprime"],
     geo: { lat: 44.6050, lng: -0.9350 },
+    paellaNote: "Entre forêt de pins et bord de Leyre, je m'adapte à un jardin ou une salle communale.",
   },
   {
     slug: "audenge",
@@ -145,6 +154,7 @@ export const cities = [
     distance: "Chef à domicile · Bassin d'Arcachon",
     quartiers: ["Audenge centre", "Le port", "Certes et Graveyron"],
     geo: { lat: 44.6833, lng: -1.0167 },
+    paellaNote: "Au bord des réservoirs à poissons, une paella en extérieur trouve toujours son public.",
   },
   {
     slug: "lanton",
@@ -156,6 +166,7 @@ export const cities = [
     distance: "Chef à domicile · Bassin d'Arcachon",
     quartiers: ["Lanton centre", "Cassy", "Taussat", "Blagon"],
     geo: { lat: 44.7000, lng: -1.0333 },
+    paellaNote: "Cassy, Taussat, Blagon : je m'installe où vous voulez pour cuisiner devant vos invités.",
   },
   {
     slug: "andernos",
@@ -167,6 +178,7 @@ export const cities = [
     distance: "Chef à domicile · Bassin d'Arcachon",
     quartiers: ["Andernos centre", "Le Mauret", "Le Coulin", "Port ostréicole"],
     geo: { lat: 44.7444, lng: -1.1025 },
+    paellaNote: "Sur la jetée ou dans un jardin ombragé, la paella se prête bien aux longues soirées d'été.",
   },
   {
     slug: "lege",
@@ -178,6 +190,7 @@ export const cities = [
     distance: "Chef à domicile · Bassin d'Arcachon",
     quartiers: ["Lège centre", "Arès", "Le Canon", "Claouey"],
     geo: { lat: 44.7667, lng: -1.1500 },
+    paellaNote: "Toute la presqu'île, du Canon à Claouey, profite de la même prestation sur place.",
   },
   {
     slug: "cap-ferret",
@@ -189,6 +202,7 @@ export const cities = [
     distance: "Chef à domicile · Bassin d'Arcachon",
     quartiers: ["Le Phare", "L'Herbe", "Piraillan", "Claouey", "Petit Piquey", "Grand Piquey", "Les Jacquets"],
     geo: { lat: 44.6342, lng: -1.2392 },
+    paellaNote: "Entre pinède et bord de bassin, la paella cuisinée en direct fait toujours son effet au Cap Ferret.",
   },
   {
     slug: "bordeaux",
@@ -199,6 +213,7 @@ export const cities = [
     distance: "Sur devis · frais de déplacement calculés",
     quartiers: ["Chartrons", "Saint-Pierre", "Bastide", "Caudéran", "Mérignac", "Pessac", "Bègles", "Talence"],
     geo: { lat: 44.8378, lng: -0.5792 },
+    paellaNote: "Cocktails, mariages ou soirées d'entreprise, je m'adapte aux lieux de réception bordelais.",
   },
 ];
 

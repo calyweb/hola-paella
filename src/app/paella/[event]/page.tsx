@@ -42,6 +42,8 @@ const eventContent: Record<
       { q: "Combien d'invités pour un mariage paella ?", a: "J'interviens à partir de 24 invités pour la formule chef à domicile. Pour les très grands événements, appelez-moi, on adapte le matériel et l'équipe." },
       { q: "Combien de temps à l'avance réserver ?", a: "Idéalement plusieurs mois pour les samedis de juin à septembre, qui se remplissent vite. Préavis minimum 72 h pour le chef à domicile." },
       { q: "Vous déplacez-vous où pour un mariage ?", a: "Je me déplace de septembre à juin jusqu'au Cap Ferret. Toute l'année jusqu'à Biganos. Pour les autres communes (Bordeaux notamment), c'est sur étude." },
+      { q: "Que se passe-t-il s'il pleut le jour J ?", a: "Je m'adapte : sous un chapiteau, une grange ou une salle couverte, la plancha se déplace sans problème. Prévoyez simplement un point d'installation à l'abri au moment de la réservation, on en discute ensemble en amont." },
+      { q: "Peut-on goûter la paella avant de réserver ?", a: "Je n'organise pas de dégustation à l'aveugle, mais je réponds en détail à toutes vos questions sur les recettes et les produits. Beaucoup de mariés me font confiance sur la base des avis clients (110+ sur Google et TripAdvisor) et des photos d'événements précédents." },
     ],
   },
   entreprise: {
@@ -56,6 +58,8 @@ const eventContent: Record<
       { q: "Vous gérez la vaisselle pour un événement entreprise ?", a: "Kit couverts bambou éco-responsable disponible en option à 1,50 €/pers. Pour la vaisselle complète, on étudie au cas par cas." },
       { q: "Quel délai pour réserver ?", a: "48 h minimum pour la livraison, 72 h pour le chef à domicile. Pour vos événements stratégiques, prévoyez 2 à 4 semaines." },
       { q: "Vous livrez à Bordeaux pour un événement entreprise ?", a: "Sur étude. Notre zone principale est le Bassin d'Arcachon ; pour Bordeaux et la métropole, contactez-nous et on calcule les frais de déplacement." },
+      { q: "Proposez-vous une offre pour un séminaire sur plusieurs jours ?", a: "Oui, je peux intervenir sur un ou plusieurs repas d'un séminaire (déjeuner, dîner de gala). Contactez-moi avec votre programme, on construit une offre adaptée à chaque temps fort." },
+      { q: "Pouvez-vous adapter le menu pour des convives ayant des restrictions alimentaires ?", a: "Oui. La Paella Fruits de mer & Poulet bio convient à la plupart des régimes, et je peux prévoir des portions sans fruits de mer ou sans porc sur demande. Signalez-le simplement à la réservation." },
     ],
   },
   anniversaire: {
@@ -70,6 +74,8 @@ const eventContent: Record<
       { q: "Préavis pour un anniversaire ?", a: "48 h minimum pour la livraison, 72 h pour le chef à domicile. En haute saison, prévoyez plusieurs semaines à l'avance." },
       { q: "Vous gérez la vaisselle ?", a: "Option kit couverts bambou éco-responsable à 1,50 €/pers. Pour la vaisselle complète, sur étude." },
       { q: "Anniversaire enfant possible ?", a: "Bien sûr — la paella Fruits de mer & Poulet est douce et plaît aux enfants. J'adapte le menu selon vos invités." },
+      { q: "Peut-on personnaliser le service autour du buffet paella ?", a: "Oui, dites-moi le thème ou l'ambiance recherchée, je m'adapte au format de service (buffet, plancha en direct) et à la mise en table selon vos envies." },
+      { q: "Proposez-vous un dessert en complément ?", a: "Je me concentre sur la paella, les tapas et les planches, mais je peux vous recommander des partenaires locaux pour le dessert si besoin." },
     ],
   },
   bapteme: {
@@ -84,6 +90,8 @@ const eventContent: Record<
       { q: "Peut-on adapter le menu pour les enfants ?", a: "Oui. La paella Fruits de mer & Poulet bio est douce et convient aux enfants. Je peux aussi prévoir des portions adaptées." },
       { q: "Quel délai pour réserver ?", a: "48 h pour la livraison, 72 h pour le chef à domicile. En saison, prévoyez quelques semaines à l'avance." },
       { q: "Vous déplacez-vous le dimanche ?", a: "Oui, je travaille le week-end. La plupart des baptêmes ont lieu le dimanche — c'est mon quotidien." },
+      { q: "Le service inclut-il la vaisselle ?", a: "Un kit couverts bambou éco-responsable est disponible en option à 1,50 €/pers. Pour la vaisselle complète (assiettes, verres), on regarde ensemble selon votre lieu de réception." },
+      { q: "Peut-on prévoir un menu allégé pour les personnes âgées présentes ?", a: "Oui, la Paella Fruits de mer & Poulet bio est douce et bien tolérée. N'hésitez pas à me signaler des besoins particuliers à la réservation." },
     ],
   },
   "soiree-privee": {
@@ -98,6 +106,8 @@ const eventContent: Record<
       { q: "Jusqu'à quelle heure livrez-vous ?", a: "Je m'adapte à votre programme. Dites-moi l'heure du repas, je livre en conséquence." },
       { q: "Vous fournissez les couverts ?", a: "Kit couverts bambou éco-responsable en option à 1,50 €/pers. Compostable, élégant." },
       { q: "Peut-on commander uniquement des tapas et planches ?", a: "Oui, sans problème. Tapas, planches de charcuterie ibérique et sangria — un format apéritif dînatoire très demandé." },
+      { q: "Peut-on commander pour une soirée improvisée ?", a: "Avec 48 h de préavis pour la livraison, c'est jouable même pour une soirée décidée sur le tard. Contactez-moi dès que vous avez une date, je vous dis rapidement si c'est possible." },
+      { q: "Proposez-vous un format brunch ou déjeuner ?", a: "Oui, la paella se prête très bien à un déjeuner. Je m'adapte à l'horaire de votre soirée ou repas, livraison comme chef à domicile." },
     ],
   },
   evjf: {
@@ -112,6 +122,8 @@ const eventContent: Record<
       { q: "Quel menu pour un EVJF ?", a: "Paella + sangrias + tapas, c'est la formule EVJF idéale. Je m'adapte à votre nombre d'invitées et votre budget." },
       { q: "Combien de personnes minimum ?", a: "10 pour la livraison, 24 pour le chef à domicile." },
       { q: "Quel délai pour réserver ?", a: "Minimum 48 h, mais les week-ends de printemps-été partent vite. Prévenez dès que la date est fixée." },
+      { q: "Peut-on associer une animation autour de la paella ?", a: "La cuisson en direct au feu de bois est déjà un vrai moment d'animation en soi. Si vous avez une idée précise (jeux, thème), dites-le-moi, je m'organise autour." },
+      { q: "Le lieu doit-il être équipé d'une cuisine ?", a: "Non, pour le chef à domicile j'arrive avec tout mon matériel (plancha, gaz, ustensiles). Une prise électrique et un point d'eau à proximité suffisent." },
     ],
   },
   evg: {
@@ -126,6 +138,8 @@ const eventContent: Record<
       { q: "Quel menu pour un EVG ?", a: "Paella Royale ou Del Pueblo pour le plat, sangrias maison, tapas et planches de Pata Negra pour l'apéro. Je m'adapte." },
       { q: "Combien de personnes minimum ?", a: "10 pour la livraison, 24 pour le chef à domicile." },
       { q: "Vous livrez le dimanche ?", a: "Oui, je travaille 7 jours sur 7. Les EVG ont souvent lieu le week-end — c'est mon quotidien." },
+      { q: "Peut-on cuisiner en extérieur dans une location de vacances ?", a: "Oui, je me déplace dans les gîtes, locations de vacances ou terrains privés du Bassin. Vérifiez juste qu'il y a un accès électrique et un point d'eau à proximité." },
+      { q: "Les portions sont-elles copieuses ?", a: "Oui, les portions sont généreuses par nature avec la paella. Pour les EVG et les gros appétits, je peux ajuster les quantités par personne — dites-le-moi à la réservation." },
     ],
   },
   "repas-de-chantier": {
@@ -156,6 +170,8 @@ const eventContent: Record<
       { q: "La paella convient-elle aux enfants ?", a: "Oui, la paella Fruits de mer & Poulet bio est douce et appréciée des enfants. Je peux adapter les portions." },
       { q: "Combien de personnes minimum ?", a: "10 pour la livraison, 24 pour le chef à domicile." },
       { q: "Quel délai pour réserver ?", a: "48 h minimum. Pour les communions du printemps, réservez dès que la date est connue, le carnet se remplit vite." },
+      { q: "Peut-on prévoir un menu sans porc ?", a: "Oui, la Paella Fruits de mer & Poisson ou Fruits de mer & Poulet bio conviennent sans porc. Signalez-le à la réservation, je m'organise sur la composition." },
+      { q: "La paella peut-elle être servie en extérieur si la cérémonie est en plein air ?", a: "Oui, livraison comme chef à domicile s'adaptent très bien à un repas en extérieur — jardin, salle des fêtes avec terrasse, etc." },
     ],
   },
   "depart-retraite": {
@@ -170,6 +186,8 @@ const eventContent: Record<
       { q: "Quel format pour un pot de départ ?", a: "Livraison dès 10 personnes pour un pot convivial, chef à domicile dès 24 invités pour une soirée plus festive." },
       { q: "Vous gérez la facture pro ?", a: "Oui, je fournis un devis et une facture en bonne et due forme." },
       { q: "Quel délai pour réserver ?", a: "Minimum 48 h, idéalement 1 à 2 semaines à l'avance pour être sûr d'avoir votre date." },
+      { q: "Peut-on organiser la surprise sans que le/la retraité(e) soit au courant ?", a: "Oui, c'est fréquent. Coordonnez-vous avec un collègue pour la logistique de livraison ou d'installation, je m'adapte à l'horaire et au lieu convenus en toute discrétion." },
+      { q: "Intervenez-vous dans les locaux de l'entreprise ?", a: "Oui, livraison ou chef à domicile dans vos bureaux, salle de pause ou extérieur d'entreprise. Vérifiez juste l'accès pour le matériel si vous optez pour la cuisson sur place." },
     ],
   },
   cousinade: {
@@ -184,6 +202,8 @@ const eventContent: Record<
       { q: "La paella convient-elle à tous les âges ?", a: "Absolument. La paella Fruits de mer & Poulet est appréciée de tous, des enfants aux grands-parents." },
       { q: "Vous vous déplacez loin pour une cousinade ?", a: "Je livre sur le sud Bassin d'Arcachon et me déplace jusqu'à Bordeaux et la Gironde pour le chef à domicile." },
       { q: "Quel délai pour réserver ?", a: "Minimum 48 h, mais pour les grandes réunions de famille, mieux vaut prévoir plusieurs semaines à l'avance." },
+      { q: "Peut-on prévoir plusieurs paellas différentes pour varier les goûts ?", a: "Oui, je peux préparer plusieurs de mes 4 recettes en parallèle pour un grand rassemblement — pratique quand les goûts diffèrent d'une génération à l'autre." },
+      { q: "Le lieu doit-il être équipé pour recevoir un chef à domicile ?", a: "Non, j'arrive avec tout mon matériel (plancha, gaz, ustensiles). Un accès électrique et un point d'eau à proximité suffisent, que ce soit un jardin familial ou une salle des fêtes." },
     ],
   },
   "club-sportif": {

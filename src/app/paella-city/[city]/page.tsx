@@ -191,6 +191,7 @@ export default async function PaellaCityPage({
           </div>
           <p className="mt-6 text-ink-soft text-sm">
             Toutes servies sur riz au safran, moules, calamars, chorizo, poivrons et épices.
+            {c.paellaNote && <> {c.paellaNote}</>}
           </p>
           <Link href="/carte" className="inline-flex items-center gap-2 text-[15px] font-semibold text-ink hover:text-terracotta transition-colors group mt-4">
             Voir la carte complète

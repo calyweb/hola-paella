@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SITE, JsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata = {
@@ -29,13 +30,19 @@ export default function MentionsLegalesPage() {
         <div className="max-w-3xl mx-auto prose prose-ink">
           <h2>1. &Eacute;diteur du site</h2>
           <p>
-            <strong>Hola Paella</strong>
+            <strong>Hola Paella</strong> (nom commercial)
             <br />
-            Entrepreneur individuel
+            ANNA &mdash; Soci&eacute;t&eacute; &agrave; responsabilit&eacute; limit&eacute;e au capital de 5&nbsp;000&nbsp;&euro;
             <br />
-            Nicolas Cubie
+            G&eacute;rant : Nicolas Cubie
             <br />
-            5 rue B&eacute;ranger, 33260 La Teste-de-Buch, France
+            5 Impasse du Domaine de B&eacute;ranger, 33260 La Teste-de-Buch, France
+            <br />
+            SIREN : 537 864 084 &mdash; SIRET : 537 864 084 00026
+            <br />
+            RCS Bordeaux 537 864 084 &mdash; TVA intracommunautaire : FR77537864084
+            <br />
+            Code NAF/APE : 5621Z (Services des traiteurs)
             <br />
             T&eacute;l&eacute;phone : {SITE.phoneDisplay}
             <br />
@@ -68,11 +75,14 @@ export default function MentionsLegalesPage() {
             Pour exercer ces droits, contactez-nous &agrave; {SITE.email}.
           </p>
 
-          <h2>5. Cookies</h2>
+          <h2>5. Cookies et mesure d&apos;audience</h2>
           <p>
             Ce site n&apos;utilise pas de cookies de suivi ou publicitaires. Seuls des
             cookies techniques n&eacute;cessaires au fonctionnement du site peuvent
-            &ecirc;tre d&eacute;pos&eacute;s.
+            &ecirc;tre d&eacute;pos&eacute;s. Nous utilisons Vercel Analytics et Vercel
+            Speed Insights pour mesurer la fr&eacute;quentation et les performances du
+            site : ces outils ne d&eacute;posent pas de cookies et ne collectent aucune
+            donn&eacute;e personnelle identifiable.
           </p>
 
           <h2>6. Cr&eacute;dits</h2>
@@ -81,6 +91,13 @@ export default function MentionsLegalesPage() {
             <a href="https://www.calyweb.com" target="_blank" rel="noopener noreferrer">
               Studio Calyweb
             </a>
+          </p>
+
+          <h2>7. Pour aller plus loin</h2>
+          <p>
+            Consultez nos{" "}
+            <Link href="/cgv">conditions g&eacute;n&eacute;rales de vente</Link> et notre{" "}
+            <Link href="/politique-de-confidentialite">politique de confidentialit&eacute;</Link>.
           </p>
         </div>
       </section>

@@ -3,7 +3,7 @@ import { SITE, cities, events } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Date statique de derniere mise a jour reelle (pas new Date())
-  const lastUpdate = new Date("2026-06-08");
+  const lastUpdate = new Date("2026-07-11");
   const base = SITE.url;
 
   const main: MetadataRoute.Sitemap = [
@@ -14,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/a-propos`, lastModified: lastUpdate, changeFrequency: "yearly", priority: 0.6 },
     { url: `${base}/contact`, lastModified: lastUpdate, changeFrequency: "yearly", priority: 0.6 },
     { url: `${base}/mentions-legales`, lastModified: lastUpdate, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${base}/cgv`, lastModified: lastUpdate, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${base}/politique-de-confidentialite`, lastModified: lastUpdate, changeFrequency: "yearly", priority: 0.3 },
   ];
 
   // Pages "Paella [ville]" pour toutes les villes

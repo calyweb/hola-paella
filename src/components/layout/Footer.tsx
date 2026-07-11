@@ -117,6 +117,8 @@ export function Footer() {
             <div>© {new Date().getFullYear()} Hola Paella · Traiteur paella sur le Bassin d&apos;Arcachon &amp; Bordeaux.</div>
             <div className="flex gap-6">
               <Link href="/mentions-legales" className="hover:text-cream/80">Mentions légales</Link>
+              <Link href="/cgv" className="hover:text-cream/80">CGV</Link>
+              <Link href="/politique-de-confidentialite" className="hover:text-cream/80">Confidentialité</Link>
               <a href="https://www.calyweb.com" target="_blank" rel="noopener noreferrer" className="hover:text-cream/80">Réalisation studio Calyweb</a>
             </div>
           </div>
