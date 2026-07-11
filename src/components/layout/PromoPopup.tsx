@@ -65,13 +65,10 @@ export function PromoPopup() {
             Gujan-Mestras — la livraison de votre paella est offerte cet été.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 mt-7">
+          <div className="mt-7">
             <Link href="/devis" onClick={dismiss} className="btn-primary group">
               Demander un devis
             </Link>
-            <button onClick={dismiss} className="btn-ghost">
-              Plus tard
-            </button>
           </div>
         </div>
       </div>
