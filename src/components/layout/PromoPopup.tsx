@@ -1,20 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { X, Truck } from "lucide-react";
+import { X } from "lucide-react";
 
 const STORAGE_KEY = "hp_promo_livraison_ete_2026";
-
-const villes = [
-  "Arcachon",
-  "Pyla-sur-Mer",
-  "La Teste-de-Buch",
-  "Cazaux",
-  "La Hume",
-  "Gujan-Mestras",
-  "Le Teich",
-];
 
 export function PromoPopup() {
   const [visible, setVisible] = useState(false);
@@ -39,23 +30,27 @@ export function PromoPopup() {
         onClick={dismiss}
         className="absolute inset-0 bg-ink/40 backdrop-blur-sm"
       />
-      <div className="relative w-full max-w-md bg-paper rounded-3xl shadow-2xl p-7 sm:p-8 overflow-hidden">
-        <div className="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-saffron/25 blur-3xl" />
-        <div className="absolute -bottom-14 -left-14 w-48 h-48 rounded-full bg-terracotta/15 blur-3xl" />
-
+      <div className="relative w-full max-w-md bg-paper rounded-3xl shadow-2xl overflow-hidden">
         <button
           aria-label="Fermer"
           onClick={dismiss}
-          className="absolute top-4 right-4 w-9 h-9 rounded-full bg-ink/5 hover:bg-ink/10 flex items-center justify-center text-ink transition-colors"
+          className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-paper/90 hover:bg-paper flex items-center justify-center text-ink shadow-sm transition-colors"
         >
           <X size={18} />
         </button>
 
-        <div className="relative">
-          <div className="w-12 h-12 rounded-2xl bg-terracotta text-paper flex items-center justify-center mb-5">
-            <Truck size={22} strokeWidth={2} />
-          </div>
+        <div className="relative h-44 sm:h-52">
+          <Image
+            src="/images/paella-royale-bodega.png"
+            alt="Paella Royale Hola Paella"
+            fill
+            className="object-cover"
+            sizes="450px"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent" />
+        </div>
 
+        <div className="p-7 sm:p-8">
           <div className="pill mb-4">Offre d&apos;été</div>
 
           <h2 className="font-display text-3xl sm:text-4xl text-ink leading-[1.05]">
@@ -65,21 +60,10 @@ export function PromoPopup() {
           </h2>
 
           <p className="mt-4 text-ink-soft leading-relaxed">
-            Sur Arcachon, Pyla-sur-Mer, La Teste-de-Buch, Cazaux, La Hume,
-            Gujan-Mestras et Le Teich, la livraison de votre paella est offerte
-            cet été.
+            Sur le sud du Bassin d&apos;Arcachon — d&apos;Arcachon au Teich, en
+            passant par Pyla-sur-Mer, La Teste-de-Buch, Cazaux, La Hume et
+            Gujan-Mestras — la livraison de votre paella est offerte cet été.
           </p>
-
-          <div className="mt-5 flex flex-wrap gap-2">
-            {villes.map((v) => (
-              <span
-                key={v}
-                className="text-[11px] text-ink-soft border border-ink/15 rounded-full px-3 py-1"
-              >
-                {v}
-              </span>
-            ))}
-          </div>
 
           <div className="flex flex-col sm:flex-row gap-3 mt-7">
             <Link href="/devis" onClick={dismiss} className="btn-primary group">
