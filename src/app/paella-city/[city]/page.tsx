@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
 import { cities, events, SITE, JsonLd, serviceJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
+import { testimonialForCity } from "@/data/testimonials";
+import { SocialProof } from "@/components/SocialProof";
 
 export function generateStaticParams() {
   return cities.map((c) => ({ city: c.slug }));
@@ -48,6 +50,7 @@ export default async function PaellaCityPage({
 
   const url = `${SITE.url}/paella-${c.slug}`;
   const others = cities.filter((x) => x.slug !== c.slug);
+  const testimonial = testimonialForCity(c.slug);
 
   const faqs = c.delivery
     ? [
@@ -242,6 +245,15 @@ export default async function PaellaCityPage({
         </div>
       </section>
 
+
+      <section className="py-14 px-5 sm:px-8 bg-cream">
+        <div className="max-w-[1440px] mx-auto">
+          <h2 className="font-display text-3xl text-ink mb-6">
+            Ils nous ont fait confiance
+          </h2>
+          <SocialProof testimonial={testimonial} />
+        </div>
+      </section>
 
       {c.quartiers && c.quartiers.length > 0 && (
         <section className="py-14 px-5 sm:px-8 bg-paper">

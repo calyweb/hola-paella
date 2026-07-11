@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Phone, Check } from "lucide-react";
 import { events, cities, SITE, JsonLd, serviceJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
+import { testimonialForEvent } from "@/data/testimonials";
+import { SocialProof } from "@/components/SocialProof";
 
 export function generateStaticParams() {
   return events.map((e) => ({ event: e.slug }));
@@ -250,6 +252,7 @@ export default async function EventPage({
   if (!e) return notFound();
   const content = eventContent[e.slug];
   const url = `${SITE.url}/paella-${e.slug}`;
+  const testimonial = testimonialForEvent(e.slug);
 
   return (
     <>
@@ -322,6 +325,15 @@ export default async function EventPage({
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-14 px-5 sm:px-8 bg-paper">
+        <div className="max-w-[1440px] mx-auto">
+          <h2 className="font-display text-3xl text-ink mb-6">
+            Ils nous ont fait confiance
+          </h2>
+          <SocialProof testimonial={testimonial} />
         </div>
       </section>
 

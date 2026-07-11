@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import { SITE } from "@/lib/seo";
+import { testimonials } from "@/data/testimonials";
 
 export function Testimonials() {
   return (
@@ -17,11 +18,7 @@ export function Testimonials() {
         </p>
 
         <div className="mt-10 grid md:grid-cols-3 gap-4 text-left max-w-4xl mx-auto mb-12">
-          {[
-            { name: "Sophie L.", source: "Google", stars: 5, text: "Nicolas est venu cuisiner pour notre mariage au Cap Ferret, 65 invités. Paella Royale incroyable, service impeccable. Nos invités en parlent encore !" },
-            { name: "Marc D.", source: "TripAdvisor", stars: 5, text: "Livraison pour un anniversaire à Arcachon, 25 personnes. Paella Del Pueblo généreuse et savoureuse. Les planches de Pata Negra étaient exceptionnelles." },
-            { name: "Caroline B.", source: "Google", stars: 5, text: "Troisième fois qu'on fait appel à Hola Paella pour nos soirées d'entreprise à Bordeaux. Toujours au top, produits frais, sangria maison délicieuse." },
-          ].map((t) => (
+          {testimonials.map((t) => (
             <div key={t.name} className="card-warm p-6">
               <div className="flex items-center gap-1 mb-3">
                 {[...Array(t.stars)].map((_, i) => (
