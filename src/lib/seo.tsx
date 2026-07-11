@@ -1,7 +1,7 @@
 export const SITE = {
   name: "Hola Paella",
   tagline: "Traiteur espagnol sur le Bassin d'Arcachon",
-  url: "https://hola-paella.fr",
+  url: "https://www.hola-paella.fr",
   phone: "+33646198234",
   phoneDisplay: "06 46 19 82 34",
   email: "contact@hola-paella.fr",

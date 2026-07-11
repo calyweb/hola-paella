@@ -50,7 +50,7 @@ export function CarteClient() {
                 </div>
               )}
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {items.map((item) => (
+                {items.map((item, index) => (
                   <article key={item.slug} className="card-warm overflow-hidden flex flex-col">
                     <div className="relative aspect-[5/3] overflow-hidden bg-saffron/10">
                       {item.surDevis ? (
@@ -64,7 +64,7 @@ export function CarteClient() {
                           src={item.image}
                           alt={item.name}
                           fill
-                          loading="lazy"
+                          {...(index === 0 ? { priority: true } : { loading: "lazy" as const })}
                           className="object-cover transition-transform duration-700 hover:scale-105"
                           sizes="(max-width: 768px) 100vw, 33vw"
                         />

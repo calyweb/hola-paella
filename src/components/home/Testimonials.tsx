@@ -13,7 +13,7 @@ export function Testimonials() {
           <span className="italic font-light">vous laisser le dire.</span>
         </h2>
         <p className="mt-6 text-ink-soft text-lg max-w-xl mx-auto leading-relaxed">
-          Plus de 110 avis sur Google et TripAdvisor. Voilà ce qu&apos;en disent nos clients.
+          4,8/5 sur Google (40 avis) et 5/5 sur TripAdvisor (73 avis). Voilà ce qu&apos;en disent nos clients.
         </p>
 
         <div className="mt-10 grid md:grid-cols-3 gap-4 text-left max-w-4xl mx-auto mb-12">

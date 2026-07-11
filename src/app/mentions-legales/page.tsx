@@ -35,7 +35,7 @@ export default function MentionsLegalesPage() {
             <br />
             Nicolas Cubie
             <br />
-            La Teste-de-Buch, 33260, France
+            5 rue B&eacute;ranger, 33260 La Teste-de-Buch, France
             <br />
             T&eacute;l&eacute;phone : {SITE.phoneDisplay}
             <br />

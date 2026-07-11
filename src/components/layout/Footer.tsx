@@ -34,7 +34,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="pt-50 pb-12 px-5 sm:px-8 max-w-[1440px] mx-auto">
+      <div className="pt-72 sm:pt-60 md:pt-50 pb-12 px-5 sm:px-8 max-w-[1440px] mx-auto">
         <div className="grid md:grid-cols-4 gap-12">
           <div className="md:col-span-2">
             <div className="text-saffron text-xs uppercase tracking-[0.2em] mb-4">Hola Paella</div>

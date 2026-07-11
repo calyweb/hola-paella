@@ -5,7 +5,7 @@ import { Origines } from "@/components/home/Origines";
 import { Mood } from "@/components/home/Mood";
 import { Testimonials } from "@/components/home/Testimonials";
 import { FAQ } from "@/components/home/FAQ";
-import { JsonLd, faqJsonLd, breadcrumbJsonLd, localBusinessJsonLd, SITE } from "@/lib/seo";
+import { JsonLd, faqJsonLd, breadcrumbJsonLd, SITE } from "@/lib/seo";
 
 const homeFaqs = [
   {
@@ -34,7 +34,6 @@ export default function Home() {
   return (
     <>
       <JsonLd data={[
-        localBusinessJsonLd(),
         faqJsonLd(homeFaqs),
         breadcrumbJsonLd([{ name: "Accueil", url: SITE.url }]),
       ]} />
