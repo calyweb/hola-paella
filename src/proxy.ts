@@ -7,7 +7,7 @@ const citySlugs = new Set([
   "biganos", "mios", "audenge", "lanton", "andernos", "lege", "cap-ferret", "bordeaux",
 ]);
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // /paella-arcachon → /paella-city/arcachon (delivery cities)
