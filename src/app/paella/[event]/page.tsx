@@ -43,7 +43,7 @@ const eventContent: Record<
       { q: "Combien de temps à l'avance réserver ?", a: "Idéalement plusieurs mois pour les samedis de juin à septembre, qui se remplissent vite. Préavis minimum 72 h pour le chef à domicile." },
       { q: "Vous déplacez-vous où pour un mariage ?", a: "Je me déplace de septembre à juin jusqu'au Cap Ferret. Toute l'année jusqu'à Biganos. Pour les autres communes (Bordeaux notamment), c'est sur étude." },
       { q: "Que se passe-t-il s'il pleut le jour J ?", a: "Je m'adapte : sous un chapiteau, une grange ou une salle couverte, la plancha se déplace sans problème. Prévoyez simplement un point d'installation à l'abri au moment de la réservation, on en discute ensemble en amont." },
-      { q: "Peut-on goûter la paella avant de réserver ?", a: "Je n'organise pas de dégustation à l'aveugle, mais je réponds en détail à toutes vos questions sur les recettes et les produits. Beaucoup de mariés me font confiance sur la base des avis clients (110+ sur Google et TripAdvisor) et des photos d'événements précédents." },
+      { q: "Peut-on goûter la paella avant de réserver ?", a: "Je n'organise pas de dégustation à l'aveugle, mais je réponds en détail à toutes vos questions sur les recettes et les produits. Beaucoup de mariés me font confiance sur la base des avis clients (4,8/5 sur Google, 5/5 sur TripAdvisor) et des photos d'événements précédents." },
     ],
   },
   entreprise: {
