@@ -27,5 +27,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/paella-:slug*"],
+  matcher: ["/paella-:slug"],
 };
