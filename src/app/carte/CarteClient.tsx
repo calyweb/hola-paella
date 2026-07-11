@@ -103,9 +103,9 @@ export function CarteClient() {
                             {item.cartonUnit}
                           </span>
                         )}
-                        {item.classicVersion && (
+                        {item.bodegaVersion && (
                           <span className="text-[11px] text-ink-soft border border-ink/15 rounded-full px-2.5 py-1 leading-none">
-                            Dispo aussi en version classique
+                            {item.bodegaNote}
                           </span>
                         )}
                       </div>

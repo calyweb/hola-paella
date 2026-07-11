@@ -68,7 +68,7 @@ const eventContent: Record<
     hooks: [
       { title: "Livraison à domicile dès 10 personnes", text: "Pour vos anniversaires entre amis ou en famille, on livre la paella chaude chez vous, prête à servir. Vous restez maître de votre soirée." },
       { title: "Chef à domicile dès 24 invités", text: "Pour les grandes tablées, je viens cuisiner sur place. Zéro stress côté logistique, effet \"wahou\" côté invités." },
-      { title: "Carte personnalisable", text: "Mes 4 paellas (Fruits de mer & Poulet Bodéga, Fruits de mer & Poisson Bodéga, Del Pueblo, Royale Bodéga), planches de charcuterie ibérique, sangria maison. J'adapte selon vos envies." },
+      { title: "Carte personnalisable", text: "Mes 4 paellas (Fruits de mer & Poulet, Fruits de mer & Poisson, Del Pueblo, Royale), planches de charcuterie ibérique, sangria maison. J'adapte selon vos envies." },
       { title: "Tarif clair, sans surprise", text: "Paellas de 18 à 21 €/pers, planches de 21 à 29 €, sangria maison BIB 3 L à 27 €. Vous composez votre devis en ligne." },
     ],
     faqs: [

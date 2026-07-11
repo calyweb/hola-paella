@@ -20,7 +20,8 @@ export interface MenuItem {
   signature?: boolean;
   cartonPrice?: number;
   cartonUnit?: string;
-  classicVersion?: boolean;
+  bodegaVersion?: boolean;
+  bodegaNote?: string;
   nouveaute?: boolean;
   surDevis?: boolean;
 }
@@ -75,46 +76,49 @@ export const categoryMeta: Record<
 
 export const menu: MenuItem[] = [
   // PAELLAS — base commune : moules, calamars, chorizo, poivrons, riz bomba, safran & épices
-  // Version Bodéga (défaut) = poulet désossé, gambas décortiquées — prêts à déguster
-  // Version Classique = poulet avec os, gambas entières avec coquille — même prix
+  // Version Classique (défaut) = poulet avec os, gambas entières avec coquille
+  // Version Bodéga = poulet désossé, gambas décortiquées — prêts à déguster, même prix
   {
     slug: "paella-fruits-de-mer-poulet",
-    name: "Paella Fruits de mer & Poulet Bodéga",
+    name: "Paella Fruits de mer & Poulet",
     category: "paellas",
-    tagline: "Poulet désossé · Gambas décortiquées.",
+    tagline: "Poulet avec os · Gambas entières.",
     description:
-      "Version Bodéga : poulet désossé, gambas décortiquées — prêts à déguster. Riz au safran, moules, calamars, chorizo, poivrons et épices.",
+      "Poulet avec os, gambas entières avec leur coquille. Riz au safran, moules, calamars, chorizo, poivrons et épices.",
     price: 18,
     unit: "/ pers.",
-    highlights: ["Poulet désossé", "Gambas décortiquées"],
+    highlights: ["Poulet avec os", "Gambas entières"],
     image: "/images/paella-poulet-bodega.png",
-    classicVersion: true,
+    bodegaVersion: true,
+    bodegaNote: "Disponible en version Bodéga au même prix, avec poulet désossé et gambas décortiquées.",
   },
   {
     slug: "paella-fruits-de-mer-poisson",
-    name: "Paella Fruits de mer & Poisson Bodéga",
+    name: "Paella Fruits de mer & Poisson",
     category: "paellas",
-    tagline: "Gambas décortiquées · Lotte.",
+    tagline: "Gambas entières · Lotte.",
     description:
-      "Version Bodéga : gambas décortiquées et lotte. Riz au safran, moules, calamars, chorizo, poivrons et épices.",
+      "Gambas entières avec leur coquille et lotte. Riz au safran, moules, calamars, chorizo, poivrons et épices.",
     price: 19,
     unit: "/ pers.",
-    highlights: ["Gambas décortiquées", "Lotte"],
+    highlights: ["Gambas entières", "Lotte"],
     image: "/images/paella-poisson-bodega.png",
-    classicVersion: true,
+    bodegaVersion: true,
+    bodegaNote: "Disponible en version Bodéga au même prix, avec gambas décortiquées.",
   },
   {
     slug: "paella-royale",
-    name: "Paella Royale Bodéga",
+    name: "Paella Royale",
     category: "paellas",
-    tagline: "Gambas décortiquées · Poulet désossé · Lotte · Langoustines décortiquées.",
+    tagline: "Gambas entières · Poulet avec os · Lotte · Langoustines entières.",
     description:
-      "Version Bodéga : gambas décortiquées, poulet désossé, lotte et langoustines décortiquées. Riz au safran, moules, calamars, chorizo, poivrons et épices.",
+      "Gambas entières, poulet avec os, lotte et langoustines entières avec leur coquille. Riz au safran, moules, calamars, chorizo, poivrons et épices.",
     price: 21,
     unit: "/ pers.",
-    highlights: ["Gambas décortiquées", "Poulet désossé", "Lotte", "Langoustines décortiquées"],
+    highlights: ["Gambas entières", "Poulet avec os", "Lotte", "Langoustines entières"],
     image: "/images/paella-royale-bodega.png",
-    classicVersion: true,
+    bodegaVersion: true,
+    bodegaNote: "Disponible en version Bodéga au même prix, avec gambas, poulet et langoustines décortiqués.",
   },
   {
     slug: "paella-del-pueblo",
