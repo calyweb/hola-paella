@@ -92,7 +92,6 @@ export default function RootLayout({
       className={`${fraunces.variable} ${inter.variable} ${bricolage.variable} h-full antialiased`}
     >
       <head>
-        <link rel="icon" href="/logo.png" />
         <meta name="geo.region" content="FR-NAQ" />
         <meta name="geo.placename" content="La Teste-de-Buch" />
         <meta name="geo.position" content="44.62580;-1.14530" />
