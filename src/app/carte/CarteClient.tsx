@@ -64,7 +64,7 @@ export function CarteClient() {
                           src={item.image}
                           alt={item.name}
                           fill
-                          {...(index === 0 ? { priority: true } : { loading: "lazy" as const })}
+                          {...(active === c && index === 0 ? { priority: true } : { loading: "lazy" as const })}
                           className="object-cover transition-transform duration-700 hover:scale-105"
                           sizes="(max-width: 768px) 100vw, 33vw"
                         />
