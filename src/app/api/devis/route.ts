@@ -7,11 +7,19 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request: Request) {
   const data = await request.json();
 
-  const { formule, event, guests, date, location, items, prenom, name, email, phone, message } = data;
+  const { formule, event, guests, date, location, items, bodegaChoices, prenom, name, email, phone, message } = data;
   const fullName = `${prenom ?? ""} ${name ?? ""}`.trim();
 
   const itemsList = items?.length > 0
-    ? items.map((slug: string) => menu.find((m) => m.slug === slug)?.name ?? slug).join(", ")
+    ? items
+        .map((slug: string) => {
+          const it = menu.find((m) => m.slug === slug);
+          if (!it) return slug;
+          return it.bodegaVersion
+            ? `${it.name} (${bodegaChoices?.[slug] ? "Bodéga" : "Classique"})`
+            : it.name;
+        })
+        .join(", ")
     : "Aucune sélection";
 
   const formattedDate = date

@@ -44,6 +44,7 @@ export function DevisForm() {
     date: "",
     location: "",
     items: [] as string[],
+    bodegaChoices: {} as Record<string, boolean>,
     prenom: "",
     name: "",
     email: "",
@@ -68,13 +69,17 @@ export function DevisForm() {
   };
 
   const toggleItem = (slug: string) => {
-    setData((d) => ({
-      ...d,
-      items: d.items.includes(slug)
-        ? d.items.filter((s) => s !== slug)
-        : [...d.items, slug],
-    }));
+    setData((d) => {
+      const isChecked = d.items.includes(slug);
+      const items = isChecked ? d.items.filter((s) => s !== slug) : [...d.items, slug];
+      const bodegaChoices = { ...d.bodegaChoices };
+      if (isChecked) delete bodegaChoices[slug];
+      return { ...d, items, bodegaChoices };
+    });
   };
+
+  const setBodegaChoice = (slug: string, isBodega: boolean) =>
+    setData((d) => ({ ...d, bodegaChoices: { ...d.bodegaChoices, [slug]: isBodega } }));
 
   const canNext1 = data.formule && data.event;
   const canNext2 = data.guests >= 10 && data.date && data.location;
@@ -284,31 +289,62 @@ export function DevisForm() {
                     <div className="grid sm:grid-cols-2 gap-2">
                       {items.map((it) => {
                         const checked = data.items.includes(it.slug);
+                        const isBodega = data.bodegaChoices[it.slug] ?? false;
                         return (
-                          <button
+                          <div
                             key={it.slug}
-                            type="button"
-                            onClick={() => toggleItem(it.slug)}
-                            className={`cursor-pointer text-left px-4 py-3 rounded-xl border-[1.5px] transition-all flex items-start gap-3 ${
+                            className={`rounded-xl border-[1.5px] transition-all ${
                               checked
                                 ? "border-saffron bg-saffron/10"
                                 : "border-ink/10 bg-paper hover:border-saffron/40"
                             }`}
                           >
-                            <div
-                              className={`w-5 h-5 rounded-md border-2 mt-0.5 flex items-center justify-center shrink-0 ${
-                                checked ? "border-saffron-dark bg-saffron" : "border-ink/25"
-                              }`}
+                            <button
+                              type="button"
+                              onClick={() => toggleItem(it.slug)}
+                              className="cursor-pointer text-left px-4 py-3 flex items-start gap-3 w-full"
                             >
-                              {checked && <Check size={12} className="text-ink" />}
-                            </div>
-                            <div>
-                              <div className="font-medium text-ink text-sm">{it.name}</div>
-                              <div className="text-xs text-ink-soft">
-                                {it.surDevis ? "Sur devis" : `${it.price}€ ${it.unit}`}
+                              <div
+                                className={`w-5 h-5 rounded-md border-2 mt-0.5 flex items-center justify-center shrink-0 ${
+                                  checked ? "border-saffron-dark bg-saffron" : "border-ink/25"
+                                }`}
+                              >
+                                {checked && <Check size={12} className="text-ink" />}
                               </div>
-                            </div>
-                          </button>
+                              <div>
+                                <div className="font-medium text-ink text-sm">{it.name}</div>
+                                <div className="text-xs text-ink-soft">
+                                  {it.surDevis ? "Sur devis" : `${it.price}€ ${it.unit}`}
+                                </div>
+                              </div>
+                            </button>
+                            {checked && it.bodegaVersion && (
+                              <div className="px-4 pb-3 flex gap-2">
+                                <button
+                                  type="button"
+                                  onClick={() => setBodegaChoice(it.slug, false)}
+                                  className={`cursor-pointer text-xs px-3 py-1.5 rounded-full border transition-all ${
+                                    !isBodega
+                                      ? "border-terracotta bg-terracotta text-paper"
+                                      : "border-ink/15 text-ink-soft bg-paper"
+                                  }`}
+                                >
+                                  Classique
+                                </button>
+                                <button
+                                  type="button"
+                                  onClick={() => setBodegaChoice(it.slug, true)}
+                                  className={`cursor-pointer text-xs px-3 py-1.5 rounded-full border transition-all ${
+                                    isBodega
+                                      ? "border-terracotta bg-terracotta text-paper"
+                                      : "border-ink/15 text-ink-soft bg-paper"
+                                  }`}
+                                >
+                                  Bodéga (décortiquée)
+                                </button>
+                              </div>
+                            )}
+                          </div>
                         );
                       })}
                     </div>
@@ -378,7 +414,18 @@ export function DevisForm() {
                 <li><span className="text-ink-soft/70">Date·</span> {data.date ? new Date(data.date + "T12:00:00").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) : "—"} pour {data.guests} pers.</li>
                 <li><span className="text-ink-soft/70">Lieu·</span> {data.location || "—"}</li>
                 {data.items.length > 0 && (
-                  <li><span className="text-ink-soft/70">Carte·</span> {data.items.length} plats sélectionnés</li>
+                  <li>
+                    <span className="text-ink-soft/70">Carte·</span>{" "}
+                    {data.items
+                      .map((slug) => {
+                        const it = menu.find((m) => m.slug === slug);
+                        if (!it) return slug;
+                        return it.bodegaVersion
+                          ? `${it.name} (${data.bodegaChoices[slug] ? "Bodéga" : "Classique"})`
+                          : it.name;
+                      })
+                      .join(", ")}
+                  </li>
                 )}
               </ul>
             </div>
