@@ -118,7 +118,7 @@ export const menu: MenuItem[] = [
     highlights: ["Gambas entières", "Poulet", "Lotte", "Langoustines entières"],
     image: "/images/paella-royale-bodega.png",
     bodegaVersion: true,
-    bodegaNote: "Disponible en version Bodéga au même prix, avec gambas, poulet et langoustines décortiqués.",
+    bodegaNote: "Disponible en version Bodéga au même prix, avec gambas et langoustines décortiquées et poulet désossé.",
   },
   {
     slug: "paella-del-pueblo",
