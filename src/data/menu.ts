@@ -84,7 +84,7 @@ export const menu: MenuItem[] = [
     category: "paellas",
     tagline: "Poulet · Gambas entières.",
     description:
-      "Poulet et gambas entières. Riz au safran, moules, calamars, chorizo, poivrons et épices.",
+      "Poulet et gambas entières. Riz au safran, moules, calamars, chorizo, poivrons, oignons et petits pois.",
     price: 18,
     unit: "/ pers.",
     highlights: ["Poulet", "Gambas entières"],
@@ -98,7 +98,7 @@ export const menu: MenuItem[] = [
     category: "paellas",
     tagline: "Gambas entières · Lotte.",
     description:
-      "Gambas entières et lotte. Riz au safran, moules, calamars, chorizo, poivrons et épices.",
+      "Gambas entières et lotte. Riz au safran, moules, calamars, chorizo, poivrons, oignons et petits pois.",
     price: 19,
     unit: "/ pers.",
     highlights: ["Gambas entières", "Lotte"],
@@ -112,7 +112,7 @@ export const menu: MenuItem[] = [
     category: "paellas",
     tagline: "Gambas entières · Poulet · Lotte · Langoustines entières.",
     description:
-      "Gambas entières, poulet, lotte et langoustines entières. Riz au safran, moules, calamars, chorizo, poivrons et épices.",
+      "Gambas entières, poulet, lotte et langoustines entières. Riz au safran, moules, calamars, chorizo, poivrons, oignons et petits pois.",
     price: 21,
     unit: "/ pers.",
     highlights: ["Gambas entières", "Poulet", "Lotte", "Langoustines entières"],
@@ -126,7 +126,7 @@ export const menu: MenuItem[] = [
     category: "paellas",
     tagline: "Travers de porc · Poulet désossé · Jambon Serrano · Gambas décortiquées.",
     description:
-      "Tout désossé et décortiqué. Travers de porc, poulet désossé, jambon Serrano et gambas décortiquées. Riz au safran, moules, calamars, chorizo, poivrons et épices.",
+      "Tout désossé et décortiqué. Travers de porc, poulet désossé, jambon Serrano et gambas décortiquées. Riz au safran, moules, calamars, chorizo, poivrons, oignons et petits pois.",
     price: 20,
     unit: "/ pers.",
     highlights: ["Travers de porc", "Gambas décortiquées", "Jambon Serrano"],
