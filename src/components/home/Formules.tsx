@@ -67,14 +67,14 @@ export function Formules() {
                   ))}
                 </ul>
 
-                <div className="flex items-end justify-between pt-6 border-t border-ink/8">
+                <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pt-6 border-t border-ink/8">
                   <div>
                     <div className="text-xs uppercase tracking-[0.16em] text-ink-soft/70">À partir de</div>
                     <div className="font-display text-3xl text-ink mt-1">
                       {f.startingPrice}€<span className="text-sm text-ink-soft font-body font-normal"> / pers.</span>
                     </div>
                   </div>
-                  <div className="text-sm text-ink-soft text-right">
+                  <div className="text-sm text-ink-soft sm:text-right">
                     Réservation <span className="text-ink font-medium">{f.notice}</span>
                     <br />
                     <span className="text-xs">{f.zone}</span>

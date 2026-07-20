@@ -24,7 +24,7 @@ export function PromoPopup() {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center px-4 pb-4 sm:pb-4">
+    <div className="fixed inset-0 z-[60] flex items-center justify-center px-4">
       <button
         aria-label="Fermer"
         onClick={dismiss}

@@ -6,7 +6,7 @@ const shots = [
   {
     src: "/images/mood-1.png",
     alt: "Repas convivial en terrasse autour d'une paella au coucher du soleil",
-    span: "row-span-2",
+    span: "md:row-span-2",
     caption: "L'ambiance",
   },
   {
@@ -24,7 +24,7 @@ const shots = [
   {
     src: "/images/mood-4.png",
     alt: "Tablée festive autour d'une paella au bord de l'eau",
-    span: "col-span-2",
+    span: "md:col-span-2",
     caption: "Le repas",
   },
 ];
@@ -54,11 +54,11 @@ export function Mood() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-2 gap-3 md:gap-4 h-[500px] md:h-[600px]">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:grid-rows-2 md:gap-4 md:h-[600px]">
           {shots.map((s) => (
             <figure
               key={s.src}
-              className={`relative rounded-2xl overflow-hidden group bg-ink/5 ${s.span}`}
+              className={`relative aspect-square md:aspect-auto rounded-2xl overflow-hidden group bg-ink/5 ${s.span}`}
             >
               <Image
                 src={s.src}

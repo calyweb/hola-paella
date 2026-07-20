@@ -8,15 +8,15 @@ export function Footer() {
       <div className="absolute -top-28 left-0 right-0 h-28 bg-paper" />
       {/* CTA band */}
       <div className="absolute -top-28 left-0 right-0 px-5">
-        <div className="max-w-5xl mx-auto bg-terracotta rounded-[2rem] px-8 sm:px-14 py-12 sm:py-14 shadow-2xl relative overflow-hidden">
+        <div className="max-w-5xl mx-auto bg-terracotta rounded-[2rem] px-6 sm:px-14 py-8 sm:py-14 shadow-2xl relative overflow-hidden">
           <div className="absolute -top-10 -right-10 w-48 h-48 rounded-full bg-saffron/30 blur-3xl" />
           <div className="absolute -bottom-10 -left-10 w-56 h-56 rounded-full bg-cream/20 blur-3xl" />
-          <div className="relative grid md:grid-cols-[1fr_auto] gap-8 items-center">
+          <div className="relative grid md:grid-cols-[1fr_auto] gap-6 sm:gap-8 items-center">
             <div>
-              <div className="text-saffron text-sm uppercase tracking-[0.2em] mb-3">
+              <div className="text-saffron text-xs sm:text-sm uppercase tracking-[0.15em] sm:tracking-[0.2em] mb-3">
                 Vous avez un événement ?
               </div>
-              <h2 className="font-display text-4xl sm:text-5xl text-paper leading-[1.05]">
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-paper leading-[1.05]">
                 Recevons vos invités
                 <br />
                 <span className="italic font-light">comme il se doit.</span>
@@ -115,7 +115,7 @@ export function Footer() {
 
           <div className="flex flex-col md:flex-row gap-4 justify-between text-xs text-cream/50 pt-6 border-t border-cream/10">
             <div>© {new Date().getFullYear()} Hola Paella · Traiteur paella sur le Bassin d&apos;Arcachon &amp; Bordeaux.</div>
-            <div className="flex gap-6">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-3 md:flex md:gap-6">
               <Link href="/mentions-legales" className="hover:text-cream/80">Mentions légales</Link>
               <Link href="/cgv" className="hover:text-cream/80">CGV</Link>
               <Link href="/politique-de-confidentialite" className="hover:text-cream/80">Confidentialité</Link>

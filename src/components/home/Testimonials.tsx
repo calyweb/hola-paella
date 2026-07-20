@@ -31,19 +31,19 @@ export function Testimonials() {
           ))}
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3">
+        <div className="grid grid-cols-2 gap-3">
           <a
             href="https://share.google/rLMCg3fYinvKaesXv"
             target="_blank"
             rel="noopener noreferrer"
             className="card-warm px-6 py-5 flex items-center gap-4 group"
           >
-            <div className="w-10 h-10 flex items-center justify-center">
-              <Image src="/google.svg" alt="Google" width={40} height={40} />
+            <div className="w-8 h-8 shrink-0 flex items-center justify-center">
+              <Image src="/google.svg" alt="Google" width={32} height={32} />
             </div>
             <div className="text-left">
               <div className="font-display text-lg text-ink leading-tight">Google</div>
-              <div className="text-xs text-ink-soft mt-0.5 flex items-center gap-1">
+              <div className="text-xs text-ink-soft mt-0.5 flex items-center gap-1 whitespace-nowrap">
                 <span className="text-saffron-dark font-semibold">4,8/5</span>
                 <span>· 40 avis</span>
                 <ExternalLink size={11} />
