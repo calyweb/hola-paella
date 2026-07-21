@@ -19,21 +19,23 @@ export async function generateMetadata({
   const { city } = await params;
   const c = cities.find((x) => x.slug === city);
   if (!c) return {};
+  const prep = c.prep ?? "à";
+  const place = c.nameAfterPrep ?? c.name;
   const url = `${SITE.url}/paella-${c.slug}`;
   return {
     title: c.delivery
       ? `Paella ${c.name} — Livraison & chef à domicile`
       : `Paella ${c.name} — Chef traiteur à domicile`,
     description: c.delivery
-      ? `Commandez votre paella à ${c.name}. Livraison à domicile dès 10 personnes ou chef sur place dès 24 invités. Tapas, planches ibériques, sangria maison.`
-      : `Chef traiteur paella à domicile à ${c.name} dès 24 invités. Je viens avec mon matériel et je cuisine devant vos invités. Tapas, planches, sangria.`,
+      ? `Commandez votre paella ${prep} ${place}. Livraison à domicile dès 10 personnes ou chef sur place dès 24 invités. Tapas, planches ibériques, sangria maison.`
+      : `Chef traiteur paella à domicile ${prep} ${place} dès 24 invités. Je viens avec mon matériel et je cuisine devant vos invités. Tapas, planches, sangria.`,
     alternates: { canonical: url },
     openGraph: {
       url,
       title: `Paella ${c.name} · Hola Paella`,
       description: c.delivery
-        ? `Paella livrée ou cuisinée sur place à ${c.name}. À partir de 18 €/pers.`
-        : `Chef paella à domicile à ${c.name}. Dès 24 invités, à partir de 18 €/pers.`,
+        ? `Paella livrée ou cuisinée sur place ${prep} ${place}. À partir de 18 €/pers.`
+        : `Chef paella à domicile ${prep} ${place}. Dès 24 invités, à partir de 18 €/pers.`,
       images: ["/images/hero-banner.png"],
     },
   };
@@ -48,6 +50,8 @@ export default async function PaellaCityPage({
   const c = cities.find((x) => x.slug === city);
   if (!c) return notFound();
 
+  const prep = c.prep ?? "à";
+  const place = c.nameAfterPrep ?? c.name;
   const url = `${SITE.url}/paella-${c.slug}`;
   const others = cities.filter((x) => x.slug !== c.slug);
   const testimonial = testimonialForCity(c.slug);
@@ -55,15 +59,15 @@ export default async function PaellaCityPage({
   const faqs = c.delivery
     ? [
         {
-          q: `Comment commander une paella à ${c.name} ?`,
+          q: `Comment commander une paella ${prep} ${place} ?`,
           a: `Remplissez le formulaire de devis en ligne avec votre date, nombre d'invités et préférences. Je vous réponds sous 24 h avec une proposition sur mesure.`,
         },
         {
-          q: `Quelles paellas proposez-vous à ${c.name} ?`,
+          q: `Quelles paellas proposez-vous ${prep} ${place} ?`,
           a: "4 paellas au choix : Fruits de mer & Poulet bio (18 €/pers), Fruits de mer & Poisson (19 €/pers), Del Pueblo (20 €/pers), Royale — gambas sauvages, poulet bio, lotte, langoustines (21 €/pers).",
         },
         {
-          q: `Livrez-vous ou cuisinez-vous sur place à ${c.name} ?`,
+          q: `Livrez-vous ou cuisinez-vous sur place ${prep} ${place} ?`,
           a: `Les deux. Livraison à domicile dès 10 personnes (réservation 48 h), chef à domicile dès 24 invités (réservation 72 h). ${c.name} est dans ma zone de livraison principale.`,
         },
         {
@@ -73,16 +77,16 @@ export default async function PaellaCityPage({
       ]
     : [
         {
-          q: `Comment commander une paella à ${c.name} ?`,
+          q: `Comment commander une paella ${prep} ${place} ?`,
           a: `Remplissez le formulaire de devis en ligne avec votre date, nombre d'invités et préférences. Je vous réponds sous 24 h avec une proposition sur mesure.`,
         },
         {
-          q: `Quelles paellas proposez-vous à ${c.name} ?`,
+          q: `Quelles paellas proposez-vous ${prep} ${place} ?`,
           a: "4 paellas au choix : Fruits de mer & Poulet bio (18 €/pers), Fruits de mer & Poisson (19 €/pers), Del Pueblo (20 €/pers), Royale — gambas sauvages, poulet bio, lotte, langoustines (21 €/pers).",
         },
         {
-          q: `Quel est le minimum d'invités à ${c.name} ?`,
-          a: `Je me déplace à ${c.name} dès 24 invités pour la formule chef à domicile. Je viens avec mon matériel complet et je cuisine devant vos invités. Réservation 72 h à l'avance.`,
+          q: `Quel est le minimum d'invités ${prep} ${place} ?`,
+          a: `Je me déplace ${prep} ${place} dès 24 invités pour la formule chef à domicile. Je viens avec mon matériel complet et je cuisine devant vos invités. Réservation 72 h à l'avance.`,
         },
         {
           q: `Que proposez-vous en dehors de la paella ?`,
@@ -95,10 +99,10 @@ export default async function PaellaCityPage({
       <JsonLd
         data={[
           serviceJsonLd(
-            `Paella à ${c.name}`,
+            `Paella ${prep} ${place}`,
             c.delivery
-              ? `Service traiteur paella à ${c.name} : livraison à domicile et chef sur place.`
-              : `Chef traiteur paella à domicile à ${c.name} : je viens cuisiner sur place dès 24 invités.`,
+              ? `Service traiteur paella ${prep} ${place} : livraison à domicile et chef sur place.`
+              : `Chef traiteur paella à domicile ${prep} ${place} : je viens cuisiner sur place dès 24 invités.`,
             c.name,
             url,
           ),
@@ -127,18 +131,18 @@ export default async function PaellaCityPage({
               <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl text-ink leading-[1.02]">
                 Paella
                 <br />
-                <span className="italic font-light text-terracotta">à {c.name}.</span>
+                <span className="italic font-light text-terracotta">{prep} {place}.</span>
               </h1>
               <p className="mt-6 text-ink-soft text-lg leading-relaxed max-w-xl">
                 {c.delivery ? (
                   <>
-                    Commandez votre paella à {c.name} : livraison à domicile dès 10 personnes
+                    Commandez votre paella {prep} {place} : livraison à domicile dès 10 personnes
                     ou chef sur place dès 24 invités. Tapas, planches ibériques, sangria maison.
                     Du producteur à votre table.
                   </>
                 ) : (
                   <>
-                    Je me déplace à {c.name} avec mon matériel pour cuisiner votre paella
+                    Je me déplace {prep} {place}{" "}avec mon matériel pour cuisiner votre paella
                     devant vos invités, dès 24 personnes. Tapas, planches ibériques, sangria
                     maison. Réservation 72 h à l&apos;avance.
                   </>
@@ -156,7 +160,7 @@ export default async function PaellaCityPage({
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/hero-banner.png"
-                alt={`Paella à ${c.name}`}
+                alt={`Paella ${prep} ${place}`}
                 fill
                 priority
                 className="object-cover"
@@ -171,9 +175,9 @@ export default async function PaellaCityPage({
         <div className="max-w-[1440px] mx-auto">
           <h2 className="font-display text-4xl sm:text-5xl text-ink leading-tight">
             {c.delivery ? (
-              <>Nos paellas <span className="italic font-light">livrées à {c.name}.</span></>
+              <>Nos paellas <span className="italic font-light">livrées {prep} {place}.</span></>
             ) : (
-              <>Nos paellas <span className="italic font-light">à {c.name}.</span></>
+              <>Nos paellas <span className="italic font-light">{prep} {place}.</span></>
             )}
           </h2>
           <div className="mt-10 grid md:grid-cols-2 gap-5">
@@ -219,7 +223,7 @@ export default async function PaellaCityPage({
                 <div className="card-warm p-7">
                   <div className="text-saffron font-display text-4xl mb-3">02</div>
                   <h3 className="font-display text-xl text-ink leading-tight mb-2">Je cuisine le jour J</h3>
-                  <p className="text-ink-soft text-[15px] leading-relaxed">Livraison chaude à {c.name} dès 10 personnes. Chef à domicile dès 24 invités — je viens avec tout mon matériel.</p>
+                  <p className="text-ink-soft text-[15px] leading-relaxed">Livraison chaude {prep} {place} dès 10 personnes. Chef à domicile dès 24 invités — je viens avec tout mon matériel.</p>
                 </div>
                 <div className="card-warm p-7">
                   <div className="text-saffron font-display text-4xl mb-3">03</div>
@@ -237,7 +241,7 @@ export default async function PaellaCityPage({
                 <div className="card-warm p-7">
                   <div className="text-saffron font-display text-4xl mb-3">02</div>
                   <h3 className="font-display text-xl text-ink leading-tight mb-2">Je viens cuisiner chez vous</h3>
-                  <p className="text-ink-soft text-[15px] leading-relaxed">J&apos;arrive à {c.name} avec mon matériel complet et je cuisine votre paella en direct, devant vos invités. Dès 24 personnes.</p>
+                  <p className="text-ink-soft text-[15px] leading-relaxed">J&apos;arrive {prep} {place} avec mon matériel complet et je cuisine votre paella en direct, devant vos invités. Dès 24 personnes.</p>
                 </div>
               </>
             )}
@@ -259,7 +263,7 @@ export default async function PaellaCityPage({
         <section className="py-14 px-5 sm:px-8 bg-paper">
           <div className="max-w-[1440px] mx-auto">
             <h2 className="font-display text-3xl text-ink mb-6">
-              Quartiers desservis à {c.name}
+              Quartiers desservis {prep} {place}
             </h2>
             <ul className="flex flex-wrap gap-2">
               {c.quartiers.map((q) => (
@@ -334,7 +338,7 @@ export default async function PaellaCityPage({
 
       <section className="py-24 px-5 sm:px-8 bg-paper text-center">
         <h2 className="font-display text-4xl sm:text-5xl text-ink leading-tight max-w-2xl mx-auto">
-          Votre paella à <span className="italic">{c.name},</span>{" "}c&apos;est par ici.
+          Votre paella {prep} <span className="italic">{place},</span>{" "}c&apos;est par ici.
         </h2>
         <Link href="/devis" className="btn-primary mt-7 group">
           Demander un devis <ArrowRight size={18} />

@@ -438,35 +438,35 @@ export function DevisForm() {
             <a href="tel:+33646198234" className="font-medium underline">06 46 19 82 34</a>.
           </p>
         )}
-        <div className="flex items-center justify-between gap-3 mt-9 pt-7 border-t border-ink/8">
-          <button
-            type="button"
-            onClick={() => goToStep(Math.max(1, step - 1))}
-            disabled={step === 1}
-            className="cursor-pointer text-ink-soft hover:text-ink disabled:opacity-30 disabled:cursor-not-allowed text-sm"
-          >
-            ← Retour
-          </button>
-          {step < 4 ? (
-            <div className="flex items-center gap-3">
-              {step === 3 && (
-                <button
-                  type="button"
-                  onClick={() => goToStep(4)}
-                  className="text-sm text-ink-soft hover:text-ink underline underline-offset-2"
-                >
-                  Passer cette étape
-                </button>
-              )}
+        <div className="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-3 mt-9 pt-7 border-t border-ink/8">
+          <div className="flex items-center justify-between sm:justify-start sm:gap-4">
+            <button
+              type="button"
+              onClick={() => goToStep(Math.max(1, step - 1))}
+              disabled={step === 1}
+              className="cursor-pointer text-ink-soft hover:text-ink disabled:opacity-30 disabled:cursor-not-allowed text-sm"
+            >
+              ← Retour
+            </button>
+            {step === 3 && (
               <button
                 type="button"
-                onClick={() => goToStep(step + 1)}
-                disabled={(step === 1 && !canNext1) || (step === 2 && !canNext2)}
-                className="cursor-pointer btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                onClick={() => goToStep(4)}
+                className="text-sm text-ink-soft hover:text-ink underline underline-offset-2"
               >
-                Étape suivante <ArrowRight size={16} />
+                Passer cette étape
               </button>
-            </div>
+            )}
+          </div>
+          {step < 4 ? (
+            <button
+              type="button"
+              onClick={() => goToStep(step + 1)}
+              disabled={(step === 1 && !canNext1) || (step === 2 && !canNext2)}
+              className="cursor-pointer btn-primary w-full sm:w-auto justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              Étape suivante <ArrowRight size={16} />
+            </button>
           ) : (
             <button
               type="button"
@@ -492,7 +492,7 @@ export function DevisForm() {
                 }
               }}
               disabled={!data.prenom || !data.name || !data.email || !data.phone || sending}
-              className="cursor-pointer btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+              className="cursor-pointer btn-primary w-full sm:w-auto justify-center disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {sending ? "Envoi en cours…" : "Envoyer ma demande"} <ArrowRight size={16} />
             </button>

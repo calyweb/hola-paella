@@ -110,6 +110,8 @@ export const cities = [
     slug: "le-teich",
     name: "Le Teich",
     delivery: true,
+    prep: "au",
+    nameAfterPrep: "Teich",
     h1: "Livraison paella au Teich",
     intro:
       "Le Teich est dans ma zone de livraison. Paella livrée chaude à domicile dès 10 personnes, réservation 48h à l'avance. Chef à domicile aussi disponible dès 24 invités.",
@@ -196,6 +198,7 @@ export const cities = [
     slug: "cap-ferret",
     name: "Cap Ferret",
     delivery: false,
+    prep: "au",
     h1: "Chef paella à domicile au Cap Ferret",
     intro:
       "Je me déplace au Cap Ferret avec mon matériel pour cuisiner votre paella en direct, devant vos invités. Dès 24 invités. Mariages, anniversaires, soirées privées.",
