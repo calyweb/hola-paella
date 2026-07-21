@@ -30,7 +30,6 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: "Hola Paella <devis@hola-paella.fr>",
       to: "contact@hola-paella.fr",
-      cc: "yo.cremonese@gmail.com",
       replyTo: email,
       subject: `Nouveau devis — ${event} · ${guests} pers. · ${fullName}`,
       html: `

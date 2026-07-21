@@ -39,14 +39,6 @@ export default function CartePage() {
 
       <CarteClient />
 
-      {/* Sticky CTA mobile */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-paper/95 backdrop-blur-md border-t border-ink/10 px-5 py-3">
-        <Link href="/devis" className="btn-primary w-full group">
-          Demander un devis
-          <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-        </Link>
-      </div>
-
       <section className="pt-10 pb-24 px-5 sm:px-8 bg-paper text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="font-display text-4xl sm:text-5xl text-ink leading-tight">

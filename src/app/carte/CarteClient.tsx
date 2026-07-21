@@ -14,13 +14,13 @@ export function CarteClient() {
     <div className="bg-paper">
 
       {/* Navigation centrée */}
-      <div className="sticky top-[72px] z-30 bg-paper/90 backdrop-blur-md pt-14 pb-10">
-        <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 px-5">
+      <div className="bg-paper/90 pt-14 pb-10">
+        <div className="flex flex-wrap justify-center gap-x-5 sm:gap-x-10 gap-y-2 sm:gap-y-3 px-5">
           {order.map((c) => (
             <button
               key={c}
               onClick={() => setActive(c)}
-              className={`font-display text-3xl sm:text-4xl leading-none transition-colors duration-200 ${
+              className={`font-display text-xl sm:text-4xl leading-none transition-colors duration-200 ${
                 active === c
                   ? "text-ink underline underline-offset-4 decoration-saffron decoration-2 cursor-default"
                   : "text-ink/20 hover:text-ink/50 cursor-pointer"
