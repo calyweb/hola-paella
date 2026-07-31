@@ -42,6 +42,7 @@ export function DevisForm() {
     event: "",
     guests: 25,
     date: "",
+    moment: "",
     location: "",
     items: [] as string[],
     bodegaChoices: {} as Record<string, boolean>,
@@ -49,6 +50,7 @@ export function DevisForm() {
     name: "",
     email: "",
     phone: "",
+    address: "",
     message: "",
   });
 
@@ -82,7 +84,7 @@ export function DevisForm() {
     setData((d) => ({ ...d, bodegaChoices: { ...d.bodegaChoices, [slug]: isBodega } }));
 
   const canNext1 = data.formule && data.event;
-  const canNext2 = data.guests >= 10 && data.date && data.location;
+  const canNext2 = data.guests >= 10 && data.date && data.moment && data.location;
   const fullName = `${data.prenom} ${data.name}`.trim();
 
   if (submitted) {
@@ -212,7 +214,7 @@ export function DevisForm() {
               <p className="text-ink-soft mt-1">L&apos;essentiel pour bloquer la date.</p>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-5">
+            <div className="grid sm:grid-cols-3 gap-5">
               <div>
                 <label className="text-sm uppercase tracking-[0.16em] text-ink-soft mb-2 block">
                   Date prévue
@@ -223,6 +225,30 @@ export function DevisForm() {
                   onChange={(e) => update("date", e.target.value)}
                   className="cursor-pointer"
                 />
+              </div>
+              <div>
+                <label className="text-sm uppercase tracking-[0.16em] text-ink-soft mb-2 block">
+                  Midi ou soir
+                </label>
+                <div className="flex gap-2">
+                  {[
+                    { id: "midi", label: "Midi" },
+                    { id: "soir", label: "Soir" },
+                  ].map((m) => (
+                    <button
+                      key={m.id}
+                      type="button"
+                      onClick={() => update("moment", m.id)}
+                      className={`cursor-pointer flex-1 px-4 py-2.5 rounded-full border-[1.5px] text-sm transition-all ${
+                        data.moment === m.id
+                          ? "bg-terracotta text-paper border-terracotta"
+                          : "bg-paper text-ink border-ink/12 hover:border-terracotta"
+                      }`}
+                    >
+                      {m.label}
+                    </button>
+                  ))}
+                </div>
               </div>
               <div>
                 <label className="text-sm uppercase tracking-[0.16em] text-ink-soft mb-2 block">
@@ -396,6 +422,18 @@ export function DevisForm() {
 
             <div>
               <label className="text-sm uppercase tracking-[0.16em] text-ink-soft mb-2 block">
+                Adresse complète
+              </label>
+              <input
+                type="text"
+                placeholder="Numéro, rue, code postal, ville"
+                value={data.address}
+                onChange={(e) => update("address", e.target.value)}
+              />
+            </div>
+
+            <div>
+              <label className="text-sm uppercase tracking-[0.16em] text-ink-soft mb-2 block">
                 Précisions (allergies, ambiance, demandes spéciales…)
               </label>
               <textarea
@@ -411,8 +449,9 @@ export function DevisForm() {
                 <li><span className="text-ink-soft/70">Nom·</span> {fullName || "—"}</li>
                 <li><span className="text-ink-soft/70">Événement·</span> {data.event || "—"}</li>
                 <li><span className="text-ink-soft/70">Format·</span> {data.formule === "chef-prive" ? "Chef privé à domicile" : data.formule === "livraison" ? "Livraison à domicile" : data.formule === "indecis" ? "À définir" : "—"}</li>
-                <li><span className="text-ink-soft/70">Date·</span> {data.date ? new Date(data.date + "T12:00:00").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) : "—"} pour {data.guests} pers.</li>
+                <li><span className="text-ink-soft/70">Date·</span> {data.date ? new Date(data.date + "T12:00:00").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) : "—"} {data.moment ? `(${data.moment === "midi" ? "midi" : "soir"})` : ""} pour {data.guests} pers.</li>
                 <li><span className="text-ink-soft/70">Lieu·</span> {data.location || "—"}</li>
+                <li><span className="text-ink-soft/70">Adresse·</span> {data.address || "—"}</li>
                 {data.items.length > 0 && (
                   <li>
                     <span className="text-ink-soft/70">Carte·</span>{" "}
