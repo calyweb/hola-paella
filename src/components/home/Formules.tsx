@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, Check } from "lucide-react";
 import { formules } from "@/data/formules";
+import { EntrepriseOfferBanner } from "./EntrepriseOfferBanner";
 
 export function Formules() {
   return (
@@ -83,6 +84,7 @@ export function Formules() {
               </div>
             </Link>
           ))}
+          <EntrepriseOfferBanner />
         </div>
       </div>
     </section>

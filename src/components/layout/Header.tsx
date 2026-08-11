@@ -9,6 +9,7 @@ import { Menu, X, Phone } from "lucide-react";
 const nav = [
   { href: "/formules", label: "Nos formules" },
   { href: "/carte", label: "Notre carte" },
+  { href: "/offre-entreprises", label: "Professionnels" },
   { href: "/a-propos", label: "Notre histoire" },
   { href: "/contact", label: "Contact" },
 ];
