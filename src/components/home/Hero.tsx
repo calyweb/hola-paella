@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Star } from "lucide-react";
+import { EntrepriseOfferBanner } from "./EntrepriseOfferBanner";
 
 export function Hero() {
   return (
@@ -95,6 +96,10 @@ export function Hero() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="mt-12 lg:mt-16">
+          <EntrepriseOfferBanner />
         </div>
       </div>
     </section>
