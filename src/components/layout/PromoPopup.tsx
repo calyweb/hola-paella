@@ -3,9 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { X } from "lucide-react";
+import { CalendarDays, X } from "lucide-react";
 
-const STORAGE_KEY = "hp_promo_livraison_ete_2026";
+const STORAGE_KEY = "hp_promo_automne_2026";
 
 export function PromoPopup() {
   const [visible, setVisible] = useState(false);
@@ -39,10 +39,10 @@ export function PromoPopup() {
           <X size={18} />
         </button>
 
-        <div className="relative h-44 sm:h-52">
+        <div className="relative h-[16dvh] min-h-24 sm:h-52">
           <Image
-            src="/images/paella-royale-bodega.png"
-            alt="Paella Royale Hola Paella"
+            src="/images/planche-iberique.png"
+            alt="Planche de charcuterie ibérique Hola Paella"
             fill
             className="object-cover"
             sizes="450px"
@@ -51,17 +51,25 @@ export function PromoPopup() {
         </div>
 
         <div className="p-7 sm:p-8">
-          <h2 className="font-display text-3xl sm:text-4xl text-ink leading-[1.05]">
+          <div className="pill pill-terracotta mb-4">Offre d&apos;automne</div>
+
+          <h2 className="font-display text-[1.5rem] sm:text-3xl text-ink leading-[1.1]">
             Livraison offerte
             <br />
-            <span className="italic font-light text-terracotta">cet été.</span>
+            <span className="italic font-light text-terracotta whitespace-nowrap">+ planche de charcuterie</span>
           </h2>
 
           <p className="mt-4 text-ink-soft leading-relaxed">
-            Sur le sud du Bassin d&apos;Arcachon — d&apos;Arcachon au Teich, en
-            passant par Pyla-sur-Mer, La Teste-de-Buch, Cazaux, La Hume et
-            Gujan-Mestras — la livraison de votre paella est offerte cet été.
+            La livraison de votre paella est offerte sur le sud du Bassin
+            d&apos;Arcachon — d&apos;Arcachon au Teich, en passant par Pyla-sur-Mer,
+            La Teste-de-Buch, Cazaux, La Hume et Gujan-Mestras — et une planche
+            de charcuterie vous est offerte.
           </p>
+
+          <div className="mt-4 flex items-center gap-2.5 bg-saffron/20 border border-saffron/40 text-ink rounded-xl px-4 py-3 text-[15px] font-semibold leading-snug">
+            <CalendarDays size={18} className="shrink-0 text-saffron-dark" />
+            Valable pour tout événement jusqu&apos;au 31 décembre 2026
+          </div>
 
           <div className="mt-7">
             <Link href="/devis" onClick={dismiss} className="btn-primary w-full justify-center group">
