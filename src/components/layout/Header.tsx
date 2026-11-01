@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Truck } from "lucide-react";
 
 const nav = [
   { href: "/formules", label: "Nos formules" },
@@ -36,6 +36,10 @@ export function Header() {
         scrolled ? "bg-cream/85 backdrop-blur-md" : "bg-transparent"
       }`}
     >
+      <div className="bg-terracotta text-paper text-xs sm:text-sm font-bold uppercase tracking-wide px-3 py-2 flex items-center justify-center gap-2">
+        <Truck size={16} className="shrink-0" />
+        Livraison offerte jusqu&apos;au 31 décembre
+      </div>
       <div className="max-w-[1440px] mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-12 h-12 sm:w-14 sm:h-14 group-hover:scale-105 transition-transform">

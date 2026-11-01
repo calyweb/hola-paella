@@ -29,7 +29,7 @@ export function FAQ() {
   return (
     <section className="py-24 lg:py-32 px-5 sm:px-8 bg-paper">
       <div className="max-w-[1440px] mx-auto grid lg:grid-cols-[1fr_1.4fr] gap-14 lg:gap-20">
-        <div className="lg:sticky lg:top-28 self-start">
+        <div className="lg:sticky lg:top-36 self-start">
           <div className="pill mb-5">Vos questions</div>
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.05]">
             Avant de
