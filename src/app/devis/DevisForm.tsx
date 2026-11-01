@@ -108,7 +108,7 @@ export function DevisForm() {
     );
   }
 
-  const orderedCats: Category[] = ["paellas", "tapas", "planches", "sangrias", "vins"];
+  const orderedCats: Category[] = ["tartiflette", "paellas", "tapas", "planches", "sangrias", "vins"];
 
   return (
     <div className="max-w-3xl mx-auto" ref={topRef}>

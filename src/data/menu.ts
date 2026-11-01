@@ -1,5 +1,6 @@
 export type Category =
   | "paellas"
+  | "tartiflette"
   | "tapas"
   | "planches"
   | "sangrias"
@@ -34,6 +35,12 @@ export const categoryMeta: Record<
     label: "Paellas",
     tagline: "4 paellas déclinables en 2 versions · cuisson au feu de bois, riz bomba, safran.",
     emoji: "🥘",
+    accent: "saffron",
+  },
+  tartiflette: {
+    label: "Tartiflette",
+    tagline: "Forfait tartiflette au reblochon AOP, vin inclus.",
+    emoji: "🧀",
     accent: "saffron",
   },
   tapas: {
@@ -144,6 +151,20 @@ export const menu: MenuItem[] = [
     unit: "",
     image: "",
     surDevis: true,
+  },
+
+  // TARTIFLETTE — proposée au devis uniquement, absente de la carte
+  {
+    slug: "forfait-tartiflette",
+    name: "Forfait tartiflette au reblochon AOP",
+    category: "tartiflette",
+    tagline: "Votre traiteur vous emmène en Haute-Savoie !",
+    description:
+      "Tartiflette généreuse au reblochon AOP, mesclun de salade, jambon cru grande réserve et vin blanc sélectionné par notre caviste.",
+    price: 22,
+    unit: "/ pers., vin inclus",
+    image: "",
+    nouveaute: true,
   },
 
   // TAPAS — ~4 personnes par plat
