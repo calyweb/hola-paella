@@ -153,7 +153,7 @@ export const menu: MenuItem[] = [
     surDevis: true,
   },
 
-  // TARTIFLETTE — proposée au devis uniquement, absente de la carte
+  // TARTIFLETTE
   {
     slug: "forfait-tartiflette",
     name: "Forfait tartiflette au reblochon AOP",
@@ -163,7 +163,7 @@ export const menu: MenuItem[] = [
       "Tartiflette généreuse au reblochon AOP, mesclun de salade, jambon cru grande réserve et vin blanc sélectionné par notre caviste.",
     price: 22,
     unit: "/ pers., vin inclus",
-    image: "",
+    image: "/images/forfait-tartiflette.jpg",
     nouveaute: true,
   },
 

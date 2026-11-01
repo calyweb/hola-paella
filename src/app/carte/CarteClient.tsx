@@ -5,10 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { menu, categoryMeta, type Category } from "@/data/menu";
 
-const order: Category[] = ["paellas", "tapas", "planches", "sangrias", "vins", "eaux", "extras"];
+const order: Category[] = ["tartiflette", "paellas", "tapas", "planches", "sangrias", "vins", "eaux", "extras"];
 
 export function CarteClient() {
-  const [active, setActive] = useState<Category>("paellas");
+  const [active, setActive] = useState<Category>("tartiflette");
 
   return (
     <div className="bg-paper">

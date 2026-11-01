@@ -12,7 +12,7 @@ export const metadata = {
 };
 
 export default function CartePage() {
-  const menuItems = menu.filter((m) => !m.surDevis && m.category !== "tartiflette").map((m) => ({ name: m.name, description: m.description, price: m.price, category: m.category }));
+  const menuItems = menu.filter((m) => !m.surDevis).map((m) => ({ name: m.name, description: m.description, price: m.price, category: m.category }));
   return (
     <>
       <JsonLd data={[
@@ -31,7 +31,7 @@ export default function CartePage() {
             <span className="italic font-light">paella d&apos;exception.</span>
           </h1>
           <p className="mt-6 text-ink-soft text-lg max-w-2xl mx-auto leading-relaxed">
-            4 paellas déclinables en 2 versions, trois tapas, six planches ibériques, sangrias maison et vins espagnols.
+            Une tartiflette au reblochon AOP en automne-hiver, 4 paellas déclinables en 2 versions, trois tapas, six planches ibériques, sangrias maison et vins espagnols.
             Tout est à composer sur votre devis.
           </p>
         </div>
